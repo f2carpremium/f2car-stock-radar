@@ -2,8 +2,16 @@ name: F2CAR Stock Radar
 
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "base or check"
+        required: true
+        default: "check"
   schedule:
-    - cron: "15 7 * * *"
+    # GitHub Actions uses UTC. These correspond to 04:00 and 10:00 in Portugal
+    # during the current WEST period. The job remains daily across DST changes.
+    - cron: "0 3 * * *"
+    - cron: "0 9 * * *"
 
 permissions:
   contents: write
@@ -13,17 +21,33 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Detect scheduled mode
+        id: mode
+        shell: bash
+        run: |
+          if [ -n "${{ github.event.inputs.mode }}" ]; then
+            echo "mode=${{ github.event.inputs.mode }}" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 3 * * *" ]; then
+            echo "mode=base" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=check" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Run radar
-        run: python radar.py
-      - name: Save state
+        run: python radar.py "${{ steps.mode.outputs.mode }}"
+
+      - name: Save radar data
         run: |
           git config user.name "F2CAR Stock Radar"
           git config user.email "actions@users.noreply.github.com"
-          git add data/state.json data/last_alerts.json
-          git diff --cached --quiet || git commit -m "Update radar state"
+          git add data/
+          git diff --cached --quiet || git commit -m "Update radar stock"
           git push
