@@ -194,9 +194,11 @@ def scrape(url):
                         seen.add(v["id"])
                 stock = merged
             elif "mh33car.pt" in url:
-                # MH33CAR's stock index is /viaturas and its detail pages use
-                # singular /viatura/... URLs.
-                if page.url.rstrip("/") == "https://www.mh33car.pt":
+                # MH33CAR exposes the stock index at /viaturas, with singular
+                # /viatura/... detail URLs. The index card can contain global
+                # filter text, so parse each detail page instead of the parent
+                # container.
+                if "/viaturas" not in page.url:
                     try:
                         page.goto("https://www.mh33car.pt/viaturas",
                                   wait_until="domcontentloaded",
@@ -204,7 +206,44 @@ def scrape(url):
                         page.wait_for_timeout(1800)
                     except Exception:
                         pass
-                stock = extract_stock(BeautifulSoup(page.content(), "html.parser"), page.url)
+
+                soup = BeautifulSoup(page.content(), "html.parser")
+                detail_urls = []
+                seen_urls = set()
+                for a in soup.find_all("a", href=True):
+                    href = urljoin(page.url, a.get("href", ""))
+                    if "/viatura/" in href and href not in seen_urls:
+                        seen_urls.add(href)
+                        detail_urls.append(href)
+
+                stock = []
+                for detail_url in detail_urls[:80]:
+                    try:
+                        page.goto(detail_url, wait_until="domcontentloaded",
+                                  timeout=CFG["timeout_seconds"] * 1000)
+                        page.wait_for_timeout(500)
+                        detail_soup = BeautifulSoup(page.content(), "html.parser")
+                        v = None
+                        # Prefer the complete body, then progressively smaller
+                        # containers if the body contains navigation noise.
+                        for text in [
+                            norm(detail_soup.get_text(" ", strip=True)),
+                            norm(detail_soup.find("main").get_text(" ", strip=True)) if detail_soup.find("main") else ""
+                        ]:
+                            if len(text) >= 20:
+                                v = parse(text, detail_url)
+                                if v:
+                                    break
+                        if v:
+                            stock.append(v)
+                    except Exception:
+                        pass
+                merged, seen = [], set()
+                for v in stock:
+                    if v["id"] not in seen:
+                        merged.append(v)
+                        seen.add(v["id"])
+                stock = merged
             else:
                 stock = extract_stock(BeautifulSoup(page.content(), "html.parser"), page.url)
 
