@@ -169,8 +169,20 @@ def scrape(url):
             diagnostics.append(
                 f"chromium_final={final_url} title={title!r} html_bytes={len(html)} body_chars={len(body_text)}"
             )
-            stock = extract_stock(BeautifulSoup(html, "html.parser"), final_url)
+            soup = BeautifulSoup(html, "html.parser")
+            stock = extract_stock(soup, final_url)
             diagnostics.append(f"chromium_stock={len(stock)}")
+            if not stock:
+                candidates = []
+                for a in soup.find_all("a", href=True):
+                    href = urljoin(final_url, a.get("href", ""))
+                    txt = norm(a.get_text(" ", strip=True))
+                    blob = (txt + " " + href).lower()
+                    if any(k in blob for k in ["/viaturas", "/carros", "/stock", "viatura", "carros"]):
+                        candidates.append({"text": txt[:100], "href": href})
+                    if len(candidates) >= 30:
+                        break
+                diagnostics.append("chromium_links=" + json.dumps(candidates, ensure_ascii=False))
             browser.close()
         if stock:
             return stock, diagnostics
