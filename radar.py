@@ -30,7 +30,8 @@ def clean_name(s):
 
 def parse(text, url):
     text = norm(text)
-    price = number(r"(\d[\d .]*)\s*€", text)
+    prices = re.findall(r"(\d[\d .]*)\s*€", text)
+    price = int(re.sub(r"\D", "", prices[-1])) if prices else None
     kms = number(r"(\d[\d .]*)\s*km", text)
     ym = re.search(r"\b(0[1-9]|1[0-2])/(20\d{2})\b", text)
     year = ym.group(0) if ym else None
@@ -81,7 +82,9 @@ def extract_stock(soup, url):
     out, seen_ids, seen_urls = [], set(), set()
     for a in soup.find_all("a", href=True):
         href = urljoin(url, a["href"])
-        text = norm(a.parent.get_text(" ", strip=True) if a.parent else a.get_text(" ", strip=True))
+        direct = norm(a.get_text(" ", strip=True))
+        parent_text = norm(a.parent.get_text(" ", strip=True) if a.parent else "")
+        text = direct if len(direct) >= 30 else parent_text
         if href in seen_urls or len(text) < 30 or len(text) > 1600:
             continue
         v = parse(text, href)
@@ -136,7 +139,13 @@ def make_base():
     stock = scrape(site["url"])
     now = datetime.now(timezone.utc).isoformat()
     if stock is None or len(stock) == 0:
-        print(json.dumps({"mode": "base", "status": "verification_failed", "site": site["name"]}))
+        print(json.dumps({
+            "mode": "base",
+            "status": "verification_failed",
+            "site": site["name"],
+            "url": site["url"],
+            "reason": "No vehicle cards could be extracted from HTTP or Chromium"
+        }, ensure_ascii=False))
         return 1
 
     snapshot = {
