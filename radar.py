@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
+from playwright.sync_api import sync_playwright
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(ROOT, "config.json"), encoding="utf-8") as f:
@@ -76,24 +77,40 @@ def parse(text, url):
     v["match_key"] = key
     return v
 
+def extract_stock(soup, url):
+    out, seen_ids, seen_urls = [], set(), set()
+    for a in soup.find_all("a", href=True):
+        href = urljoin(url, a["href"])
+        text = norm(a.parent.get_text(" ", strip=True) if a.parent else a.get_text(" ", strip=True))
+        if href in seen_urls or len(text) < 30 or len(text) > 1600:
+            continue
+        v = parse(text, href)
+        if v and v["id"] not in seen_ids:
+            out.append(v)
+            seen_ids.add(v["id"])
+            seen_urls.add(href)
+    return out
+
 def scrape(url):
+    # Try ordinary HTML first; use Chromium when the site renders stock with JavaScript.
     try:
         r = requests.get(url, headers=HEAD, timeout=CFG["timeout_seconds"])
-        if not r.ok:
-            return None
-        soup = BeautifulSoup(r.text, "html.parser")
-        out, seen_ids, seen_urls = [], set(), set()
-        for a in soup.find_all("a", href=True):
-            href = urljoin(url, a["href"])
-            text = norm(a.parent.get_text(" ", strip=True) if a.parent else a.get_text(" ", strip=True))
-            if href in seen_urls or len(text) < 30 or len(text) > 1200:
-                continue
-            v = parse(text, href)
-            if v and v["id"] not in seen_ids:
-                out.append(v)
-                seen_ids.add(v["id"])
-                seen_urls.add(href)
-        return out
+        if r.ok:
+            stock = extract_stock(BeautifulSoup(r.text, "html.parser"), url)
+            if stock:
+                return stock
+    except Exception:
+        pass
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=HEAD["User-Agent"])
+            page.goto(url, wait_until="domcontentloaded", timeout=CFG["timeout_seconds"] * 1000)
+            page.wait_for_timeout(3000)
+            html = page.content()
+            browser.close()
+        return extract_stock(BeautifulSoup(html, "html.parser"), url)
     except Exception:
         return None
 
