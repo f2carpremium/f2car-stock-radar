@@ -46,61 +46,41 @@ def parse(text, url):
     )[0].strip(" -|")
     if len(title) < 4:
         return None
-
     vin = None
     m = re.search(r"\b([A-HJ-NPR-Z0-9]{17})\b", text.upper())
     if m:
         vin = m.group(1)
-
     registration = None
     m = re.search(r"\b([0-9]{2}-[0-9]{2}-[A-Z]{2}|[A-Z]{2}-[0-9]{2}-[A-Z]{2})\b", text.upper())
     if m:
         registration = m.group(1)
-
-    v = {
-        "title": title[:180],
-        "year": year,
-        "km": kms,
-        "fuel": fuel,
-        "price": price,
-        "url": url,
-        "vin": vin,
-        "registration": registration
-    }
-
+    v = {"title": title[:180], "year": year, "km": kms, "fuel": fuel, "price": price,
+         "url": url, "vin": vin, "registration": registration}
     if vin:
         key = "vin:" + vin
     elif registration:
         key = "reg:" + registration
     else:
         key = "|".join([clean_name(title), year or "", clean_name(fuel or "")])
-
     v["id"] = hashlib.sha1(key.encode("utf-8")).hexdigest()[:20]
     v["match_key"] = key
     return v
 
 def extract_stock(soup, url):
     out, seen_ids, seen_urls = [], set(), set()
-
-    # Vehicle detail links are the most reliable anchors across supplier sites.
     anchors = soup.find_all("a", href=lambda h: h and ("/viaturas/" in h or "/viatura/" in h))
     if not anchors:
         anchors = soup.find_all("a", href=True)
-
     for a in anchors:
         href = urljoin(url, a["href"])
         if href in seen_urls:
             continue
-
-        # Prefer the anchor text, then walk up a few levels to recover the
-        # complete vehicle card when the anchor only contains the model name.
         candidates = [norm(a.get_text(" ", strip=True))]
         node = a.parent
         for _ in range(4):
             if node:
                 candidates.append(norm(node.get_text(" ", strip=True)))
                 node = node.parent
-
         v = None
         for text in candidates:
             if len(text) < 20 or len(text) > 2000:
@@ -109,18 +89,14 @@ def extract_stock(soup, url):
             if candidate:
                 v = candidate
                 break
-
         if v and v["id"] not in seen_ids:
             out.append(v)
             seen_ids.add(v["id"])
             seen_urls.add(href)
-
     return out
 
 def scrape(url):
-    # Try ordinary HTML first; use Chromium when the site renders stock with JavaScript.
     diagnostics = []
-
     try:
         r = requests.get(url, headers=HEAD, timeout=CFG["timeout_seconds"])
         diagnostics.append(f"http={r.status_code} bytes={len(r.content)} final={r.url}")
@@ -135,20 +111,11 @@ def scrape(url):
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(
-                headless=True,
-                args=["--disable-blink-features=AutomationControlled"]
-            )
-            page = browser.new_page(
-                user_agent=HEAD["User-Agent"],
-                viewport={"width": 1440, "height": 1000},
-                locale="pt-PT"
-            )
+            browser = p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
+            page = browser.new_page(user_agent=HEAD["User-Agent"], viewport={"width": 1440, "height": 1000}, locale="pt-PT")
             page.goto(url, wait_until="domcontentloaded", timeout=CFG["timeout_seconds"] * 1000)
             page.wait_for_timeout(3000)
 
-            # F2CAR/OnePilot may expose the full stock through lazy loading.
-            # Scroll repeatedly and activate common "load more" controls.
             if "f2car.com" in url:
                 for _ in range(8):
                     page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
@@ -162,18 +129,42 @@ def scrape(url):
                         except Exception:
                             pass
 
-            html = page.content()
+            page_stocks = []
+            if "cemporcentocar.pt" in url:
+                # 100%Car paginates the stock list. Read every numeric page
+                # instead of stopping after the first 12 cards.
+                for page_no in range(1, 10):
+                    current_html = page.content()
+                    page_stock = extract_stock(BeautifulSoup(current_html, "html.parser"), page.url)
+                    page_stocks.extend(page_stock)
+                    next_page = str(page_no + 1)
+                    try:
+                        pager = page.get_by_text(next_page, exact=True).last
+                        if not pager.is_visible():
+                            break
+                        pager.click(timeout=1500)
+                        page.wait_for_timeout(1500)
+                    except Exception:
+                        break
+
+                merged, seen = [], set()
+                for v in page_stocks:
+                    if v["id"] not in seen:
+                        merged.append(v)
+                        seen.add(v["id"])
+                stock = merged
+            else:
+                stock = extract_stock(BeautifulSoup(page.content(), "html.parser"), page.url)
+
             title = page.title()
             final_url = page.url
             body_text = norm(page.locator("body").inner_text(timeout=5000))
-            diagnostics.append(
-                f"chromium_final={final_url} title={title!r} html_bytes={len(html)} body_chars={len(body_text)}"
-            )
-            soup = BeautifulSoup(html, "html.parser")
-            stock = extract_stock(soup, final_url)
+            diagnostics.append(f"chromium_final={final_url} title={title!r} html_bytes={len(page.content())} body_chars={len(body_text)}")
             diagnostics.append(f"chromium_stock={len(stock)}")
+
             if not stock:
                 candidates = []
+                soup = BeautifulSoup(page.content(), "html.parser")
                 for a in soup.find_all("a", href=True):
                     href = urljoin(final_url, a.get("href", ""))
                     txt = norm(a.get_text(" ", strip=True))
@@ -213,30 +204,16 @@ def make_base():
     stock, diagnostics = scrape(site["url"])
     now = datetime.now(timezone.utc).isoformat()
     if stock is None or len(stock) == 0:
-        print(json.dumps({
-            "mode": "base",
-            "status": "verification_failed",
-            "site": site["name"],
-            "url": site["url"],
-            "reason": "No vehicle cards could be extracted from HTTP or Chromium",
-            "diagnostics": diagnostics
-        }, ensure_ascii=False))
+        print(json.dumps({"mode": "base", "status": "verification_failed", "site": site["name"], "url": site["url"],
+                          "reason": "No vehicle cards could be extracted from HTTP or Chromium", "diagnostics": diagnostics}, ensure_ascii=False))
         return 1
-
-    snapshot = {
-        "created_at": now,
-        "source": site["url"],
-        "count": len(stock),
-        "stock": stock
-    }
+    snapshot = {"created_at": now, "source": site["url"], "count": len(stock), "stock": stock}
     save_json(base_path(today()), snapshot)
     save_json(os.path.join(BASE_DIR, "base-latest.json"), snapshot)
-
     state_path = os.path.join(DATA, "state.json")
     state = load_json(state_path, {})
     state["daily_base"] = today()
     save_json(state_path, state)
-
     print(json.dumps({"mode": "base", "status": "ok", "count": len(stock), "date": today()}, ensure_ascii=False))
     return 0
 
@@ -246,10 +223,8 @@ def make_check():
     if not base:
         print(json.dumps({"mode": "check", "status": "base_missing", "date": day}))
         return 1
-
     base_stock = base["stock"]
     suppliers, failures = {}, []
-
     for key, site in CFG["sites"].items():
         if key == "f2car":
             continue
@@ -264,7 +239,6 @@ def make_check():
     known_suppliers = state.get("known_suppliers", {})
     pending = state.get("pending_removals", {})
     known_unpublished = state.get("known_unpublished", {})
-
     base_by_key = {v["match_key"]: v for v in base_stock}
     base_by_id = {v["id"]: v for v in base_stock}
     alerts = []
@@ -272,40 +246,24 @@ def make_check():
 
     for supplier, stock in suppliers.items():
         current_keys = {v["match_key"] for v in stock}
-
         for v in stock:
             f2 = base_by_key.get(v["match_key"])
             if f2:
                 known_suppliers.setdefault(f2["id"], [])
                 if supplier not in known_suppliers[f2["id"]]:
                     known_suppliers[f2["id"]].append(supplier)
-
                 changes = {}
                 for field in ["price", "km", "year", "fuel"]:
                     if f2.get(field) != v.get(field):
-                        changes[field] = {
-                            "f2_base": f2.get(field),
-                            "supplier_now": v.get(field)
-                        }
+                        changes[field] = {"f2_base": f2.get(field), "supplier_now": v.get(field)}
                 if changes:
-                    alerts.append({
-                        "type": "change",
-                        "supplier": supplier,
-                        "vehicle": v,
-                        "f2_vehicle": f2,
-                        "changes": changes
-                    })
+                    alerts.append({"type": "change", "supplier": supplier, "vehicle": v, "f2_vehicle": f2, "changes": changes})
             else:
                 ukey = f"{supplier}::{v['id']}"
                 if ukey not in known_unpublished:
-                    alerts.append({
-                        "type": "new",
-                        "supplier": supplier,
-                        "vehicle": v
-                    })
+                    alerts.append({"type": "new", "supplier": supplier, "vehicle": v})
                 known_unpublished[ukey] = now
 
-        # Start/clear removal confirmations for vehicles in today's F2CAR base.
         for f2id, suppliers_seen in known_suppliers.items():
             f2 = base_by_id.get(f2id)
             if not f2 or supplier not in suppliers_seen:
@@ -314,17 +272,11 @@ def make_check():
             if f2["match_key"] in current_keys:
                 pending.pop(pkey, None)
             else:
-                item = pending.get(pkey, {
-                    "count": 0,
-                    "vehicle": f2,
-                    "first_missing": now
-                })
+                item = pending.get(pkey, {"count": 0, "vehicle": f2, "first_missing": now})
                 item["count"] = int(item.get("count", 0)) + 1
                 item["last_missing"] = now
                 pending[pkey] = item
 
-    # Continue pending confirmations even if the vehicle is no longer in the
-    # next F2CAR base. This makes the second verification robust.
     for pkey, item in list(pending.items()):
         try:
             supplier, f2id = pkey.split("::", 1)
@@ -338,45 +290,24 @@ def make_check():
             pending.pop(pkey, None)
             continue
         if int(item.get("count", 0)) >= CFG["removal_confirmations"]:
-            alerts.append({
-                "type": "removed",
-                "supplier": supplier,
-                "vehicle": vehicle,
-                "last_confirmed_at": item.get("first_missing"),
-                "f2_url": vehicle.get("url")
-            })
+            alerts.append({"type": "removed", "supplier": supplier, "vehicle": vehicle,
+                           "last_confirmed_at": item.get("first_missing"), "f2_url": vehicle.get("url")})
             pending.pop(pkey, None)
 
-    snapshot = {
-        "checked_at": now,
-        "base_date": day,
-        "base_count": len(base_stock),
-        "suppliers": suppliers,
-        "failures": failures,
-        "alerts": alerts
-    }
+    snapshot = {"checked_at": now, "base_date": day, "base_count": len(base_stock),
+                "suppliers": suppliers, "failures": failures, "alerts": alerts}
     save_json(os.path.join(BASE_DIR, f"{day}-check.json"), snapshot)
-    save_json(os.path.join(DATA, "last_alerts.json"), {
-        "generated_at": now,
-        "base_date": day,
-        "alerts": alerts,
-        "failures": failures
-    })
-
+    save_json(os.path.join(DATA, "last_alerts.json"), {"generated_at": now, "base_date": day,
+                                                        "alerts": alerts, "failures": failures})
     state["last_check"] = now
     state["pending_removals"] = pending
     state["known_suppliers"] = known_suppliers
     state["known_unpublished"] = known_unpublished
     save_json(state_path, state)
 
-    print(json.dumps({
-        "mode": "check",
-        "status": "ok",
-        "base_count": len(base_stock),
-        "supplier_counts": {k: len(v) for k, v in suppliers.items()},
-        "alerts": alerts,
-        "failures": failures
-    }, ensure_ascii=False, indent=2))
+    print(json.dumps({"mode": "check", "status": "ok", "base_count": len(base_stock),
+                      "supplier_counts": {k: len(v) for k, v in suppliers.items()},
+                      "alerts": alerts, "failures": failures}, ensure_ascii=False, indent=2))
     return 0
 
 if __name__ == "__main__":
