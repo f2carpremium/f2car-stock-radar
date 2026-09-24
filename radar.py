@@ -80,42 +80,87 @@ def parse(text, url):
 
 def extract_stock(soup, url):
     out, seen_ids, seen_urls = [], set(), set()
-    for a in soup.find_all("a", href=True):
+
+    # Vehicle detail links are the most reliable anchors on F2CAR.
+    anchors = soup.find_all("a", href=lambda h: h and "/viaturas/" in h)
+    if not anchors:
+        anchors = soup.find_all("a", href=True)
+
+    for a in anchors:
         href = urljoin(url, a["href"])
-        direct = norm(a.get_text(" ", strip=True))
-        parent_text = norm(a.parent.get_text(" ", strip=True) if a.parent else "")
-        text = direct if len(direct) >= 30 else parent_text
-        if href in seen_urls or len(text) < 30 or len(text) > 1600:
+        if href in seen_urls:
             continue
-        v = parse(text, href)
+
+        # Prefer the anchor text, then walk up a few levels to recover the
+        # complete vehicle card when the anchor only contains the model name.
+        candidates = [norm(a.get_text(" ", strip=True))]
+        node = a.parent
+        for _ in range(4):
+            if node:
+                candidates.append(norm(node.get_text(" ", strip=True)))
+                node = node.parent
+
+        v = None
+        for text in candidates:
+            if len(text) < 20 or len(text) > 2000:
+                continue
+            candidate = parse(text, href)
+            if candidate:
+                v = candidate
+                break
+
         if v and v["id"] not in seen_ids:
             out.append(v)
             seen_ids.add(v["id"])
             seen_urls.add(href)
+
     return out
 
 def scrape(url):
     # Try ordinary HTML first; use Chromium when the site renders stock with JavaScript.
+    diagnostics = []
+
     try:
         r = requests.get(url, headers=HEAD, timeout=CFG["timeout_seconds"])
+        diagnostics.append(f"http={r.status_code} bytes={len(r.content)} final={r.url}")
         if r.ok:
-            stock = extract_stock(BeautifulSoup(r.text, "html.parser"), url)
+            soup = BeautifulSoup(r.text, "html.parser")
+            stock = extract_stock(soup, r.url)
+            diagnostics.append(f"http_stock={len(stock)} title={norm(soup.title.get_text()) if soup.title else ''}")
             if stock:
-                return stock
-    except Exception:
-        pass
+                return stock, diagnostics
+    except Exception as e:
+        diagnostics.append(f"http_error={type(e).__name__}:{e}")
 
     try:
         with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page(user_agent=HEAD["User-Agent"])
+            browser = p.chromium.launch(
+                headless=True,
+                args=["--disable-blink-features=AutomationControlled"]
+            )
+            page = browser.new_page(
+                user_agent=HEAD["User-Agent"],
+                viewport={"width": 1440, "height": 1000},
+                locale="pt-PT"
+            )
             page.goto(url, wait_until="domcontentloaded", timeout=CFG["timeout_seconds"] * 1000)
-            page.wait_for_timeout(3000)
+            page.wait_for_timeout(5000)
             html = page.content()
+            title = page.title()
+            final_url = page.url
+            body_text = norm(page.locator("body").inner_text(timeout=5000))
+            diagnostics.append(
+                f"chromium_final={final_url} title={title!r} html_bytes={len(html)} body_chars={len(body_text)}"
+            )
+            stock = extract_stock(BeautifulSoup(html, "html.parser"), final_url)
+            diagnostics.append(f"chromium_stock={len(stock)}")
             browser.close()
-        return extract_stock(BeautifulSoup(html, "html.parser"), url)
-    except Exception:
-        return None
+        if stock:
+            return stock, diagnostics
+    except Exception as e:
+        diagnostics.append(f"chromium_error={type(e).__name__}:{e}")
+
+    return None, diagnostics
 
 def load_json(path, default):
     try:
@@ -136,7 +181,7 @@ def base_path(day):
 
 def make_base():
     site = CFG["sites"]["f2car"]
-    stock = scrape(site["url"])
+    stock, diagnostics = scrape(site["url"])
     now = datetime.now(timezone.utc).isoformat()
     if stock is None or len(stock) == 0:
         print(json.dumps({
@@ -144,7 +189,8 @@ def make_base():
             "status": "verification_failed",
             "site": site["name"],
             "url": site["url"],
-            "reason": "No vehicle cards could be extracted from HTTP or Chromium"
+            "reason": "No vehicle cards could be extracted from HTTP or Chromium",
+            "diagnostics": diagnostics
         }, ensure_ascii=False))
         return 1
 
@@ -178,9 +224,9 @@ def make_check():
     for key, site in CFG["sites"].items():
         if key == "f2car":
             continue
-        stock = scrape(site["url"])
+        stock, diagnostics = scrape(site["url"])
         if stock is None:
-            failures.append(site["name"])
+            failures.append({"site": site["name"], "diagnostics": diagnostics})
         else:
             suppliers[site["name"]] = stock
 
