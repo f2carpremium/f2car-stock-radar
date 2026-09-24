@@ -32,10 +32,11 @@ def parse(text, url):
     text = norm(text)
     prices = re.findall(r"(\d[\d .]*)\s*€", text)
     price = int(re.sub(r"\D", "", prices[-1])) if prices else None
-    kms = number(r"(\d[\d .]*)\s*km", text)
+    km_match = re.search(r"(?<![/\d])(\d{1,3}(?:[ .]\d{3})+|\d+)\s*km\b", text, re.I)
+    kms = int(re.sub(r"\D", "", km_match.group(1))) if km_match else None
     ym = re.search(r"\b(0[1-9]|1[0-2])/(20\d{2})\b", text)
     year = ym.group(0) if ym else None
-    fuel = next((x for x in ["Híbrido Plug-In", "Elétrico", "Diesel", "Gasolina", "Híbrido"]
+    fuel = next((x for x in ["Híbrido Plug-In", "Eléctrico", "Elétrico", "Diesel", "Gasolina", "Híbrido"]
                  if x.lower() in text.lower()), None)
     if price is None or kms is None:
         return None
@@ -144,7 +145,23 @@ def scrape(url):
                 locale="pt-PT"
             )
             page.goto(url, wait_until="domcontentloaded", timeout=CFG["timeout_seconds"] * 1000)
-            page.wait_for_timeout(5000)
+            page.wait_for_timeout(3000)
+
+            # F2CAR/OnePilot may expose the full stock through lazy loading.
+            # Scroll repeatedly and activate common "load more" controls.
+            if "f2car.com" in url:
+                for _ in range(8):
+                    page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                    page.wait_for_timeout(1200)
+                    for label in ["Ver mais", "Mostrar mais", "Carregar mais", "Mais viaturas"]:
+                        try:
+                            loc = page.get_by_text(label, exact=False).last
+                            if loc.is_visible():
+                                loc.click(timeout=800)
+                                page.wait_for_timeout(1200)
+                        except Exception:
+                            pass
+
             html = page.content()
             title = page.title()
             final_url = page.url
