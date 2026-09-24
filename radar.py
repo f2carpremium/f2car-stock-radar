@@ -134,58 +134,35 @@ def scrape(url):
 
             page_stocks = []
             if "cemporcentocar.pt" in url:
-                # 100%Car currently exposes numeric pagination (1, 2, ...).
-                # Prefer real hrefs when present; otherwise click the next
-                # numeric button. Never assume a fixed stock count.
-                visited_pages = set()
-                for _ in range(12):
-                    current_url = page.url
-                    if current_url in visited_pages:
-                        break
-                    visited_pages.add(current_url)
-
+                # 100%Car uses client-side numeric pagination. The URL can stay
+                # unchanged after clicking page 2, so detect page changes by
+                # the vehicle URLs/signature rather than by the browser URL.
+                seen_page_signatures = set()
+                for page_no in range(1, 13):
                     current_html = page.content()
-                    page_stock = extract_stock(BeautifulSoup(current_html, "html.parser"), current_url)
-                    page_stocks.extend(page_stock)
+                    current_stock = extract_stock(BeautifulSoup(current_html, "html.parser"), page.url)
+                    signature = tuple(sorted(v["url"] for v in current_stock))
+                    if signature in seen_page_signatures:
+                        break
+                    seen_page_signatures.add(signature)
+                    page_stocks.extend(current_stock)
 
-                    links = page.locator("a").all()
-                    next_hrefs = []
-                    for a in links:
-                        try:
-                            txt = norm(a.inner_text())
-                            href = a.get_attribute("href")
-                            if txt.isdigit() and href:
-                                full = urljoin(current_url, href)
-                                if full not in visited_pages:
-                                    next_hrefs.append((int(txt), full))
-                        except Exception:
-                            pass
-
-                    if next_hrefs:
-                        next_hrefs.sort(key=lambda x: x[0])
-                        target = next_hrefs[0][1]
-                        try:
-                            page.goto(target, wait_until="domcontentloaded", timeout=CFG["timeout_seconds"] * 1000)
-                            page.wait_for_timeout(1800)
-                            continue
-                        except Exception:
-                            pass
-
+                    target = str(page_no + 1)
                     clicked = False
-                    for page_no in range(2, 13):
-                        try:
-                            pager = page.get_by_text(str(page_no), exact=True).last
+                    try:
+                        candidates = page.get_by_text(target, exact=True)
+                        count = candidates.count()
+                        for idx in range(count - 1, -1, -1):
+                            pager = candidates.nth(idx)
                             if pager.is_visible():
-                                pager.click(timeout=2000)
+                                pager.click(timeout=2500)
                                 page.wait_for_timeout(1800)
-                                if page.url not in visited_pages:
-                                    clicked = True
-                                    break
-                        except Exception:
-                            pass
-                    if clicked:
-                        continue
-                    break
+                                clicked = True
+                                break
+                    except Exception:
+                        clicked = False
+                    if not clicked:
+                        break
 
                 merged, seen = [], set()
                 for v in page_stocks:
