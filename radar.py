@@ -66,6 +66,110 @@ def parse(text, url):
     v["match_key"] = key
     return v
 
+def parse_mh33_detail(soup, url):
+    # MH33CAR detail pages can expose the vehicle data in JSON-LD/meta tags
+    # even when the visible body is only a small client-side shell.
+    candidates = []
+
+    for meta in soup.find_all("meta"):
+        key = (meta.get("property") or meta.get("name") or "").lower()
+        val = norm(meta.get("content", ""))
+        if val and key in {"og:title", "twitter:title", "description", "og:description"}:
+            candidates.append(val)
+
+    for tag in soup.find_all(["h1", "h2"]):
+        val = norm(tag.get_text(" ", strip=True))
+        if val:
+            candidates.append(val)
+
+    def walk_json(obj):
+        if isinstance(obj, dict):
+            name = obj.get("name")
+            offers = obj.get("offers")
+            mileage = obj.get("mileageFromOdometer")
+            fuel = obj.get("fuelType")
+            date = obj.get("productionDate") or obj.get("vehicleModelDate")
+            parts = []
+            if name:
+                parts.append(str(name))
+            if date:
+                parts.append(str(date))
+            if isinstance(mileage, dict):
+                mv = mileage.get("value")
+                if mv is not None:
+                    parts.append(f"{mv} km")
+            elif mileage:
+                parts.append(str(mileage))
+            if fuel:
+                parts.append(str(fuel))
+            if isinstance(offers, dict):
+                price = offers.get("price")
+                currency = offers.get("priceCurrency", "EUR")
+                if price is not None:
+                    parts.append(f"{price} {currency}")
+            if len(parts) >= 2:
+                candidates.append(" ".join(parts))
+            for v in obj.values():
+                walk_json(v)
+        elif isinstance(obj, list):
+            for v in obj:
+                walk_json(v)
+
+    for script in soup.find_all("script"):
+        raw = script.string or script.get_text()
+        if not raw:
+            continue
+        if script.get("type", "").lower() == "application/ld+json":
+            try:
+                walk_json(json.loads(raw))
+            except Exception:
+                pass
+        else:
+            # Some client-side apps embed vehicle facts in JavaScript objects.
+            if any(k in raw.lower() for k in ["mileage", "price", "fueltype", "productiondate"]):
+                candidates.append(norm(raw))
+
+    # Finally use the URL slug as a title fallback. The detail URL itself is
+    # reliable enough to identify the vehicle even if the HTML shell is sparse.
+    slug = url.rstrip("/").rsplit("/", 1)[-1]
+    slug = re.sub(r"[-_]+", " ", slug)
+    slug = re.sub(r"\bID\d+\b", "", slug, flags=re.I)
+    candidates.append(slug)
+
+    # Try structured candidates first, then progressively looser text.
+    for text in candidates:
+        if not text:
+            continue
+        v = parse(text, url)
+        if v:
+            return v
+
+    # Build a vehicle record from separate structured fragments when parse()
+    # cannot recognize the combined representation.
+    all_text = " ".join(candidates)
+    price_m = re.search(r"(?:€|EUR)\\s*([0-9][0-9 .]*)|\\b([0-9][0-9 .]*)\\s*€", all_text, re.I)
+    km_m = re.search(r"(?<![/\\d])([0-9]{1,3}(?:[ .][0-9]{3})+|[0-9]+)\\s*km\\b", all_text, re.I)
+    year_m = re.search(r"\\b(0[1-9]|1[0-2])/(20\\d{2})\\b|\\b(20\\d{2})\\b", all_text)
+    if price_m and km_m:
+        price = int(re.sub(r"\\D", "", price_m.group(1) or price_m.group(2)))
+        kms = int(re.sub(r"\\D", "", km_m.group(1)))
+        year = None
+        if year_m:
+            year = year_m.group(0) if "/" in year_m.group(0) else year_m.group(3)
+        fuel = next((x for x in ["Híbrido Plug-In", "Eléctrico", "Elétrico", "Diesel", "Gasolina", "Híbrido"]
+                     if x.lower() in all_text.lower()), None)
+        title = candidates[0] if candidates else slug
+        title = re.split(r"\\b(?:0[1-9]|1[0-2])/20\\d{2}\\b|\\b\\d[\\d .]*\\s*km\\b|\\b\\d[\\d .]*\\s*€", title, 1)[0].strip(" -|")
+        if len(title) >= 4:
+            key = "|".join([clean_name(title), year or "", clean_name(fuel or "")])
+            return {
+                "title": title[:180], "year": year, "km": kms, "fuel": fuel,
+                "price": price, "url": url, "vin": None, "registration": None,
+                "id": hashlib.sha1(key.encode("utf-8")).hexdigest()[:20],
+                "match_key": key
+            }
+    return None
+
 def extract_stock(soup, url):
     out, seen_ids, seen_urls = [], set(), set()
     anchors = soup.find_all("a", href=lambda h: h and ("/viaturas/" in h or "/viatura/" in h))
@@ -200,17 +304,7 @@ def scrape(url):
                                   timeout=CFG["timeout_seconds"] * 1000)
                         page.wait_for_timeout(500)
                         detail_soup = BeautifulSoup(page.content(), "html.parser")
-                        v = None
-                        # Prefer the complete body, then progressively smaller
-                        # containers if the body contains navigation noise.
-                        for text in [
-                            norm(detail_soup.get_text(" ", strip=True)),
-                            norm(detail_soup.find("main").get_text(" ", strip=True)) if detail_soup.find("main") else ""
-                        ]:
-                            if len(text) >= 20:
-                                v = parse(text, detail_url)
-                                if v:
-                                    break
+                        v = parse_mh33_detail(detail_soup, detail_url)
                         if v:
                             stock.append(v)
                     except Exception:
