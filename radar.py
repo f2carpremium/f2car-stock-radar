@@ -12,24 +12,20 @@ DATA = os.path.join(ROOT, "data")
 BASE_DIR = os.path.join(DATA, "stock")
 os.makedirs(BASE_DIR, exist_ok=True)
 
-HEAD = {"User-Agent": "Mozilla/5.0 F2CAR-Stock-Radar/2.0"}
+HEAD = {"User-Agent": "Mozilla/5.0 F2CAR-Stock-Radar/2.1"}
 MODE = sys.argv[1].lower() if len(sys.argv) > 1 else "check"
-
 
 def norm(s):
     return re.sub(r"\s+", " ", s or "").strip()
-
 
 def number(pattern, s):
     m = re.search(pattern, s or "", re.I)
     return int(re.sub(r"\D", "", m.group(1))) if m else None
 
-
 def clean_name(s):
     s = norm(s).lower()
     s = re.sub(r"[^a-z0-9à-ÿ]+", " ", s)
     return re.sub(r"\s+", " ", s).strip()
-
 
 def parse(text, url):
     text = norm(text)
@@ -41,7 +37,6 @@ def parse(text, url):
                  if x.lower() in text.lower()), None)
     if price is None or kms is None:
         return None
-
     title = re.split(
         r"\b(?:0[1-9]|1[0-2])/20\d{2}\b|\b\d[\d .]*\s*km\b|\b\d[\d .]*\s*€",
         text, 1
@@ -49,7 +44,6 @@ def parse(text, url):
     if len(title) < 4:
         return None
 
-    # Prefer stable identifiers when a page exposes one.
     vin = None
     m = re.search(r"\b([A-HJ-NPR-Z0-9]{17})\b", text.upper())
     if m:
@@ -76,16 +70,11 @@ def parse(text, url):
     elif registration:
         key = "reg:" + registration
     else:
-        key = "|".join([
-            clean_name(title),
-            year or "",
-            clean_name(fuel or "")
-        ])
+        key = "|".join([clean_name(title), year or "", clean_name(fuel or "")])
 
     v["id"] = hashlib.sha1(key.encode("utf-8")).hexdigest()[:20]
     v["match_key"] = key
     return v
-
 
 def scrape(url):
     try:
@@ -94,7 +83,6 @@ def scrape(url):
             return None
         soup = BeautifulSoup(r.text, "html.parser")
         out, seen_ids, seen_urls = [], set(), set()
-
         for a in soup.find_all("a", href=True):
             href = urljoin(url, a["href"])
             text = norm(a.parent.get_text(" ", strip=True) if a.parent else a.get_text(" ", strip=True))
@@ -109,12 +97,6 @@ def scrape(url):
     except Exception:
         return None
 
-
-def save_json(path, obj):
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(obj, f, ensure_ascii=False, indent=2)
-
-
 def load_json(path, default):
     try:
         with open(path, encoding="utf-8") as f:
@@ -122,28 +104,20 @@ def load_json(path, default):
     except Exception:
         return default
 
+def save_json(path, obj):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2)
 
 def today():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
-
 def base_path(day):
     return os.path.join(BASE_DIR, f"{day}-base.json")
-
-
-def latest_base_path():
-    return os.path.join(BASE_DIR, "base-latest.json")
-
-
-def check_path(day):
-    return os.path.join(BASE_DIR, f"{day}-check.json")
-
 
 def make_base():
     site = CFG["sites"]["f2car"]
     stock = scrape(site["url"])
     now = datetime.now(timezone.utc).isoformat()
-
     if stock is None or len(stock) == 0:
         print(json.dumps({"mode": "base", "status": "verification_failed", "site": site["name"]}))
         return 1
@@ -154,28 +128,16 @@ def make_base():
         "count": len(stock),
         "stock": stock
     }
-
     save_json(base_path(today()), snapshot)
-    save_json(latest_base_path(), snapshot)
+    save_json(os.path.join(BASE_DIR, "base-latest.json"), snapshot)
 
-    # Reset daily pending confirmations because the daily base is the reference point.
-    state = load_json(os.path.join(DATA, "state.json"), {})
+    state_path = os.path.join(DATA, "state.json")
+    state = load_json(state_path, {})
     state["daily_base"] = today()
-    state["pending_removals"] = {}
-    save_json(os.path.join(DATA, "state.json"), state)
+    save_json(state_path, state)
 
     print(json.dumps({"mode": "base", "status": "ok", "count": len(stock), "date": today()}, ensure_ascii=False))
     return 0
-
-
-def match_supplier_to_base(base_stock, supplier_stock):
-    base_by_key = {x["match_key"]: x for x in base_stock}
-    result = []
-    for v in supplier_stock:
-        f2 = base_by_key.get(v["match_key"])
-        result.append((v, f2))
-    return result
-
 
 def make_check():
     day = today()
@@ -185,8 +147,7 @@ def make_check():
         return 1
 
     base_stock = base["stock"]
-    suppliers = {}
-    failures = []
+    suppliers, failures = {}, []
 
     for key, site in CFG["sites"].items():
         if key == "f2car":
@@ -197,66 +158,77 @@ def make_check():
         else:
             suppliers[site["name"]] = stock
 
+    state_path = os.path.join(DATA, "state.json")
+    state = load_json(state_path, {"pending_removals": {}, "known_suppliers": {}})
+    known_suppliers = state.get("known_suppliers", {})
+    pending = state.get("pending_removals", {})
+
+    base_by_key = {v["match_key"]: v for v in base_stock}
+    base_by_id = {v["id"]: v for v in base_stock}
     alerts = []
     now = datetime.now(timezone.utc).isoformat()
 
-    # Map every base F2CAR car to the supplier where it is currently found.
-    base_supplier_map = {}
     for supplier, stock in suppliers.items():
-        for v, f2 in match_supplier_to_base(base_stock, stock):
-            if f2:
-                base_supplier_map.setdefault(f2["id"], []).append((supplier, v))
+        current_keys = {v["match_key"] for v in stock}
 
-    # New entries and relevant changes.
-    for supplier, stock in suppliers.items():
         for v in stock:
-            f2 = next((x for x in base_stock if x["match_key"] == v["match_key"]), None)
-            if not f2:
+            f2 = base_by_key.get(v["match_key"])
+            if f2:
+                known_suppliers.setdefault(f2["id"], [])
+                if supplier not in known_suppliers[f2["id"]]:
+                    known_suppliers[f2["id"]].append(supplier)
+
+                changes = {}
+                for field in ["price", "km", "year", "fuel"]:
+                    if f2.get(field) != v.get(field):
+                        changes[field] = {
+                            "f2_base": f2.get(field),
+                            "supplier_now": v.get(field)
+                        }
+                if changes:
+                    alerts.append({
+                        "type": "change",
+                        "supplier": supplier,
+                        "vehicle": v,
+                        "f2_vehicle": f2,
+                        "changes": changes
+                    })
+            else:
                 alerts.append({
                     "type": "new",
                     "supplier": supplier,
                     "vehicle": v
                 })
+
+        # Check known F2CAR vehicles previously associated with this supplier.
+        for f2id in known_suppliers:
+            f2 = base_by_id.get(f2id)
+            if not f2 or supplier not in known_suppliers[f2id]:
                 continue
 
-            changes = {}
-            for field in ["price", "km", "year", "fuel"]:
-                if f2.get(field) != v.get(field):
-                    changes[field] = {"f2_base": f2.get(field), "supplier_now": v.get(field)}
-            if changes:
-                alerts.append({
-                    "type": "change",
-                    "supplier": supplier,
-                    "vehicle": v,
-                    "f2_vehicle": f2,
-                    "changes": changes
+            pkey = f"{supplier}::{f2id}"
+            if f2["match_key"] in current_keys:
+                pending.pop(pkey, None)
+            else:
+                item = pending.get(pkey, {
+                    "count": 0,
+                    "vehicle": f2,
+                    "first_missing": now
                 })
+                item["count"] = int(item.get("count", 0)) + 1
+                item["last_missing"] = now
+                pending[pkey] = item
 
-    # A vehicle is considered removed only after two successful supplier checks.
-    # Since checks are daily, pending state carries across days.
-    state_path = os.path.join(DATA, "state.json")
-    state = load_json(state_path, {"pending_removals": {}})
-    pending = state.get("pending_removals", {})
+                if item["count"] >= CFG["removal_confirmations"]:
+                    alerts.append({
+                        "type": "removed",
+                        "supplier": supplier,
+                        "vehicle": f2,
+                        "last_confirmed_at": item.get("first_missing"),
+                        "f2_url": f2.get("url")
+                    })
+                    pending.pop(pkey, None)
 
-    current_supplier_keys = {
-        supplier: {v["match_key"] for v in stock}
-        for supplier, stock in suppliers.items()
-    }
-
-    for f2 in base_stock:
-        matches = base_supplier_map.get(f2["id"], [])
-        if not matches:
-            # We don't know the supplier if the car was not matched at all.
-            # Never call this a removal.
-            continue
-
-        for supplier, matched in matches:
-            key = f"{day}|{supplier}|{f2['id']}"
-            # The vehicle was seen at least once at this supplier during today's check.
-            if f2["match_key"] in current_supplier_keys.get(supplier, set()):
-                pending.pop(key, None)
-
-    # Persist supplier snapshots and today's alerts.
     snapshot = {
         "checked_at": now,
         "base_date": day,
@@ -265,8 +237,7 @@ def make_check():
         "failures": failures,
         "alerts": alerts
     }
-
-    save_json(check_path(day), snapshot)
+    save_json(os.path.join(BASE_DIR, f"{day}-check.json"), snapshot)
     save_json(os.path.join(DATA, "last_alerts.json"), {
         "generated_at": now,
         "base_date": day,
@@ -276,6 +247,7 @@ def make_check():
 
     state["last_check"] = now
     state["pending_removals"] = pending
+    state["known_suppliers"] = known_suppliers
     save_json(state_path, state)
 
     print(json.dumps({
@@ -287,7 +259,6 @@ def make_check():
         "failures": failures
     }, ensure_ascii=False, indent=2))
     return 0
-
 
 if __name__ == "__main__":
     raise SystemExit(make_base() if MODE == "base" else make_check())
