@@ -97,17 +97,20 @@ def extract_stock(soup, url):
 
 def scrape(url):
     diagnostics = []
-    try:
-        r = requests.get(url, headers=HEAD, timeout=CFG["timeout_seconds"])
-        diagnostics.append(f"http={r.status_code} bytes={len(r.content)} final={r.url}")
-        if r.ok:
-            soup = BeautifulSoup(r.text, "html.parser")
-            stock = extract_stock(soup, r.url)
-            diagnostics.append(f"http_stock={len(stock)} title={norm(soup.title.get_text()) if soup.title else ''}")
-            if stock:
-                return stock, diagnostics
-    except Exception as e:
-        diagnostics.append(f"http_error={type(e).__name__}:{e}")
+    browser_first = any(host in url for host in ["cemporcentocar.pt", "mh33car.pt"])
+
+    if not browser_first:
+        try:
+            r = requests.get(url, headers=HEAD, timeout=CFG["timeout_seconds"])
+            diagnostics.append(f"http={r.status_code} bytes={len(r.content)} final={r.url}")
+            if r.ok:
+                soup = BeautifulSoup(r.text, "html.parser")
+                stock = extract_stock(soup, r.url)
+                diagnostics.append(f"http_stock={len(stock)} title={norm(soup.title.get_text()) if soup.title else ''}")
+                if stock:
+                    return stock, diagnostics
+        except Exception as e:
+            diagnostics.append(f"http_error={type(e).__name__}:{e}")
 
     try:
         with sync_playwright() as p:
@@ -131,21 +134,58 @@ def scrape(url):
 
             page_stocks = []
             if "cemporcentocar.pt" in url:
-                # 100%Car paginates the stock list. Read every numeric page
-                # instead of stopping after the first 12 cards.
-                for page_no in range(1, 10):
-                    current_html = page.content()
-                    page_stock = extract_stock(BeautifulSoup(current_html, "html.parser"), page.url)
-                    page_stocks.extend(page_stock)
-                    next_page = str(page_no + 1)
-                    try:
-                        pager = page.get_by_text(next_page, exact=True).last
-                        if not pager.is_visible():
-                            break
-                        pager.click(timeout=1500)
-                        page.wait_for_timeout(1500)
-                    except Exception:
+                # 100%Car currently exposes numeric pagination (1, 2, ...).
+                # Prefer real hrefs when present; otherwise click the next
+                # numeric button. Never assume a fixed stock count.
+                visited_pages = set()
+                for _ in range(12):
+                    current_url = page.url
+                    if current_url in visited_pages:
                         break
+                    visited_pages.add(current_url)
+
+                    current_html = page.content()
+                    page_stock = extract_stock(BeautifulSoup(current_html, "html.parser"), current_url)
+                    page_stocks.extend(page_stock)
+
+                    links = page.locator("a").all()
+                    next_hrefs = []
+                    for a in links:
+                        try:
+                            txt = norm(a.inner_text())
+                            href = a.get_attribute("href")
+                            if txt.isdigit() and href:
+                                full = urljoin(current_url, href)
+                                if full not in visited_pages:
+                                    next_hrefs.append((int(txt), full))
+                        except Exception:
+                            pass
+
+                    if next_hrefs:
+                        next_hrefs.sort(key=lambda x: x[0])
+                        target = next_hrefs[0][1]
+                        try:
+                            page.goto(target, wait_until="domcontentloaded", timeout=CFG["timeout_seconds"] * 1000)
+                            page.wait_for_timeout(1800)
+                            continue
+                        except Exception:
+                            pass
+
+                    clicked = False
+                    for page_no in range(2, 13):
+                        try:
+                            pager = page.get_by_text(str(page_no), exact=True).last
+                            if pager.is_visible():
+                                pager.click(timeout=2000)
+                                page.wait_for_timeout(1800)
+                                if page.url not in visited_pages:
+                                    clicked = True
+                                    break
+                        except Exception:
+                            pass
+                    if clicked:
+                        continue
+                    break
 
                 merged, seen = [], set()
                 for v in page_stocks:
@@ -153,6 +193,18 @@ def scrape(url):
                         merged.append(v)
                         seen.add(v["id"])
                 stock = merged
+            elif "mh33car.pt" in url:
+                # MH33CAR's stock index is /viaturas and its detail pages use
+                # singular /viatura/... URLs.
+                if page.url.rstrip("/") == "https://www.mh33car.pt":
+                    try:
+                        page.goto("https://www.mh33car.pt/viaturas",
+                                  wait_until="domcontentloaded",
+                                  timeout=CFG["timeout_seconds"] * 1000)
+                        page.wait_for_timeout(1800)
+                    except Exception:
+                        pass
+                stock = extract_stock(BeautifulSoup(page.content(), "html.parser"), page.url)
             else:
                 stock = extract_stock(BeautifulSoup(page.content(), "html.parser"), page.url)
 
