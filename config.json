@@ -1,0 +1,11 @@
+{
+  "sites": {
+    "f2car": {"name":"F2CAR","url":"https://f2car.com/carros"},
+    "100car": {"name":"100%Car","url":"https://cemporcentocar.pt/viaturas"},
+    "mh33car": {"name":"MH33CAR","url":"https://www.mh33car.pt/"},
+    "ftc": {"name":"FTC Automóveis","url":"https://ftcautomoveis.pt/"},
+    "gaia": {"name":"Gaia Concept Car","url":"https://www.gaiaconceptcar.pt/"}
+  },
+  "removal_confirmations": 2,
+  "timeout_seconds": 30
+}
