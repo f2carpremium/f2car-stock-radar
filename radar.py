@@ -159,9 +159,10 @@ def make_check():
             suppliers[site["name"]] = stock
 
     state_path = os.path.join(DATA, "state.json")
-    state = load_json(state_path, {"pending_removals": {}, "known_suppliers": {}})
+    state = load_json(state_path, {"pending_removals": {}, "known_suppliers": {}, "known_unpublished": {}})
     known_suppliers = state.get("known_suppliers", {})
     pending = state.get("pending_removals", {})
+    known_unpublished = state.get("known_unpublished", {})
 
     base_by_key = {v["match_key"]: v for v in base_stock}
     base_by_id = {v["id"]: v for v in base_stock}
@@ -194,18 +195,20 @@ def make_check():
                         "changes": changes
                     })
             else:
-                alerts.append({
-                    "type": "new",
-                    "supplier": supplier,
-                    "vehicle": v
-                })
+                ukey = f"{supplier}::{v['id']}"
+                if ukey not in known_unpublished:
+                    alerts.append({
+                        "type": "new",
+                        "supplier": supplier,
+                        "vehicle": v
+                    })
+                known_unpublished[ukey] = now
 
-        # Check known F2CAR vehicles previously associated with this supplier.
-        for f2id in known_suppliers:
+        # Start/clear removal confirmations for vehicles in today's F2CAR base.
+        for f2id, suppliers_seen in known_suppliers.items():
             f2 = base_by_id.get(f2id)
-            if not f2 or supplier not in known_suppliers[f2id]:
+            if not f2 or supplier not in suppliers_seen:
                 continue
-
             pkey = f"{supplier}::{f2id}"
             if f2["match_key"] in current_keys:
                 pending.pop(pkey, None)
@@ -219,15 +222,29 @@ def make_check():
                 item["last_missing"] = now
                 pending[pkey] = item
 
-                if item["count"] >= CFG["removal_confirmations"]:
-                    alerts.append({
-                        "type": "removed",
-                        "supplier": supplier,
-                        "vehicle": f2,
-                        "last_confirmed_at": item.get("first_missing"),
-                        "f2_url": f2.get("url")
-                    })
-                    pending.pop(pkey, None)
+    # Continue pending confirmations even if the vehicle is no longer in the
+    # next F2CAR base. This makes the second verification robust.
+    for pkey, item in list(pending.items()):
+        try:
+            supplier, f2id = pkey.split("::", 1)
+        except ValueError:
+            continue
+        if supplier not in suppliers:
+            continue
+        current_keys = {v["match_key"] for v in suppliers[supplier]}
+        vehicle = item.get("vehicle", {})
+        if vehicle.get("match_key") in current_keys:
+            pending.pop(pkey, None)
+            continue
+        if int(item.get("count", 0)) >= CFG["removal_confirmations"]:
+            alerts.append({
+                "type": "removed",
+                "supplier": supplier,
+                "vehicle": vehicle,
+                "last_confirmed_at": item.get("first_missing"),
+                "f2_url": vehicle.get("url")
+            })
+            pending.pop(pkey, None)
 
     snapshot = {
         "checked_at": now,
@@ -248,6 +265,7 @@ def make_check():
     state["last_check"] = now
     state["pending_removals"] = pending
     state["known_suppliers"] = known_suppliers
+    state["known_unpublished"] = known_unpublished
     save_json(state_path, state)
 
     print(json.dumps({
