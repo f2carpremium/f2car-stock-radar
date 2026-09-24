@@ -1,228 +1,271 @@
 {
-  "generated_at": "2026-09-24T16:37:01.806898+00:00",
+  "generated_at": "2026-09-24T16:40:10.063663+00:00",
   "base_date": "2026-09-24",
   "alerts": [
     {
-      "type": "new",
-      "supplier": "FTC Automóveis",
+      "type": "change",
+      "supplier": "100%Car",
       "vehicle": {
-        "title": "DS DS3 3 1.2 PureTech Be Chic",
-        "year": "09/2016",
-        "km": 109839,
-        "fuel": "Gasolina",
-        "price": 7500,
-        "url": "https://ftcautomoveis.pt/viaturas/ds-ds3--8f5faf6c-6949-4b8b-9fe9-3056c4c2150c",
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26999,
+        "url": "https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d",
         "vin": null,
         "registration": null,
-        "id": "bb37d57872cbb24ee93a",
-        "match_key": "ds ds3 3 1 2 puretech be chic|09/2016|gasolina"
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26990,
+        "url": "https://f2car.com/viaturas/byd-dolphin-surf--30453ac5-8ddf-4537-babe-1f0613536c56",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 26990,
+          "supplier_now": 26999
+        }
       }
     },
     {
-      "type": "new",
-      "supplier": "FTC Automóveis",
+      "type": "change",
+      "supplier": "100%Car",
       "vehicle": {
-        "title": "Fiat Doblo Doblo 1.3 MultiJet",
-        "year": "11/2018",
-        "km": 123000,
-        "fuel": "Diesel",
-        "price": 10000,
-        "url": "https://ftcautomoveis.pt/viaturas/fiat-doblo--f9d25fbf-3e4b-4245-a063-a0910176fd7a",
-        "vin": null,
-        "registration": null,
-        "id": "5de7329120ca9e53145b",
-        "match_key": "fiat doblo doblo 1 3 multijet|11/2018|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Ford Courier Transit Courier 1.5 75cv",
-        "year": "01/2019",
-        "km": 85000,
-        "fuel": "Diesel",
-        "price": 12000,
-        "url": "https://ftcautomoveis.pt/viaturas/ford-courier--aec79755-f974-4a86-b7ab-9f2f0ad33b2a",
-        "vin": null,
-        "registration": null,
-        "id": "0fd68c2ea3001ec43490",
-        "match_key": "ford courier transit courier 1 5 75cv|01/2019|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Ford Transit Ford Transit 2.2 150Cv Basculante",
-        "year": "09/2015",
-        "km": 130000,
-        "fuel": "Diesel",
-        "price": 20295,
-        "url": "https://ftcautomoveis.pt/viaturas/ford-transit--19eb67ce-3673-4fb3-87f0-3f9c6257d286",
-        "vin": null,
-        "registration": null,
-        "id": "034d47270ab08ae8433c",
-        "match_key": "ford transit ford transit 2 2 150cv basculante|09/2015|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Ford Transit FORD TRANSIT 2.0 130CV BASCULANTE",
-        "year": "08/2017",
-        "km": 123900,
-        "fuel": "Diesel",
-        "price": 22490,
-        "url": "https://ftcautomoveis.pt/viaturas/ford-transit--1be86ebe-6948-48d0-8fef-94fcffa34f82",
-        "vin": null,
-        "registration": null,
-        "id": "7ecde3df3c9261fbd073",
-        "match_key": "ford transit ford transit 2 0 130cv basculante|08/2017|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Iveco Daily Iveco Daily Basculante 35C13 Iva Dedutível",
-        "year": "03/2014",
-        "km": 157000,
-        "fuel": "Diesel",
-        "price": 21990,
-        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--f4d1cef0-c4a8-42e6-83bd-660d36b7e030",
-        "vin": null,
-        "registration": null,
-        "id": "6d55e73fa3e1619a183a",
-        "match_key": "iveco daily iveco daily basculante 35c13 iva dedutível|03/2014|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Iveco Daily Iveco Daily 35.16 Basculante longa",
-        "year": "10/2017",
-        "km": 150000,
-        "fuel": "Diesel",
-        "price": 24900,
-        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--043a53d3-1bb0-444a-8817-4abc37bad38f",
-        "vin": null,
-        "registration": null,
-        "id": "b564b31e00dd5ca01ed2",
-        "match_key": "iveco daily iveco daily 35 16 basculante longa|10/2017|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Iveco Daily 35C13 - 2.3 130CV Basculante",
-        "year": "05/2014",
-        "km": 150000,
-        "fuel": "Diesel",
-        "price": 20990,
-        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--fa1b7d11-c1e0-4e84-93d2-e19fbc63b090",
-        "vin": null,
-        "registration": null,
-        "id": "cc418aa5d077e4188683",
-        "match_key": "iveco daily 35c13 2 3 130cv basculante|05/2014|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Destaque Land Rover Range Rover Sport P400e HSE Dynamic Stealth",
+        "title": "Jaguar I-Pace SE AWD Aut.",
         "year": "12/2018",
-        "km": 135000,
-        "fuel": "Híbrido Plug-In",
-        "price": 40999,
-        "url": "https://ftcautomoveis.pt/viaturas/land-rover-range-rover-sport--1c37d27a-f326-48c9-9eed-ece353379bb5",
+        "km": 71950,
+        "fuel": "Eléctrico",
+        "price": 25990,
+        "url": "https://cemporcentocar.pt/viaturas/jaguar-i-pace--98eae604-0081-4042-bcde-a6bcc0e5af78",
         "vin": null,
         "registration": null,
-        "id": "c31206bca2401c1b0351",
-        "match_key": "destaque land rover range rover sport p400e hse dynamic stealth|12/2018|híbrido plug in"
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "Jaguar I-Pace SE AWD Aut.",
+        "year": "12/2018",
+        "km": 72000,
+        "fuel": "Eléctrico",
+        "price": 27750,
+        "url": "https://f2car.com/viaturas/jaguar-i-pace--1b820954-3f67-4bb0-86c6-4f149bdf9ca1",
+        "vin": null,
+        "registration": null,
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 27750,
+          "supplier_now": 25990
+        },
+        "km": {
+          "f2_base": 72000,
+          "supplier_now": 71950
+        }
       }
     },
     {
       "type": "new",
-      "supplier": "FTC Automóveis",
+      "supplier": "MH33CAR",
       "vehicle": {
-        "title": "Mercedes-Benz Sprinter SPRINTER 514 140CV BASCULANTE",
-        "year": "11/2020",
-        "km": 107000,
-        "fuel": "Diesel",
-        "price": 36000,
-        "url": "https://ftcautomoveis.pt/viaturas/mercedes-benz-sprinter--f495c0d8-7649-482f-9c09-47cdf7b624a2",
+        "title": "Novidades Mais Recentes Não perca as viaturas acabadas de chegar!",
+        "year": null,
+        "km": 160000,
+        "fuel": "Gasolina",
+        "price": 13900,
+        "url": "https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID179219.html",
         "vin": null,
         "registration": null,
-        "id": "029362b3522152e6efac",
-        "match_key": "mercedes benz sprinter sprinter 514 140cv basculante|11/2020|diesel"
+        "id": "45872c7ceebf6a4e86fe",
+        "match_key": "novidades mais recentes não perca as viaturas acabadas de chegar||gasolina"
       }
     },
     {
       "type": "new",
-      "supplier": "FTC Automóveis",
+      "supplier": "Gaia Concept Car",
       "vehicle": {
-        "title": "Nissan NV200 Combi 1.5 dCi Comfort",
-        "year": "02/2018",
-        "km": 150000,
-        "fuel": "Diesel",
-        "price": 13990,
-        "url": "https://ftcautomoveis.pt/viaturas/nissan-nv200-combi--16dcb080-ac50-4d19-8f79-b3cd92dbd9fa",
+        "title": "Fiat 500e 3 + 1 La Prima by Bocelli",
+        "year": "09/2023",
+        "km": 29800,
+        "fuel": "Eléctrico",
+        "price": 20850,
+        "url": "https://gaiaconceptcar.pt/viaturas/fiat-500e-3-1--831b2403-a700-48d1-bf6f-405536fb6839",
         "vin": null,
         "registration": null,
-        "id": "3ff8834616750d2431d2",
-        "match_key": "nissan nv200 combi 1 5 dci comfort|02/2018|diesel"
+        "id": "a092a8639d0da96e8b7b",
+        "match_key": "fiat 500e 3 1 la prima by bocelli|09/2023|eléctrico"
       }
     },
     {
       "type": "new",
-      "supplier": "FTC Automóveis",
+      "supplier": "Gaia Concept Car",
       "vehicle": {
-        "title": "Opel Combo Opel Combo cargo L2H1 1.5 130 Cv Pack Business 3",
-        "year": "01/2019",
-        "km": 147300,
-        "fuel": "Diesel",
-        "price": 13990,
-        "url": "https://ftcautomoveis.pt/viaturas/opel-combo--e0d7a61e-3d05-4d95-ab84-ec1bb76689d8",
+        "title": "Dacia Spring Electric 45 Comfort",
+        "year": "01/2023",
+        "km": 12000,
+        "fuel": "Eléctrico",
+        "price": 12950,
+        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--9c2a8cb1-da55-41f2-b43c-f9610d843e63",
         "vin": null,
         "registration": null,
-        "id": "d8628606b1cf00818640",
-        "match_key": "opel combo opel combo cargo l2h1 1 5 130 cv pack business 3|01/2019|diesel"
+        "id": "18b052bd0fd644559479",
+        "match_key": "dacia spring electric 45 comfort|01/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Dacia Spring Electric 65 Extreme",
+        "year": "02/2023",
+        "km": 32250,
+        "fuel": "Eléctrico",
+        "price": 12950,
+        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--31da18ab-b5fe-4259-bf7e-e14682f0c4bf",
+        "vin": null,
+        "registration": null,
+        "id": "c13069191e1b0320119f",
+        "match_key": "dacia spring electric 65 extreme|02/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Fiat 500e",
+        "year": "02/2023",
+        "km": 37200,
+        "fuel": "Eléctrico",
+        "price": 16950,
+        "url": "https://gaiaconceptcar.pt/viaturas/fiat-500e--24b98a22-cbd1-46ac-978d-dec536be58df",
+        "vin": null,
+        "registration": null,
+        "id": "0a53102dec35a46fab8e",
+        "match_key": "fiat 500e|02/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Peugeot e-208 50 kWh GT Pack",
+        "year": "10/2022",
+        "km": 1342,
+        "fuel": "Eléctrico",
+        "price": 19900,
+        "url": "https://gaiaconceptcar.pt/viaturas/peugeot-e-208--741bf28b-1c9e-49d3-bbc0-03a1a91b59f6",
+        "vin": null,
+        "registration": null,
+        "id": "e3565498700b04843c0b",
+        "match_key": "peugeot e 208 50 kwh gt pack|10/2022|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Citroen e-C4 X 50 kWh Shine Pack",
+        "year": "06/2023",
+        "km": 150,
+        "fuel": "Eléctrico",
+        "price": 25900,
+        "url": "https://gaiaconceptcar.pt/viaturas/citroen-e-c4-x--d074ed62-2169-48df-b43b-1c2a40d58d96",
+        "vin": null,
+        "registration": null,
+        "id": "eeb2aeb2bffd766acb75",
+        "match_key": "citroen e c4 x 50 kwh shine pack|06/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Dacia Spring Electric 65 Extreme",
+        "year": "08/2024",
+        "km": 22135,
+        "fuel": "Eléctrico",
+        "price": 15500,
+        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--804a494a-dbf3-4af3-a0de-01c5deeb3a13",
+        "vin": null,
+        "registration": null,
+        "id": "4771368a4a03a2e0b7cf",
+        "match_key": "dacia spring electric 65 extreme|08/2024|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Dacia Spring EXTREME",
+        "year": "09/2023",
+        "km": 12465,
+        "fuel": "Eléctrico",
+        "price": 12950,
+        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--226d7d49-e55c-4fa6-9391-58c8d842b4c5",
+        "vin": null,
+        "registration": null,
+        "id": "d9a1691402f0fc88fd81",
+        "match_key": "dacia spring extreme|09/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Dacia Spring EXTREME",
+        "year": "10/2023",
+        "km": 21500,
+        "fuel": "Eléctrico",
+        "price": 12500,
+        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--d6de34e8-0c8d-4492-8341-00f87f292e47",
+        "vin": null,
+        "registration": null,
+        "id": "25e4b9510c1877a6d7a3",
+        "match_key": "dacia spring extreme|10/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Citroen e-C4 50 kWh Feel",
+        "year": "06/2023",
+        "km": 22400,
+        "fuel": "Eléctrico",
+        "price": 20950,
+        "url": "https://gaiaconceptcar.pt/viaturas/citroen-e-c4--e8009dba-f878-4243-b78f-594ebe401359",
+        "vin": null,
+        "registration": null,
+        "id": "a36d85e982ca75f8371f",
+        "match_key": "citroen e c4 50 kwh feel|06/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Leapmotor T03 37.3kWh",
+        "year": "03/2024",
+        "km": 40800,
+        "fuel": "Eléctrico",
+        "price": 14500,
+        "url": "https://gaiaconceptcar.pt/viaturas/leapmotor-t03--9fd61502-2e65-48b7-b867-796bb2a26f66",
+        "vin": null,
+        "registration": null,
+        "id": "750f544220d5f2eb0229",
+        "match_key": "leapmotor t03 37 3kwh|03/2024|eléctrico"
       }
     }
   ],
-  "failures": [
-    {
-      "site": "100%Car",
-      "diagnostics": [
-        "http=429 bytes=33946 final=https://cemporcentocar.pt/viaturas",
-        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31335 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
-      ]
-    },
-    {
-      "site": "MH33CAR",
-      "diagnostics": [
-        "http=200 bytes=5430 final=https://www.mh33car.pt/",
-        "http_stock=0 title=MH33car - Home Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Ford, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Porsche, Renault, Tesla, Xpeng, )",
-        "chromium_final=https://www.mh33car.pt/ title='MH33car - Home Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Ford, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Porsche, Renault, Tesla, Xpeng, )' html_bytes=83581 body_chars=3857",
-        "chromium_stock=0",
-        "chromium_links=[{\"text\": \"VIATURAS\", \"href\": \"https://www.mh33car.pt/viaturas\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=6\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=15\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=21\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=32\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=36\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=37\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=38\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=39\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=40\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=207\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viaturas?marca=191\"}, {\"text\": \"127 000 € Porsche Macan Electric Turbo 2025 12 000 Km Eléctrico\", \"href\": \"https://www.mh33car.pt/viatura/porsche-macan-electric-turbo-ID175744.html\"}, {\"text\": \"99 900 € Porsche Taycan Turbo S 2021 66 000 Km Eléctrico\", \"href\": \"https://www.mh33car.pt/viatura/porsche-taycan-turbo-s-ID174822.html\"}, {\"text\": \"55 900 € BMW 840 Gran Coupé d xDrive Pack M 2020 186 000 Km Gasóleo\", \"href\": \"https://www.mh33car.pt/viatura/bmw-840-gran-coupe-d-xdrive-pack-m-ID175440.html\"}, {\"text\": \"39 900 € BMW 116 SWAP M4 2013 100 000 Km Gasolina\", \"href\": \"https://www.mh33car.pt/viatura/bmw-116-swap-m4-ID179144.html\"}, {\"text\": \"27 900 € Jaguar I-Pace EV400 AWD R-DYNAMIC HSE 2018 113 000 Km Eléctrico\", \"href\": \"https://www.mh33car.pt/viatura/jaguar-i-pace-ev400-awd-r-dynamic-hse-ID174756.html\"}, {\"text\": \"24 900 € Mercedes-Benz Vito Tourer 119 BlueTEC/32 Pro 2016 286 000 Km Gasóleo\", \"href\": \"https://www.mh33car.pt/viatura/mercedes-benz-vito-tourer-119-bluetec-32-pro-ID173671.html\"}, {\"text\": \"24 900 € Mercedes-Benz Vito Tourer (BlueTEC) Extra-Longa SELECT 2018 175 000 Km Gasóleo\", \"href\": \"https://www.mh33car.pt/viatura/mercedes-benz-vito-tourer-bluetec-extra-longa-select-ID166314.html\"}, {\"text\": \"24 900 € Tesla Model 3 Standard Range Plus RWD 2019 170 000 Km Eléctrico\", \"href\": \"https://www.mh33car.pt/viatura/tesla-model-3-standard-range-plus-rwd-ID176074.html\"}, {\"text\": \"Ver todo stock\", \"href\": \"https://www.mh33car.pt/viaturas\"}, {\"text\": \"14 900 € Peugeot 3008 1.2 PureTech Allure Pack 2019 160 000 Km Gasolina\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID179219.html\"}, {\"text\": \"39 900 € BMW 116 SWAP M4 2013 100 000 Km Gasolina\", \"href\": \"https://www.mh33car.pt/viatura/bmw-116-swap-m4-ID179144.html\"}, {\"text\": \"17 900 € Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line 2014 160 000 Km Gasóleo\", \"href\": \"https://www.mh33car.pt/viatura/mercedes-benz-gla-220-d-4matic-7g-dct-amg-line-ID179014.html\"}, {\"text\": \"14 900 € Peugeot 208 1.2 PureTech Allure Pack EAT8 2023 160 000 Km Gasolina\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-208-1-2-puretech-allure-pack-eat8-ID178858.html\"}, {\"text\": \"14 900 € Opel Crossland X 1.2 T Innovation 2020 95 000 Km Gasolina\", \"href\": \"https://www.mh33car.pt/viatura/opel-crossland-x-1-2-t-innovation-ID178846.html\"}, {\"text\": \"13 900 € BMW 318 d Line Sport 2016 190 000 Km Gasóleo\", \"href\": \"https://www.mh33car.pt/viatura/bmw-318-d-line-sport-ID178844.html\"}, {\"text\": \"Ver todo stock\", \"href\": \"https://www.mh33car.pt/viaturas\"}, {\"text\": \"Coupé\", \"href\": \"https://www.mh33car.pt/viaturas/segmento/coupe\"}]"
-      ]
-    },
-    {
-      "site": "Gaia Concept Car",
-      "diagnostics": [
-        "http=429 bytes=33946 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31335 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
-      ]
-    }
-  ]
+  "failures": []
 }
