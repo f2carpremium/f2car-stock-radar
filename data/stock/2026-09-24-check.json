@@ -1,0 +1,382 @@
+{
+  "checked_at": "2026-09-24T16:33:43.130059+00:00",
+  "base_date": "2026-09-24",
+  "base_count": 52,
+  "suppliers": {
+    "100%Car": [
+      {
+        "title": "BMW i4 eDrive40 Pack Desportivo M",
+        "year": "04/2024",
+        "km": 45000,
+        "fuel": "Eléctrico",
+        "price": 45750,
+        "url": "https://cemporcentocar.pt/viaturas/bmw-i4--8c1cbb2f-f9a0-40d8-bc80-8839808dbf91",
+        "vin": null,
+        "registration": null,
+        "id": "d1f1f156012433b51862",
+        "match_key": "bmw i4 edrive40 pack desportivo m|04/2024|eléctrico"
+      },
+      {
+        "title": "BMW iX xDrive 40 Pack Desportivo",
+        "year": "12/2022",
+        "km": 60400,
+        "fuel": "Eléctrico",
+        "price": 47990,
+        "url": "https://cemporcentocar.pt/viaturas/bmw-ix--794d56c5-e0b4-4a21-90a4-49d7267f9e5d",
+        "vin": null,
+        "registration": null,
+        "id": "b62934de255a0c4d09bf",
+        "match_key": "bmw ix xdrive 40 pack desportivo|12/2022|eléctrico"
+      },
+      {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26999,
+        "url": "https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      {
+        "title": "Citroen e-Mehari CABRIO",
+        "year": "07/2016",
+        "km": 30500,
+        "fuel": "Eléctrico",
+        "price": 14750,
+        "url": "https://cemporcentocar.pt/viaturas/citroen-e-mehari--e7ba9a92-a5f3-4ee8-aa4f-0372b0079a7c",
+        "vin": null,
+        "registration": null,
+        "id": "d55ed11e81e369bff34f",
+        "match_key": "citroen e mehari cabrio|07/2016|eléctrico"
+      },
+      {
+        "title": "Fiat 500e La Prima",
+        "year": "05/2023",
+        "km": 34240,
+        "fuel": "Eléctrico",
+        "price": 19400,
+        "url": "https://cemporcentocar.pt/viaturas/fiat-500e--fbd8c446-95c8-47d4-9502-4b48e0a313b7",
+        "vin": null,
+        "registration": null,
+        "id": "f018b167da320e01dcc0",
+        "match_key": "fiat 500e la prima|05/2023|eléctrico"
+      },
+      {
+        "title": "Ford Capri 77 kWh Select",
+        "year": "06/2025",
+        "km": 20100,
+        "fuel": "Eléctrico",
+        "price": 33990,
+        "url": "https://cemporcentocar.pt/viaturas/ford-capri--590fd002-ff1a-45e8-9157-e8fb55edd4ad",
+        "vin": null,
+        "registration": null,
+        "id": "7f27230e0682206937c3",
+        "match_key": "ford capri 77 kwh select|06/2025|eléctrico"
+      },
+      {
+        "title": "Jaguar I-Pace SE AWD Aut.",
+        "year": "12/2018",
+        "km": 71950,
+        "fuel": "Eléctrico",
+        "price": 25990,
+        "url": "https://cemporcentocar.pt/viaturas/jaguar-i-pace--98eae604-0081-4042-bcde-a6bcc0e5af78",
+        "vin": null,
+        "registration": null,
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      {
+        "title": "Mercedes-Benz CLA 250 e Shooting Brake AMG Line",
+        "year": "10/2021",
+        "km": 114000,
+        "fuel": "Híbrido Plug-In",
+        "price": 28990,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-cla-250--5cfb56f6-31aa-4377-a2c8-35eef969f6ea",
+        "vin": null,
+        "registration": null,
+        "id": "8abd85b39e3dadd27253",
+        "match_key": "mercedes benz cla 250 e shooting brake amg line|10/2021|híbrido plug in"
+      },
+      {
+        "title": "Mercedes-Benz EQE SUV 43 AMG 4Matic",
+        "year": "07/2024",
+        "km": 59000,
+        "fuel": "Eléctrico",
+        "price": 89990,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--c28a7fc7-f949-4f42-bfc9-8367e0d0e24f",
+        "vin": null,
+        "registration": null,
+        "id": "40e0db902777fbe51570",
+        "match_key": "mercedes benz eqe suv 43 amg 4matic|07/2024|eléctrico"
+      },
+      {
+        "title": "Mercedes-Benz EQE 300 Electric Art",
+        "year": "08/2023",
+        "km": 49212,
+        "fuel": "Eléctrico",
+        "price": 45750,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--e7d30af0-acc1-4b45-96c3-d8be86cb5884",
+        "vin": null,
+        "registration": null,
+        "id": "5e11253851c8c974b8c8",
+        "match_key": "mercedes benz eqe 300 electric art|08/2023|eléctrico"
+      },
+      {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2024",
+        "km": 48600,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--db4696b2-bc07-45d5-baab-11e2d952a251",
+        "vin": null,
+        "registration": null,
+        "id": "5ba41cef6556ab7b03e3",
+        "match_key": "mg mg4 51 kwh standard|02/2024|eléctrico"
+      },
+      {
+        "title": "MG MG4 64 kWh Luxury",
+        "year": "07/2024",
+        "km": 43700,
+        "fuel": "Eléctrico",
+        "price": 23990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--bbb59170-6a88-4d9a-9966-e38852fe94fa",
+        "vin": null,
+        "registration": null,
+        "id": "91e2c75b00b99f962eb7",
+        "match_key": "mg mg4 64 kwh luxury|07/2024|eléctrico"
+      }
+    ]
+  },
+  "failures": [
+    {
+      "site": "MH33CAR",
+      "diagnostics": [
+        "http=200 bytes=5430 final=https://www.mh33car.pt/",
+        "http_stock=0 title=MH33car - Home Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Ford, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Porsche, Renault, Tesla, Xpeng, )",
+        "chromium_final=https://www.mh33car.pt/ title='MH33car - Home Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Ford, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Porsche, Renault, Tesla, Xpeng, )' html_bytes=83581 body_chars=3857",
+        "chromium_stock=0"
+      ]
+    },
+    {
+      "site": "FTC Automóveis",
+      "diagnostics": [
+        "http=429 bytes=33946 final=https://ftcautomoveis.pt/",
+        "chromium_final=https://ftcautomoveis.pt/ title='Vercel Security Checkpoint' html_bytes=31340 body_chars=129",
+        "chromium_stock=0"
+      ]
+    },
+    {
+      "site": "Gaia Concept Car",
+      "diagnostics": [
+        "http=429 bytes=33945 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31336 body_chars=129",
+        "chromium_stock=0"
+      ]
+    }
+  ],
+  "alerts": [
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26999,
+        "url": "https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26990,
+        "url": "https://f2car.com/viaturas/byd-dolphin-surf--30453ac5-8ddf-4537-babe-1f0613536c56",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 26990,
+          "supplier_now": 26999
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Citroen e-Mehari CABRIO",
+        "year": "07/2016",
+        "km": 30500,
+        "fuel": "Eléctrico",
+        "price": 14750,
+        "url": "https://cemporcentocar.pt/viaturas/citroen-e-mehari--e7ba9a92-a5f3-4ee8-aa4f-0372b0079a7c",
+        "vin": null,
+        "registration": null,
+        "id": "d55ed11e81e369bff34f",
+        "match_key": "citroen e mehari cabrio|07/2016|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Fiat 500e La Prima",
+        "year": "05/2023",
+        "km": 34240,
+        "fuel": "Eléctrico",
+        "price": 19400,
+        "url": "https://cemporcentocar.pt/viaturas/fiat-500e--fbd8c446-95c8-47d4-9502-4b48e0a313b7",
+        "vin": null,
+        "registration": null,
+        "id": "f018b167da320e01dcc0",
+        "match_key": "fiat 500e la prima|05/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Ford Capri 77 kWh Select",
+        "year": "06/2025",
+        "km": 20100,
+        "fuel": "Eléctrico",
+        "price": 33990,
+        "url": "https://cemporcentocar.pt/viaturas/ford-capri--590fd002-ff1a-45e8-9157-e8fb55edd4ad",
+        "vin": null,
+        "registration": null,
+        "id": "7f27230e0682206937c3",
+        "match_key": "ford capri 77 kwh select|06/2025|eléctrico"
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Jaguar I-Pace SE AWD Aut.",
+        "year": "12/2018",
+        "km": 71950,
+        "fuel": "Eléctrico",
+        "price": 25990,
+        "url": "https://cemporcentocar.pt/viaturas/jaguar-i-pace--98eae604-0081-4042-bcde-a6bcc0e5af78",
+        "vin": null,
+        "registration": null,
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "Jaguar I-Pace SE AWD Aut.",
+        "year": "12/2018",
+        "km": 72000,
+        "fuel": "Eléctrico",
+        "price": 27750,
+        "url": "https://f2car.com/viaturas/jaguar-i-pace--1b820954-3f67-4bb0-86c6-4f149bdf9ca1",
+        "vin": null,
+        "registration": null,
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 27750,
+          "supplier_now": 25990
+        },
+        "km": {
+          "f2_base": 72000,
+          "supplier_now": 71950
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Mercedes-Benz CLA 250 e Shooting Brake AMG Line",
+        "year": "10/2021",
+        "km": 114000,
+        "fuel": "Híbrido Plug-In",
+        "price": 28990,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-cla-250--5cfb56f6-31aa-4377-a2c8-35eef969f6ea",
+        "vin": null,
+        "registration": null,
+        "id": "8abd85b39e3dadd27253",
+        "match_key": "mercedes benz cla 250 e shooting brake amg line|10/2021|híbrido plug in"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Mercedes-Benz EQE SUV 43 AMG 4Matic",
+        "year": "07/2024",
+        "km": 59000,
+        "fuel": "Eléctrico",
+        "price": 89990,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--c28a7fc7-f949-4f42-bfc9-8367e0d0e24f",
+        "vin": null,
+        "registration": null,
+        "id": "40e0db902777fbe51570",
+        "match_key": "mercedes benz eqe suv 43 amg 4matic|07/2024|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Mercedes-Benz EQE 300 Electric Art",
+        "year": "08/2023",
+        "km": 49212,
+        "fuel": "Eléctrico",
+        "price": 45750,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--e7d30af0-acc1-4b45-96c3-d8be86cb5884",
+        "vin": null,
+        "registration": null,
+        "id": "5e11253851c8c974b8c8",
+        "match_key": "mercedes benz eqe 300 electric art|08/2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2024",
+        "km": 48600,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--db4696b2-bc07-45d5-baab-11e2d952a251",
+        "vin": null,
+        "registration": null,
+        "id": "5ba41cef6556ab7b03e3",
+        "match_key": "mg mg4 51 kwh standard|02/2024|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 64 kWh Luxury",
+        "year": "07/2024",
+        "km": 43700,
+        "fuel": "Eléctrico",
+        "price": 23990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--bbb59170-6a88-4d9a-9966-e38852fe94fa",
+        "vin": null,
+        "registration": null,
+        "id": "91e2c75b00b99f962eb7",
+        "match_key": "mg mg4 64 kwh luxury|07/2024|eléctrico"
+      }
+    }
+  ]
+}
