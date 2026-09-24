@@ -42,6 +42,9 @@ jobs:
             echo "mode=check" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Install Chromium
+        run: python -m playwright install --with-deps chromium
+
       - name: Run radar
         run: python radar.py "${{ steps.mode.outputs.mode }}"
 
