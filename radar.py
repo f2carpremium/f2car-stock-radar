@@ -82,8 +82,8 @@ def parse(text, url):
 def extract_stock(soup, url):
     out, seen_ids, seen_urls = [], set(), set()
 
-    # Vehicle detail links are the most reliable anchors on F2CAR.
-    anchors = soup.find_all("a", href=lambda h: h and "/viaturas/" in h)
+    # Vehicle detail links are the most reliable anchors across supplier sites.
+    anchors = soup.find_all("a", href=lambda h: h and ("/viaturas/" in h or "/viatura/" in h))
     if not anchors:
         anchors = soup.find_all("a", href=True)
 
