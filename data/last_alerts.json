@@ -1,20 +1,176 @@
 {
-  "generated_at": "2026-09-24T16:42:22.106936+00:00",
+  "generated_at": "2026-09-24T16:49:30.992376+00:00",
   "base_date": "2026-09-24",
-  "alerts": [],
-  "failures": [
+  "alerts": [
     {
-      "site": "100%Car",
-      "diagnostics": [
-        "http=429 bytes=33943 final=https://cemporcentocar.pt/viaturas",
-        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
-      ]
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26999,
+        "url": "https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26990,
+        "url": "https://f2car.com/viaturas/byd-dolphin-surf--30453ac5-8ddf-4537-babe-1f0613536c56",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 26990,
+          "supplier_now": 26999
+        }
+      }
     },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 64 kWh Luxury",
+        "year": "06/2024",
+        "km": 35000,
+        "fuel": "Eléctrico",
+        "price": 23990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--d1e060dd-7404-457b-9b0d-07f609ee6e96",
+        "vin": null,
+        "registration": null,
+        "id": "ee63a20b2827f45853dc",
+        "match_key": "mg mg4 64 kwh luxury|06/2024|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MGS5 EV 49 kWh Comfort",
+        "year": "04/2026",
+        "km": 7782,
+        "fuel": "Eléctrico",
+        "price": 28990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mgs5-ev--76f1eb53-c1bd-4663-a5f8-82a7adfe027b",
+        "vin": null,
+        "registration": null,
+        "id": "b47bc42be6bfd2d9db74",
+        "match_key": "mg mgs5 ev 49 kwh comfort|04/2026|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MINI Countryman Cooper SE ALL4 Auto",
+        "year": "12/2019",
+        "km": 120600,
+        "fuel": "Gasolina",
+        "price": 18990,
+        "url": "https://cemporcentocar.pt/viaturas/mini-countryman--1d1e9c5f-4ec3-4a03-86fc-6aa3c02eaf10",
+        "vin": null,
+        "registration": null,
+        "id": "58903e0b0e167863a280",
+        "match_key": "mini countryman cooper se all4 auto|12/2019|gasolina"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Opel Corsa-e 50 kWh",
+        "year": "05/2024",
+        "km": 17400,
+        "fuel": "Eléctrico",
+        "price": 18990,
+        "url": "https://cemporcentocar.pt/viaturas/opel-corsa-e--642e4169-d666-4235-b559-03313699c204",
+        "vin": null,
+        "registration": null,
+        "id": "f7b3535d8c046311b4f0",
+        "match_key": "opel corsa e 50 kwh|05/2024|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Peugeot e-2008 50 kWh Allure Pack",
+        "year": "04/2022",
+        "km": 80000,
+        "fuel": "Eléctrico",
+        "price": 17990,
+        "url": "https://cemporcentocar.pt/viaturas/peugeot-e-2008--8b35dd00-a0f5-4b0f-80b6-f512cf8c25f8",
+        "vin": null,
+        "registration": null,
+        "id": "1120633dec6efa1ee315",
+        "match_key": "peugeot e 2008 50 kwh allure pack|04/2022|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Tesla Model 3 Standard Range Plus RWD",
+        "year": "02/2021",
+        "km": 103500,
+        "fuel": "Eléctrico",
+        "price": 24500,
+        "url": "https://cemporcentocar.pt/viaturas/tesla-model-3--1850e882-2765-462a-8b75-8faaed27dc2a",
+        "vin": null,
+        "registration": null,
+        "id": "f6b8d6c3f713fd71a788",
+        "match_key": "tesla model 3 standard range plus rwd|02/2021|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Volvo EX30 51 kWh Single Motor Core",
+        "year": "07/2024",
+        "km": 23850,
+        "fuel": "Eléctrico",
+        "price": 31900,
+        "url": "https://cemporcentocar.pt/viaturas/volvo-ex30--a10ad6ee-6642-486e-9be0-9a7e5fddc8fe",
+        "vin": null,
+        "registration": null,
+        "id": "0fd0af3aa31ebb27d7f0",
+        "match_key": "volvo ex30 51 kwh single motor core|07/2024|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "VIATURAS Ordenar por: Mais recentes Km: Mais Baixo Km: Mais Alto Preço: Mais Baixo Preço: Mais Alto Marca AZ Marca ZA Ano: Mais Novos Ano: Mais Antigos",
+        "year": null,
+        "km": 160000,
+        "fuel": "Gasolina",
+        "price": 14900,
+        "url": "https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID179219.html",
+        "vin": null,
+        "registration": null,
+        "id": "6598dabc9ab37f75aa52",
+        "match_key": "viaturas ordenar por mais recentes km mais baixo km mais alto preço mais baixo preço mais alto marca az marca za ano mais novos ano mais antigos||gasolina"
+      }
+    }
+  ],
+  "failures": [
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33943 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31338 body_chars=129",
+        "http=429 bytes=33945 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31335 body_chars=129",
         "chromium_stock=0",
         "chromium_links=[]"
       ]
