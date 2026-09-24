@@ -1,7 +1,6 @@
 name: F2CAR Stock Radar
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       mode:
