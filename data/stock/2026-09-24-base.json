@@ -1,0 +1,151 @@
+{
+  "created_at": "2026-09-24T16:26:04.442607+00:00",
+  "source": "https://f2car.com/carros",
+  "count": 12,
+  "stock": [
+    {
+      "title": "Audi A3 Cabrio 1.6 TDi Sport",
+      "year": "01/2013",
+      "km": 2013195166,
+      "fuel": "Diesel",
+      "price": 11490,
+      "url": "https://f2car.com/viaturas/audi-a3-cabrio--eca7b4c0-6621-4734-83b2-3bfb2e8ccd1e",
+      "vin": null,
+      "registration": null,
+      "id": "73a83543334a83eeab96",
+      "match_key": "audi a3 cabrio 1 6 tdi sport|01/2013|diesel"
+    },
+    {
+      "title": "Audi A3 Cabrio 2.0 TDi S-line",
+      "year": "03/2013",
+      "km": 2013141000,
+      "fuel": "Diesel",
+      "price": 16990,
+      "url": "https://f2car.com/viaturas/audi-a3-cabrio--212950b6-4137-4c3d-9b63-a2741b1b27f5",
+      "vin": null,
+      "registration": null,
+      "id": "a8e5359aab72b06e482a",
+      "match_key": "audi a3 cabrio 2 0 tdi s line|03/2013|diesel"
+    },
+    {
+      "title": "BMW 116 d EDynamics Line Sport",
+      "year": "05/2013",
+      "km": 2013125675,
+      "fuel": "Diesel",
+      "price": 13490,
+      "url": "https://f2car.com/viaturas/bmw-116--a477fa54-70f0-4a48-92d9-0e0a14a9e805",
+      "vin": null,
+      "registration": null,
+      "id": "43a366204656ebe94087",
+      "match_key": "bmw 116 d edynamics line sport|05/2013|diesel"
+    },
+    {
+      "title": "BMW 123 D CABRIO AUTO",
+      "year": "06/2009",
+      "km": 2009220000,
+      "fuel": "Diesel",
+      "price": 14990,
+      "url": "https://f2car.com/viaturas/bmw-123--886b3af8-5cb6-4cfe-aa53-ba25a4f92f5d",
+      "vin": null,
+      "registration": null,
+      "id": "380463c0f19bddb3f874",
+      "match_key": "bmw 123 d cabrio auto|06/2009|diesel"
+    },
+    {
+      "title": "BMW 320 320D auto PACK M PERFORMANCE",
+      "year": "11/2017",
+      "km": 2017147000,
+      "fuel": "Diesel",
+      "price": 22900,
+      "url": "https://f2car.com/viaturas/bmw-320--965e95a1-7bd8-43af-a759-42afa9b72d02",
+      "vin": null,
+      "registration": null,
+      "id": "de1bf821c3cb43789cdd",
+      "match_key": "bmw 320 320d auto pack m performance|11/2017|diesel"
+    },
+    {
+      "title": "BMW 320 i Edition Exclusive",
+      "year": "05/2007",
+      "km": 2007200000,
+      "fuel": "Gasolina",
+      "price": 7990,
+      "url": "https://f2car.com/viaturas/bmw-320--30998c68-e531-46b2-8355-f59da2fe08dd",
+      "vin": null,
+      "registration": null,
+      "id": "b603f6ef22bb7699747f",
+      "match_key": "bmw 320 i edition exclusive|05/2007|gasolina"
+    },
+    {
+      "title": "BMW 330 d xDrive Pack M",
+      "year": "01/2014",
+      "km": 2014175000,
+      "fuel": "Diesel",
+      "price": 22990,
+      "url": "https://f2car.com/viaturas/bmw-330--3c8af894-1540-443f-b16f-994e50060595",
+      "vin": null,
+      "registration": null,
+      "id": "ef26aa3a2c0b3711e57d",
+      "match_key": "bmw 330 d xdrive pack m|01/2014|diesel"
+    },
+    {
+      "title": "BMW 420 Gran Coupé d Pack M Auto",
+      "year": "05/2015",
+      "km": 2015200857,
+      "fuel": "Diesel",
+      "price": 21999,
+      "url": "https://f2car.com/viaturas/bmw-420-gran-coupe--548b15df-0582-4253-aaee-b65e8287820f",
+      "vin": null,
+      "registration": null,
+      "id": "51bb526b03f3b5b09e97",
+      "match_key": "bmw 420 gran coupé d pack m auto|05/2015|diesel"
+    },
+    {
+      "title": "BMW i4 eDrive40 Pack Desportivo M",
+      "year": "04/2024",
+      "km": 202445000,
+      "fuel": null,
+      "price": 45750,
+      "url": "https://f2car.com/viaturas/bmw-i4--733b1fab-59c3-4d86-a823-b86a034d493d",
+      "vin": null,
+      "registration": null,
+      "id": "41a18877f74f35f2e1e7",
+      "match_key": "bmw i4 edrive40 pack desportivo m|04/2024|"
+    },
+    {
+      "title": "BMW i4 eDrive35 Gran Coupe",
+      "year": "08/2023",
+      "km": 202366000,
+      "fuel": null,
+      "price": 36999,
+      "url": "https://f2car.com/viaturas/bmw-i4--6477d0f7-42a4-48d4-a46e-84478a6ec6f0",
+      "vin": null,
+      "registration": null,
+      "id": "c1ec8c6eb5a2d5c6bc05",
+      "match_key": "bmw i4 edrive35 gran coupe|08/2023|"
+    },
+    {
+      "title": "BMW i5 eDrive40 Edição Desportiva M",
+      "year": "08/2024",
+      "km": 202445000,
+      "fuel": null,
+      "price": 48750,
+      "url": "https://f2car.com/viaturas/bmw-i5--de0e45a0-7cf6-4912-9542-86af327f4af7",
+      "vin": null,
+      "registration": null,
+      "id": "17928073c6fe57a6a056",
+      "match_key": "bmw i5 edrive40 edição desportiva m|08/2024|"
+    },
+    {
+      "title": "BMW iX xDrive 40 Pack Desportivo",
+      "year": "12/2022",
+      "km": 202260400,
+      "fuel": null,
+      "price": 47990,
+      "url": "https://f2car.com/viaturas/bmw-ix--e5ce8ecc-670c-46b7-866c-3ff82808c110",
+      "vin": null,
+      "registration": null,
+      "id": "8b830c945da355e69496",
+      "match_key": "bmw ix xdrive 40 pack desportivo|12/2022|"
+    }
+  ]
+}
