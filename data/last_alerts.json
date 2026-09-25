@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T15:24:34.467651+00:00",
+  "generated_at": "2026-09-25T17:00:43.680354+00:00",
   "base_date": "2026-09-25",
   "alerts": [
     {
@@ -73,22 +73,176 @@
           "supplier_now": 78000
         }
       }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Peugeot 3008 1.2 PureTech Allure Pack",
+        "year": "2019",
+        "km": 160000,
+        "fuel": "Eléctrico",
+        "price": 14900,
+        "url": "https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID179219.html",
+        "vin": null,
+        "registration": null,
+        "id": "30fc122d166a79a8925f",
+        "match_key": "peugeot 3008 1 2 puretech allure pack|2019|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "BMW 116 SWAP M4",
+        "year": "2013",
+        "km": 100000,
+        "fuel": "Eléctrico",
+        "price": 39900,
+        "url": "https://www.mh33car.pt/viatura/bmw-116-swap-m4-ID179144.html",
+        "vin": null,
+        "registration": null,
+        "id": "2ed6c62daf3750f24598",
+        "match_key": "bmw 116 swap m4|2013|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line",
+        "year": "2014",
+        "km": 160000,
+        "fuel": "Eléctrico",
+        "price": 17900,
+        "url": "https://www.mh33car.pt/viatura/mercedes-benz-gla-220-d-4matic-7g-dct-amg-line-ID179014.html",
+        "vin": null,
+        "registration": null,
+        "id": "680be8f4ea9ff7ec1c26",
+        "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|2014|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
+        "year": "2023",
+        "km": 160000,
+        "fuel": "Eléctrico",
+        "price": 14900,
+        "url": "https://www.mh33car.pt/viatura/peugeot-208-1-2-puretech-allure-pack-eat8-ID178858.html",
+        "vin": null,
+        "registration": null,
+        "id": "44013d61f1294b995a5b",
+        "match_key": "peugeot 208 1 2 puretech allure pack eat8|2023|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Opel Crossland X 1.2 T Innovation",
+        "year": "2020",
+        "km": 95000,
+        "fuel": "Eléctrico",
+        "price": 14900,
+        "url": "https://www.mh33car.pt/viatura/opel-crossland-x-1-2-t-innovation-ID178846.html",
+        "vin": null,
+        "registration": null,
+        "id": "925e2e8adbf914d0e953",
+        "match_key": "opel crossland x 1 2 t innovation|2020|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "BMW 318 d Sport Line",
+        "year": "2014",
+        "km": 250000,
+        "fuel": "Eléctrico",
+        "price": 15900,
+        "url": "https://www.mh33car.pt/viatura/bmw-318-d-sport-line-ID178610.html",
+        "vin": null,
+        "registration": null,
+        "id": "f9441db6ad4955f6a5b6",
+        "match_key": "bmw 318 d sport line|2014|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Peugeot 5008 1.2 PureTech Allure Pack",
+        "year": "2018",
+        "km": 190000,
+        "fuel": "Eléctrico",
+        "price": 14900,
+        "url": "https://www.mh33car.pt/viatura/peugeot-5008-1-2-puretech-allure-pack-ID178412.html",
+        "vin": null,
+        "registration": null,
+        "id": "d17785eed76f59c6e831",
+        "match_key": "peugeot 5008 1 2 puretech allure pack|2018|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "VW Golf 2.0 TDi GTD",
+        "year": "2014",
+        "km": 240000,
+        "fuel": "Eléctrico",
+        "price": 15000,
+        "url": "https://www.mh33car.pt/viatura/vw-golf-2-0-tdi-gtd-ID178376.html",
+        "vin": null,
+        "registration": null,
+        "id": "d1ed6e85138250b79218",
+        "match_key": "vw golf 2 0 tdi gtd|2014|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Peugeot 3008 1.2 PureTech Allure Pack",
+        "year": "2018",
+        "km": 240000,
+        "fuel": "Eléctrico",
+        "price": 14900,
+        "url": "https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html",
+        "vin": null,
+        "registration": null,
+        "id": "931ca798d6e6e2a9f544",
+        "match_key": "peugeot 3008 1 2 puretech allure pack|2018|eléctrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Nissan Qashqai 1.5 dCi N-Style",
+        "year": "2018",
+        "km": 200000,
+        "fuel": "Eléctrico",
+        "price": 15500,
+        "url": "https://www.mh33car.pt/viatura/nissan-qashqai-1-5-dci-n-style-ID177982.html",
+        "vin": null,
+        "registration": null,
+        "id": "2431668198b08324a776",
+        "match_key": "nissan qashqai 1 5 dci n style|2018|eléctrico"
+      }
     }
   ],
   "failures": [
     {
-      "site": "MH33CAR",
+      "site": "FTC Automóveis",
       "diagnostics": [
-        "chromium_final=https://www.mh33car.pt/viatura/nissan-qashqai-1-5-dci-n-style-ID177982.html title='MH33car - Nissan Qashqai 1.5 dCi N-Style em Vila Nova de Gaia Porto' html_bytes=37828 body_chars=2223",
+        "http=429 bytes=33955 final=https://ftcautomoveis.pt/viaturas",
+        "chromium_final=https://ftcautomoveis.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31334 body_chars=129",
         "chromium_stock=0",
-        "chromium_links=[{\"text\": \"VIATURAS\", \"href\": \"https://www.mh33car.pt/viaturas\"}, {\"text\": \"Intermediação de Crédito\", \"href\": \"https://www.mh33car.pt/viatura/intermediacao\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/nissan-qashqai-1-5-dci-n-style-ID177982.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/nissan-qashqai-1-5-dci-n-style-ID177982.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/nissan-qashqai-1-5-dci-n-style-ID177982.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/nissan-qashqai-1-5-dci-n-style-ID177982.html\"}]"
-      ]
-    },
-    {
-      "site": "Gaia Concept Car",
-      "diagnostics": [
-        "http=429 bytes=33940 final=https://www.gaiaconceptcar.pt/",
-        "chromium_error=NameError:name 'extract_gaia_stock_from_links' is not defined"
+        "chromium_links=[]"
       ]
     }
   ]
