@@ -67,26 +67,39 @@ def parse(text, url):
     return v
 
 def parse_mh33_detail(soup, url):
-    # MH33CAR detail pages may render only a small client-side shell. Extract
-    # vehicle facts from visible text, metadata, JSON-LD and raw HTML labels.
+    # MH33CAR detail pages can expose the vehicle data in labels, meta tags,
+    # data-* attributes or embedded JSON/JS while the visible page remains a
+    # very small client-side shell. Extract from all of those sources.
     raw = str(soup)
+
     title_tag = soup.title.get_text(" ", strip=True) if soup.title else ""
     title_fallback = re.sub(r"^MH33car\s*-\s*", "", norm(title_tag), flags=re.I)
     title_fallback = re.sub(r"\s+em\s+Vila Nova de Gaia.*$", "", title_fallback, flags=re.I).strip()
 
     texts = [norm(soup.get_text(" ", strip=True))]
-    for tag in soup.find_all(["meta", "h1", "h2"]):
+
+    for tag in soup.find_all(["meta", "h1", "h2", "h3", "span", "div", "li"]):
         val = norm(tag.get("content", "") if tag.name == "meta" else tag.get_text(" ", strip=True))
-        if val:
+        if val and len(val) <= 500:
             texts.append(val)
 
-    # JSON-LD and embedded JS are searched as raw text as well as parsed JSON.
+        # Some dealer platforms keep the actual value in data-* attributes.
+        for attr, value in tag.attrs.items():
+            if attr.startswith("data-") and isinstance(value, str):
+                value = norm(value)
+                if value:
+                    texts.append(value)
+
     for script in soup.find_all("script"):
         raw_script = script.string or script.get_text()
         if raw_script:
             texts.append(norm(raw_script))
 
+    # Also search the raw HTML. HTML entities and escaped JSON are handled by
+    # the BeautifulSoup-derived text above, while this catches attribute-level
+    # values that are not rendered as text.
     all_text = " ".join(texts)
+    raw_lower = raw.lower()
 
     def first_num(patterns, source):
         for pat in patterns:
@@ -95,24 +108,31 @@ def parse_mh33_detail(soup, url):
                 return m.group(1)
         return None
 
+    # Prefer values tied to explicit field names. This avoids accidentally
+    # picking the numeric ID from the URL or unrelated framework data.
     price_raw = first_num([
-        r'"(?:price|preco|preço|sellingPrice|salePrice)"\s*[:=]\s*["\']?([0-9][0-9 .]*)',
-        r'(?:preço|preco|price|valor)\s*[:=]?\s*([0-9][0-9 .]*)\s*€',
-        r'([0-9][0-9 .]*)\s*€'
-    ], all_text)
+        r'(?:"price"|"preco"|"preço"|"sellingPrice"|"salePrice")\s*[:=]\s*["\']?([0-9][0-9 .]*)(?:,[0-9]+|\.[0-9]+)?',
+        r'(?:preço|preco|price|valor|selling\s*price|sale\s*price)\s*[:=]?\s*([0-9][0-9 .]*)(?:,[0-9]+|\.[0-9]+)?\s*€',
+        r'(?:preço|preco|price|valor)\s*[^0-9]{0,40}([0-9][0-9 .]*)(?:,[0-9]+|\.[0-9]+)?\s*€',
+        r'([0-9]{1,3}(?:[ .][0-9]{3})+|[0-9]{4,6})\s*(?:€|EUR)'
+    ], all_text + " " + raw_lower)
+
     km_raw = first_num([
-        r'"(?:mileage|kilometers|kilometres|quilometros|quilómetros|kms|km)"\s*[:=]\s*["\']?([0-9][0-9 .]*)',
-        r'(?:quilómetros|quilometros|kilometers|kilometres|kms|km)\s*[:=]?\s*([0-9][0-9 .]*)',
-        r'([0-9]{1,3}(?:[ .][0-9]{3})+)\s*km\b'
-    ], all_text)
+        r'(?:"mileage"|"kilometers"|"kilometres"|"quilometros"|"quilómetros"|"kms"|"km")\s*[:=]\s*["\']?([0-9][0-9 .]*)',
+        r'(?:quilómetros|quilometros|kilometers|kilometres|quilometragem|kms?|km)\s*[:=]?\s*([0-9][0-9 .]*)',
+        r'([0-9]{1,3}(?:[ .][0-9]{3})+|[0-9]{4,7})\s*(?:km|kms|quilómetros|quilometros)\b'
+    ], all_text + " " + raw_lower)
+
     year = None
     ym = re.search(r'\b(0[1-9]|1[0-2])/(20\d{2})\b', all_text)
     if ym:
         year = ym.group(0)
     else:
-        ym2 = re.search(r'\b(20\d{2})\b', all_text)
-        if ym2:
-            year = ym2.group(1)
+        # Dealer pages commonly show the registration/month-year first. If it
+        # is absent, use a standalone vehicle year from the page.
+        years = re.findall(r'\b(20(?:0\d|1\d|2[0-9]))\b', all_text)
+        if years:
+            year = years[0]
 
     fuel = next((x for x in ["Híbrido Plug-In", "Eléctrico", "Elétrico", "Diesel", "Gasolina", "Híbrido"]
                  if x.lower() in all_text.lower()), None)
@@ -120,10 +140,12 @@ def parse_mh33_detail(soup, url):
     if price_raw and km_raw:
         price = int(re.sub(r"\D", "", price_raw))
         kms = int(re.sub(r"\D", "", km_raw))
+
         title = title_fallback
-        if len(title) < 4:
-            # Prefer the first useful heading/meta title rather than navigation.
-            title = next((t for t in texts if 4 <= len(t) <= 180), "")
+        if len(title) < 4 or title.lower().startswith(("viaturas", "ordenar por", "intermediação")):
+            title = re.sub(r"-ID\d+\.html$", "", url.rstrip("/").rsplit("/", 1)[-1], flags=re.I)
+            title = re.sub(r"[-_]+", " ", title).strip()
+
         if len(title) >= 4:
             key = "|".join([clean_name(title), year or "", clean_name(fuel or "")])
             return {
@@ -133,21 +155,6 @@ def parse_mh33_detail(soup, url):
                 "match_key": key
             }
 
-    # Last fallback: use the vehicle slug as title and only accept it if
-    # price/km are actually present somewhere in the HTML.
-    slug = url.rstrip("/").rsplit("/", 1)[-1]
-    slug = re.sub(r"-ID\d+\.html$", "", slug, flags=re.I)
-    slug = re.sub(r"[-_]+", " ", slug)
-    if price_raw and km_raw and len(slug) >= 4:
-        price = int(re.sub(r"\D", "", price_raw))
-        kms = int(re.sub(r"\D", "", km_raw))
-        key = "|".join([clean_name(slug), year or "", clean_name(fuel or "")])
-        return {
-            "title": slug[:180], "year": year, "km": kms, "fuel": fuel,
-            "price": price, "url": url, "vin": None, "registration": None,
-            "id": hashlib.sha1(key.encode("utf-8")).hexdigest()[:20],
-            "match_key": key
-        }
     return None
 
 
