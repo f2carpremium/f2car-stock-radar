@@ -158,9 +158,9 @@ def parse_mh33_detail(soup, url):
 
     model_text = (title_fallback + " " + url).lower()
     if fuel is None:
-        if re.search(r'\\b(dci|tdi|cdi|hdi|bluehdi|multijet|d-4d|d4d|crdi)\\b', model_text):
+        if re.search(r'\\b(dci|tdi|cdi|hdi|bluehdi|multijet|d-4d|d4d|crdi)\\b|\\bd\\b', model_text):
             fuel = "Diesel"
-        elif re.search(r'puretech|tsi|tfsi|mpi|ecoboost|vti|thp|tce', model_text):
+        elif re.search(r'puretech|tsi|tfsi|mpi|ecoboost|vti|thp|tce|116\\s*swap\\s*m4|1\\.2\\s*t', model_text):
             fuel = "Gasolina"
         elif re.search(r'\\belétric(?:o|a)\\b|\\beletrico\\b|electric', model_text):
             fuel = "Elétrico"
