@@ -134,8 +134,36 @@ def parse_mh33_detail(soup, url):
         if years:
             year = years[0]
 
-    fuel = next((x for x in ["Híbrido Plug-In", "Eléctrico", "Elétrico", "Diesel", "Gasolina", "Híbrido"]
-                 if x.lower() in all_text.lower()), None)
+    # Do not take the first fuel word from the whole page: MH33CAR pages
+    # contain generic filter/navigation text such as "Elétrico", which can
+    # otherwise make every vehicle appear electric. Prefer a value tied to an
+    # explicit fuel field, then use conservative model-name inference.
+    fuel = None
+    fuel_values = ["Híbrido Plug-In", "Elétrico", "Elétrico", "Diesel", "Gasolina", "Híbrido"]
+    fuel_patterns = [
+        r'(?:combustível|combustivel|tipo\\s+de\\s+combustível|tipo\\s+de\\s+combustivel|fuel|fuelType|fuel_type)\\s*[:=\\-]?\\s*([^,;|\\n]{0,60})',
+        r'(?:combustível|combustivel|tipo\\s+de\\s+combustível|tipo\\s+de\\s+combustivel)\\s*([^,;|\\n]{0,60})'
+    ]
+    for pat in fuel_patterns:
+        m = re.search(pat, all_text, re.I)
+        if not m:
+            continue
+        window = m.group(1)
+        for value in fuel_values:
+            if value.lower() in window.lower():
+                fuel = value
+                break
+        if fuel:
+            break
+
+    model_text = (title_fallback + " " + url).lower()
+    if fuel is None:
+        if re.search(r'\\b(dci|tdi|cdi|hdi|bluehdi|multijet|d-4d|d4d|crdi)\\b', model_text):
+            fuel = "Diesel"
+        elif re.search(r'puretech|tsi|tfsi|mpi|ecoboost|vti|thp|tce', model_text):
+            fuel = "Gasolina"
+        elif re.search(r'\\belétric(?:o|a)\\b|\\beletrico\\b|electric', model_text):
+            fuel = "Elétrico"
 
     if price_raw and km_raw:
         price = int(re.sub(r"\D", "", price_raw))
