@@ -244,6 +244,55 @@ def scrape(url):
     diagnostics = []
     browser_first = any(host in url for host in ["cemporcentocar.pt", "mh33car.pt"])
 
+    # MH33CAR: obtain the public detail URLs with plain HTTP first. This is
+    # deliberately before Chromium because the stock index can occasionally
+    # hang or time out in Playwright even though the public index responds.
+    if "mh33car.pt" in url:
+        try:
+            rr = requests.get("https://www.mh33car.pt/viaturas", headers=HEAD,
+                               timeout=CFG["timeout_seconds"])
+            diagnostics.append(f"mh33_http={rr.status_code} bytes={len(rr.content)} final={rr.url}")
+            if rr.ok:
+                index_soup = BeautifulSoup(rr.text, "html.parser")
+                detail_urls = []
+                seen_urls = set()
+                for a in index_soup.find_all("a", href=True):
+                    href = urljoin(rr.url, a.get("href", ""))
+                    if "/viatura/" in href and href not in seen_urls:
+                        seen_urls.add(href)
+                        detail_urls.append(href)
+                diagnostics.append(f"mh33_detail_urls={len(detail_urls)}")
+                if detail_urls:
+                    try:
+                        with sync_playwright() as p:
+                            browser = p.chromium.launch(headless=True, args=["--disable-blink-features=AutomationControlled"])
+                            page = browser.new_page(user_agent=HEAD["User-Agent"], viewport={"width": 1440, "height": 1000}, locale="pt-PT")
+                            stock = []
+                            for detail_url in detail_urls[:80]:
+                                try:
+                                    page.goto(detail_url, wait_until="domcontentloaded",
+                                              timeout=CFG["timeout_seconds"] * 1000)
+                                    page.wait_for_timeout(1800)
+                                    detail_soup = BeautifulSoup(page.content(), "html.parser")
+                                    v = parse_mh33_detail(detail_soup, detail_url)
+                                    if v:
+                                        stock.append(v)
+                                except Exception as e:
+                                    diagnostics.append(f"mh33_detail_error={type(e).__name__}:{detail_url}")
+                            browser.close()
+                        merged, seen = [], set()
+                        for v in stock:
+                            if v["id"] not in seen:
+                                merged.append(v)
+                                seen.add(v["id"])
+                        diagnostics.append(f"mh33_http_path_stock={len(merged)}")
+                        if merged:
+                            return merged, diagnostics
+                    except Exception as e:
+                        diagnostics.append(f"mh33_browser_details_error={type(e).__name__}:{e}")
+        except Exception as e:
+            diagnostics.append(f"mh33_http_error={type(e).__name__}:{e}")
+
     if not browser_first:
         try:
             r = requests.get(url, headers=HEAD, timeout=CFG["timeout_seconds"])
