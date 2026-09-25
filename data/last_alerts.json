@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-25T17:37:29.123894+00:00",
+  "generated_at": "2026-09-25T18:12:16.844626+00:00",
   "base_date": "2026-09-25",
   "alerts": [
     {
@@ -77,9 +77,12 @@
   ],
   "failures": [
     {
-      "site": "MH33CAR",
+      "site": "Gaia Concept Car",
       "diagnostics": [
-        "chromium_error=TimeoutError:Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.mh33car.pt/viaturas\", waiting until \"domcontentloaded\"\n"
+        "http=429 bytes=33950 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31340 body_chars=129",
+        "chromium_stock=0",
+        "chromium_links=[]"
       ]
     }
   ]
