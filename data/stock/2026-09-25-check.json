@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-25T09:03:51.731278+00:00",
+  "checked_at": "2026-09-25T09:06:02.135345+00:00",
   "base_date": "2026-09-25",
   "base_count": 52,
   "suppliers": {
@@ -384,16 +384,18 @@
     {
       "site": "MH33CAR",
       "diagnostics": [
-        "chromium_final=https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html title='MH33car - Peugeot 3008 1.2 PureTech Allure Pack em Vila Nova de Gaia Porto' html_bytes=21155 body_chars=905",
+        "chromium_final=https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html title='MH33car - Peugeot 3008 1.2 PureTech Allure Pack em Vila Nova de Gaia Porto' html_bytes=37004 body_chars=2149",
         "chromium_stock=0",
-        "chromium_links=[{\"text\": \"Intermediação de Crédito\", \"href\": \"https://www.mh33car.pt/viatura/intermediacao\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}]"
+        "chromium_links=[{\"text\": \"VIATURAS\", \"href\": \"https://www.mh33car.pt/viaturas\"}, {\"text\": \"Intermediação de Crédito\", \"href\": \"https://www.mh33car.pt/viatura/intermediacao\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}]"
       ]
     },
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33938 final=https://www.gaiaconceptcar.pt/",
-        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
+        "http=429 bytes=33943 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=371084 body_chars=4352",
+        "chromium_stock=0",
+        "chromium_links=[{\"text\": \"Stock\", \"href\": \"https://gaiaconceptcar.pt/viaturas\"}, {\"text\": \"Stock\", \"href\": \"https://gaiaconceptcar.pt/viaturas\"}, {\"text\": \"Ver viaturas\", \"href\": \"https://gaiaconceptcar.pt/viaturas\"}, {\"text\": \"Fiat 500e 3 + 1 La Prima by Bocelli 20 850 € 09/2023 29 800 km Eléctrico Automática 118 cv Citadino \", \"href\": \"https://gaiaconceptcar.pt/viaturas/fiat-500e-3-1--831b2403-a700-48d1-bf6f-405536fb6839\"}, {\"text\": \"Dacia Spring Electric 45 Comfort 12 950 € 01/2023 12 000 km Eléctrico Automática 45 cv Citadino 5 lu\", \"href\": \"https://gaiaconceptcar.pt/viaturas/dacia-spring--9c2a8cb1-da55-41f2-b43c-f9610d843e63\"}, {\"text\": \"Dacia Spring Electric 65 Extreme 12 950 € 02/2023 32 250 km Eléctrico Automática 65 cv Citadino 5 lu\", \"href\": \"https://gaiaconceptcar.pt/viaturas/dacia-spring--31da18ab-b5fe-4259-bf7e-e14682f0c4bf\"}, {\"text\": \"Fiat 500e 16 950 € 02/2023 37 200 km Eléctrico Automática 118 cv Citadino 4 lug. IVA Dedutível : Sim\", \"href\": \"https://gaiaconceptcar.pt/viaturas/fiat-500e--24b98a22-cbd1-46ac-978d-dec536be58df\"}, {\"text\": \"Peugeot e-208 50 kWh GT Pack 19 900 € 10/2022 1342 km Eléctrico Automática 136 cv Citadino 5 lug. IV\", \"href\": \"https://gaiaconceptcar.pt/viaturas/peugeot-e-208--741bf28b-1c9e-49d3-bbc0-03a1a91b59f6\"}, {\"text\": \"Ver tudo ( 11 ) Mostrar todas as 11 viaturas\", \"href\": \"https://gaiaconceptcar.pt/viaturas\"}, {\"text\": \"Citroen e-C4 X 50 kWh Shine Pack 25 900 € 06/2023 150 km Eléctrico Automática 136 cv Sedan 5 lug. IV\", \"href\": \"https://gaiaconceptcar.pt/viaturas/citroen-e-c4-x--d074ed62-2169-48df-b43b-1c2a40d58d96\"}, {\"text\": \"Dacia Spring Electric 65 Extreme 15 500 € 08/2024 22 135 km Eléctrico Automática 65 cv Citadino 5 lu\", \"href\": \"https://gaiaconceptcar.pt/viaturas/dacia-spring--804a494a-dbf3-4af3-a0de-01c5deeb3a13\"}, {\"text\": \"Dacia Spring EXTREME 12 950 € 09/2023 12 465 km Eléctrico Automática 65 cv Citadino 5 lug. IVA Dedut\", \"href\": \"https://gaiaconceptcar.pt/viaturas/dacia-spring--226d7d49-e55c-4fa6-9391-58c8d842b4c5\"}, {\"text\": \"Dacia Spring EXTREME 12 950 € 12 500 € 10/2023 21 500 km Eléctrico Automática 65 cv Citadino 5 lug. \", \"href\": \"https://gaiaconceptcar.pt/viaturas/dacia-spring--d6de34e8-0c8d-4492-8341-00f87f292e47\"}, {\"text\": \"Citroen e-C4 50 kWh Feel 20 950 € 06/2023 22 400 km Eléctrico Automática 136 cv Sedan 5 lug. IVA Ded\", \"href\": \"https://gaiaconceptcar.pt/viaturas/citroen-e-c4--e8009dba-f878-4243-b78f-594ebe401359\"}, {\"text\": \"Leapmotor T03 37.3kWh 14 500 € 03/2024 40 800 km Eléctrico Automática 95 cv Citadino IVA Discriminad\", \"href\": \"https://gaiaconceptcar.pt/viaturas/leapmotor-t03--9fd61502-2e65-48b7-b867-796bb2a26f66\"}, {\"text\": \"Ver tudo ( 11 ) Mostrar todas as 11 viaturas\", \"href\": \"https://gaiaconceptcar.pt/viaturas\"}, {\"text\": \"Veículos\", \"href\": \"https://gaiaconceptcar.pt/viaturas\"}]"
       ]
     }
   ],
