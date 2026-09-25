@@ -1,38 +1,94 @@
 {
-  "generated_at": "2026-09-24T17:08:38.854642+00:00",
-  "base_date": "2026-09-24",
-  "alerts": [],
-  "failures": [
+  "generated_at": "2026-09-25T09:03:51.731278+00:00",
+  "base_date": "2026-09-25",
+  "alerts": [
     {
-      "site": "100%Car",
-      "diagnostics": [
-        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31335 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
-      ]
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26999,
+        "url": "https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "BYD Dolphin Surf 43.2 kWh Comfort",
+        "year": "04/2026",
+        "km": 2594,
+        "fuel": "Eléctrico",
+        "price": 26990,
+        "url": "https://f2car.com/viaturas/byd-dolphin-surf--30453ac5-8ddf-4537-babe-1f0613536c56",
+        "vin": null,
+        "registration": null,
+        "id": "abafb68c23d6ed658a39",
+        "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 26990,
+          "supplier_now": 26999
+        }
+      }
     },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Jaguar I-Pace SE AWD Aut.",
+        "year": "12/2018",
+        "km": 78000,
+        "fuel": "Eléctrico",
+        "price": 25990,
+        "url": "https://cemporcentocar.pt/viaturas/jaguar-i-pace--98eae604-0081-4042-bcde-a6bcc0e5af78",
+        "vin": null,
+        "registration": null,
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      "f2_vehicle": {
+        "title": "Jaguar I-Pace SE AWD Aut.",
+        "year": "12/2018",
+        "km": 72000,
+        "fuel": "Eléctrico",
+        "price": 27750,
+        "url": "https://f2car.com/viaturas/jaguar-i-pace--1b820954-3f67-4bb0-86c6-4f149bdf9ca1",
+        "vin": null,
+        "registration": null,
+        "id": "f98b3e3dc860de172f0f",
+        "match_key": "jaguar i pace se awd aut|12/2018|eléctrico"
+      },
+      "changes": {
+        "price": {
+          "f2_base": 27750,
+          "supplier_now": 25990
+        },
+        "km": {
+          "f2_base": 72000,
+          "supplier_now": 78000
+        }
+      }
+    }
+  ],
+  "failures": [
     {
       "site": "MH33CAR",
       "diagnostics": [
-        "chromium_final=https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html title='MH33car - Peugeot 3008 1.2 PureTech Allure Pack em Vila Nova de Gaia Porto' html_bytes=21198 body_chars=905",
+        "chromium_final=https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html title='MH33car - Peugeot 3008 1.2 PureTech Allure Pack em Vila Nova de Gaia Porto' html_bytes=21155 body_chars=905",
         "chromium_stock=0",
         "chromium_links=[{\"text\": \"Intermediação de Crédito\", \"href\": \"https://www.mh33car.pt/viatura/intermediacao\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}, {\"text\": \"\", \"href\": \"https://www.mh33car.pt/viatura/peugeot-3008-1-2-puretech-allure-pack-ID178205.html\"}]"
       ]
     },
     {
-      "site": "FTC Automóveis",
-      "diagnostics": [
-        "http=429 bytes=33953 final=https://ftcautomoveis.pt/viaturas",
-        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
-      ]
-    },
-    {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33939 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31335 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
+        "http=429 bytes=33938 final=https://www.gaiaconceptcar.pt/",
+        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
       ]
     }
   ]
