@@ -158,6 +158,31 @@ def parse_mh33_detail(soup, url):
     return None
 
 
+def extract_gaia_stock_from_links(soup, url):
+    # Gaia may return a Vercel checkpoint shell while still exposing the
+    # public vehicle-card links and their text in the HTML.
+    out, seen_urls, seen_ids = [], set(), set()
+    for a in soup.find_all("a", href=True):
+        href = urljoin(url, a.get("href", ""))
+        if "/viaturas/" not in href or href in seen_urls:
+            continue
+        seen_urls.add(href)
+        candidates = [norm(a.get_text(" ", strip=True))]
+        node = a.parent
+        for _ in range(4):
+            if node:
+                candidates.append(norm(node.get_text(" ", strip=True)))
+                node = node.parent
+        for txt in candidates:
+            if len(txt) < 20 or len(txt) > 1500:
+                continue
+            v = parse(txt, href)
+            if v and v["id"] not in seen_ids:
+                out.append(v)
+                seen_ids.add(v["id"])
+                break
+    return out
+
 def extract_stock(soup, url):
     out, seen_ids, seen_urls = [], set(), set()
     anchors = soup.find_all("a", href=lambda h: h and ("/viaturas/" in h or "/viatura/" in h))
@@ -279,18 +304,36 @@ def scrape(url):
                 soup = BeautifulSoup(page.content(), "html.parser")
                 detail_urls = []
                 seen_urls = set()
-                for a in soup.find_all("a", href=True):
-                    href = urljoin(page.url, a.get("href", ""))
-                    if "/viatura/" in href and href not in seen_urls:
-                        seen_urls.add(href)
-                        detail_urls.append(href)
+
+                # Prefer the public stock index over a possible redirect to a
+                # single vehicle. The index can still be fetched by HTTP even
+                # when Chromium lands on the first detail page.
+                try:
+                    rr = requests.get("https://www.mh33car.pt/viaturas",
+                                      headers=HEAD, timeout=CFG["timeout_seconds"])
+                    if rr.ok:
+                        index_soup = BeautifulSoup(rr.text, "html.parser")
+                        for a in index_soup.find_all("a", href=True):
+                            href = urljoin(rr.url, a.get("href", ""))
+                            if "/viatura/" in href and href not in seen_urls:
+                                seen_urls.add(href)
+                                detail_urls.append(href)
+                except Exception:
+                    pass
+
+                if not detail_urls:
+                    for a in soup.find_all("a", href=True):
+                        href = urljoin(page.url, a.get("href", ""))
+                        if "/viatura/" in href and href not in seen_urls:
+                            seen_urls.add(href)
+                            detail_urls.append(href)
 
                 stock = []
                 for detail_url in detail_urls[:80]:
                     try:
                         page.goto(detail_url, wait_until="domcontentloaded",
                                   timeout=CFG["timeout_seconds"] * 1000)
-                        page.wait_for_timeout(500)
+                        page.wait_for_timeout(2200)
                         detail_soup = BeautifulSoup(page.content(), "html.parser")
                         v = parse_mh33_detail(detail_soup, detail_url)
                         if v:
