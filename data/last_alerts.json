@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-27T09:03:53.603284+00:00",
-  "base_date": "2026-09-27",
+  "generated_at": "2026-09-28T09:05:40.296867+00:00",
+  "base_date": "2026-09-28",
   "alerts": [],
   "failures": [
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33944 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://www.gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31330 body_chars=129",
+        "http=429 bytes=33939 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31329 body_chars=129",
         "chromium_stock=0",
         "chromium_links=[]"
       ]
