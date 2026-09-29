@@ -1,4 +1,4 @@
-import json, re, hashlib, os, sys
+import json, re, hashlib, os, sys, unicodedata
 from datetime import datetime, timezone
 from urllib.parse import urljoin
 import requests
@@ -25,8 +25,49 @@ def number(pattern, s):
 
 def clean_name(s):
     s = norm(s).lower()
-    s = re.sub(r"[^a-z0-9à-ÿ]+", " ", s)
+    s = unicodedata.normalize("NFKD", s)
+    s = "".join(ch for ch in s if not unicodedata.combining(ch))
+    s = re.sub(r"[^a-z0-9]+", " ", s)
     return re.sub(r"\s+", " ", s).strip()
+
+def vehicle_tokens(s):
+    stop = {"destaque", "auto", "aut", "pack", "line", "edition", "exclusive",
+            "sport", "desportivo", "desportiva", "cabrio"}
+    return {t for t in clean_name(s).split() if len(t) > 1 and t not in stop}
+
+def vehicle_similarity(a, b):
+    if a.get("vin") and b.get("vin") and a["vin"] == b["vin"]:
+        return 1.0
+    if a.get("registration") and b.get("registration") and a["registration"] == b["registration"]:
+        return 1.0
+    A, B = vehicle_tokens(a.get("title")), vehicle_tokens(b.get("title"))
+    if not A or not B:
+        return 0.0
+    overlap = len(A & B) / max(1, min(len(A), len(B)))
+    ay, by = a.get("year"), b.get("year")
+    year_ok = not ay or not by or str(ay)[-4:] == str(by)[-4:]
+    ak, bk = a.get("km"), b.get("km")
+    km_ok = True
+    if ak is not None and bk is not None:
+        km_ok = abs(ak - bk) <= max(5000, int(max(ak, bk) * 0.08))
+    af, bf = clean_name(a.get("fuel")), clean_name(b.get("fuel"))
+    fuel_ok = not af or not bf or af == bf or ("eletric" in af and "eletric" in bf)
+    if year_ok and overlap >= 0.78 and km_ok and fuel_ok:
+        return 0.95
+    if year_ok and overlap >= 0.88:
+        return 0.90
+    if year_ok and overlap >= 0.72 and km_ok:
+        return 0.86
+    return overlap * 0.75
+
+def find_f2_match(vehicle, base_stock):
+    for f2 in base_stock:
+        if vehicle.get("match_key") and vehicle.get("match_key") == f2.get("match_key"):
+            return f2, 1.0
+    candidates = [(vehicle_similarity(vehicle, f2), f2) for f2 in base_stock]
+    candidates = [x for x in candidates if x[0] >= 0.84]
+    candidates.sort(key=lambda x: x[0], reverse=True)
+    return candidates[0][1], candidates[0][0] if candidates else (None, 0.0)
 
 def parse(text, url):
     text = norm(text)
@@ -512,16 +553,17 @@ def make_check():
     known_suppliers = state.get("known_suppliers", {})
     pending = state.get("pending_removals", {})
     known_unpublished = state.get("known_unpublished", {})
-    base_by_key = {v["match_key"]: v for v in base_stock}
     base_by_id = {v["id"]: v for v in base_stock}
+    supplier_matches = {}
     alerts = []
     now = datetime.now(timezone.utc).isoformat()
 
     for supplier, stock in suppliers.items():
         current_keys = {v["match_key"] for v in stock}
         for v in stock:
-            f2 = base_by_key.get(v["match_key"])
+            f2, match_score = find_f2_match(v, base_stock)
             if f2:
+                supplier_matches[f"{supplier}::{f2['id']}"] = match_score
                 known_suppliers.setdefault(f2["id"], [])
                 if supplier not in known_suppliers[f2["id"]]:
                     known_suppliers[f2["id"]].append(supplier)
@@ -530,7 +572,7 @@ def make_check():
                     if f2.get(field) != v.get(field):
                         changes[field] = {"f2_base": f2.get(field), "supplier_now": v.get(field)}
                 if changes:
-                    alerts.append({"type": "change", "supplier": supplier, "vehicle": v, "f2_vehicle": f2, "changes": changes})
+                    alerts.append({"type": "change", "supplier": supplier, "vehicle": v, "f2_vehicle": f2, "match_score": round(match_score, 3), "changes": changes})
             else:
                 ukey = f"{supplier}::{v['id']}"
                 if ukey not in known_unpublished:
@@ -542,7 +584,7 @@ def make_check():
             if not f2 or supplier not in suppliers_seen:
                 continue
             pkey = f"{supplier}::{f2id}"
-            if f2["match_key"] in current_keys:
+            if supplier_matches.get(pkey) is not None:
                 pending.pop(pkey, None)
             else:
                 item = pending.get(pkey, {"count": 0, "vehicle": f2, "first_missing": now})
@@ -557,9 +599,8 @@ def make_check():
             continue
         if supplier not in suppliers:
             continue
-        current_keys = {v["match_key"] for v in suppliers[supplier]}
         vehicle = item.get("vehicle", {})
-        if vehicle.get("match_key") in current_keys:
+        if supplier_matches.get(pkey) is not None:
             pending.pop(pkey, None)
             continue
         if int(item.get("count", 0)) >= CFG["removal_confirmations"]:
