@@ -67,7 +67,9 @@ def find_f2_match(vehicle, base_stock):
     candidates = [(vehicle_similarity(vehicle, f2), f2) for f2 in base_stock]
     candidates = [x for x in candidates if x[0] >= 0.84]
     candidates.sort(key=lambda x: x[0], reverse=True)
-    return candidates[0][1], candidates[0][0] if candidates else (None, 0.0)
+    if candidates:
+        return candidates[0][1], candidates[0][0]
+    return None, 0.0
 
 def parse(text, url):
     text = norm(text)
