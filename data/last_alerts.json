@@ -1,13 +1,109 @@
 {
-  "generated_at": "2026-09-29T09:05:55.451863+00:00",
-  "base_date": "2026-09-29",
-  "alerts": [],
+  "generated_at": "2026-10-01T09:05:54.935244+00:00",
+  "base_date": "2026-10-01",
+  "alerts": [
+    {
+      "type": "change",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "DS DS3 3 1.2 PureTech Be Chic",
+        "year": "09/2016",
+        "km": 109839,
+        "fuel": "Gasolina",
+        "price": 17500,
+        "url": "https://ftcautomoveis.pt/viaturas/ds-ds3--8f5faf6c-6949-4b8b-9fe9-3056c4c2150c",
+        "vin": null,
+        "registration": null,
+        "id": "bb37d57872cbb24ee93a",
+        "match_key": "ds ds3 3 1 2 puretech be chic|09/2016|gasolina"
+      },
+      "f2_vehicle": {
+        "title": "DS DS3 1.2 PureTech Be Chic",
+        "year": "09/2016",
+        "km": 110000,
+        "fuel": "Gasolina",
+        "price": 9499,
+        "url": "https://f2car.com/viaturas/ds-ds3--9b892997-5917-4866-80e5-891202eb51c4",
+        "vin": null,
+        "registration": null,
+        "id": "76bf469fa9a22cdf5119",
+        "match_key": "ds ds3 1 2 puretech be chic|09/2016|gasolina"
+      },
+      "match_score": 0.95,
+      "changes": {
+        "price": {
+          "f2_base": 9499,
+          "supplier_now": 17500
+        },
+        "km": {
+          "f2_base": 110000,
+          "supplier_now": 109839
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Iveco Daily Iveco Daily Basculante 35C13 Iva Dedutível",
+        "year": "03/2014",
+        "km": 157000,
+        "fuel": "Diesel",
+        "price": 121990,
+        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--f4d1cef0-c4a8-42e6-83bd-660d36b7e030",
+        "vin": null,
+        "registration": null,
+        "id": "429fb9be70bbbfd47100",
+        "match_key": "iveco daily iveco daily basculante 35c13 iva dedutivel|03/2014|diesel"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Destaque Land Rover Range Rover Sport P400e HSE Dynamic Stealth",
+        "year": "12/2018",
+        "km": 135000,
+        "fuel": "Híbrido Plug-In",
+        "price": 140999,
+        "url": "https://ftcautomoveis.pt/viaturas/land-rover-range-rover-sport--1c37d27a-f326-48c9-9eed-ece353379bb5",
+        "vin": null,
+        "registration": null,
+        "id": "2edc4c55ecc300cd848b",
+        "match_key": "destaque land rover range rover sport p400e hse dynamic stealth|12/2018|hibrido plug in"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Opel Vivaro Opel Vivaro L2H1 120cv IVA DEDUTIVEL",
+        "year": "08/2019",
+        "km": 134200,
+        "fuel": "Diesel",
+        "price": 117990,
+        "url": "https://ftcautomoveis.pt/viaturas/opel-vivaro--b6464508-d2d0-4cd7-93e6-c59f1056072a",
+        "vin": null,
+        "registration": null,
+        "id": "abfc513ed7e33f552c2d",
+        "match_key": "opel vivaro opel vivaro l2h1 120cv iva dedutivel|08/2019|diesel"
+      }
+    }
+  ],
   "failures": [
+    {
+      "site": "100%Car",
+      "diagnostics": [
+        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31333 body_chars=129",
+        "chromium_stock=0",
+        "chromium_links=[]"
+      ]
+    },
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
         "http=429 bytes=33943 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31338 body_chars=129",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31334 body_chars=129",
         "chromium_stock=0",
         "chromium_links=[]"
       ]
