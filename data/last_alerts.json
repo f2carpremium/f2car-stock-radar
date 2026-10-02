@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-01T09:05:54.935244+00:00",
-  "base_date": "2026-10-01",
+  "generated_at": "2026-10-02T09:05:58.168010+00:00",
+  "base_date": "2026-10-02",
   "alerts": [
     {
       "type": "change",
@@ -45,48 +45,16 @@
       "type": "new",
       "supplier": "FTC Automóveis",
       "vehicle": {
-        "title": "Iveco Daily Iveco Daily Basculante 35C13 Iva Dedutível",
-        "year": "03/2014",
-        "km": 157000,
-        "fuel": "Diesel",
-        "price": 121990,
-        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--f4d1cef0-c4a8-42e6-83bd-660d36b7e030",
+        "title": "Porsche 718 Cayman 2.0 Style Edition PDK",
+        "year": "06/2019",
+        "km": 129000,
+        "fuel": "Gasolina",
+        "price": 156990,
+        "url": "https://ftcautomoveis.pt/viaturas/porsche-718-cayman--22283fa3-dfd0-4060-924e-b4a46bdcf601",
         "vin": null,
         "registration": null,
-        "id": "429fb9be70bbbfd47100",
-        "match_key": "iveco daily iveco daily basculante 35c13 iva dedutivel|03/2014|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Destaque Land Rover Range Rover Sport P400e HSE Dynamic Stealth",
-        "year": "12/2018",
-        "km": 135000,
-        "fuel": "Híbrido Plug-In",
-        "price": 140999,
-        "url": "https://ftcautomoveis.pt/viaturas/land-rover-range-rover-sport--1c37d27a-f326-48c9-9eed-ece353379bb5",
-        "vin": null,
-        "registration": null,
-        "id": "2edc4c55ecc300cd848b",
-        "match_key": "destaque land rover range rover sport p400e hse dynamic stealth|12/2018|hibrido plug in"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Opel Vivaro Opel Vivaro L2H1 120cv IVA DEDUTIVEL",
-        "year": "08/2019",
-        "km": 134200,
-        "fuel": "Diesel",
-        "price": 117990,
-        "url": "https://ftcautomoveis.pt/viaturas/opel-vivaro--b6464508-d2d0-4cd7-93e6-c59f1056072a",
-        "vin": null,
-        "registration": null,
-        "id": "abfc513ed7e33f552c2d",
-        "match_key": "opel vivaro opel vivaro l2h1 120cv iva dedutivel|08/2019|diesel"
+        "id": "fa9f947a68e46215245e",
+        "match_key": "porsche 718 cayman 2 0 style edition pdk|06/2019|gasolina"
       }
     }
   ],
@@ -94,7 +62,7 @@
     {
       "site": "100%Car",
       "diagnostics": [
-        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31333 body_chars=129",
+        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31334 body_chars=129",
         "chromium_stock=0",
         "chromium_links=[]"
       ]
@@ -102,10 +70,8 @@
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33943 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31334 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
+        "http=429 bytes=33944 final=https://www.gaiaconceptcar.pt/",
+        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
       ]
     }
   ]
