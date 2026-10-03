@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-02T09:05:58.168010+00:00",
-  "base_date": "2026-10-02",
+  "generated_at": "2026-10-03T09:07:16.510051+00:00",
+  "base_date": "2026-10-03",
   "alerts": [
     {
       "type": "change",
@@ -40,37 +40,28 @@
           "supplier_now": 109839
         }
       }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Porsche 718 Cayman 2.0 Style Edition PDK",
-        "year": "06/2019",
-        "km": 129000,
-        "fuel": "Gasolina",
-        "price": 156990,
-        "url": "https://ftcautomoveis.pt/viaturas/porsche-718-cayman--22283fa3-dfd0-4060-924e-b4a46bdcf601",
-        "vin": null,
-        "registration": null,
-        "id": "fa9f947a68e46215245e",
-        "match_key": "porsche 718 cayman 2 0 style edition pdk|06/2019|gasolina"
-      }
     }
   ],
   "failures": [
     {
       "site": "100%Car",
       "diagnostics": [
-        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31334 body_chars=129",
+        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31339 body_chars=129",
         "chromium_stock=0",
         "chromium_links=[]"
       ]
     },
     {
+      "site": "MH33CAR",
+      "diagnostics": [
+        "mh33_http_error=ConnectionError:HTTPSConnectionPool(host='www.mh33car.pt', port=443): Max retries exceeded with url: /viaturas (Caused by NewConnectionError(\"HTTPSConnection(host='www.mh33car.pt', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
+        "chromium_error=TimeoutError:Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.mh33car.pt/viaturas\", waiting until \"domcontentloaded\"\n"
+      ]
+    },
+    {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33944 final=https://www.gaiaconceptcar.pt/",
+        "http=429 bytes=33948 final=https://www.gaiaconceptcar.pt/",
         "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
       ]
     }
