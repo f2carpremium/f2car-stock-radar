@@ -1,7 +1,332 @@
 {
-  "generated_at": "2026-10-03T09:07:16.510051+00:00",
-  "base_date": "2026-10-03",
+  "generated_at": "2026-10-04T15:51:00.133528+00:00",
+  "base_date": "2026-10-04",
   "alerts": [
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Citroen e-Mehari CABRIO",
+        "year": "07/2016",
+        "km": 30500,
+        "fuel": "Eléctrico",
+        "price": 14750,
+        "url": "https://cemporcentocar.pt/viaturas/citroen-e-mehari--e7ba9a92-a5f3-4ee8-aa4f-0372b0079a7c",
+        "vin": null,
+        "registration": null,
+        "id": "edb7afd836df6c694fc3",
+        "match_key": "citroen e mehari cabrio|07/2016|electrico"
+      },
+      "f2_vehicle": {
+        "title": "Citroen e-Mehari",
+        "year": "05/2016",
+        "km": 35000,
+        "fuel": "Eléctrico",
+        "price": 14990,
+        "url": "https://f2car.com/viaturas/citroen-e-mehari--4a06b7af-2870-403d-849d-700d7e8bcd9d",
+        "vin": null,
+        "registration": null,
+        "id": "b54022d8ccbe07b6ecea",
+        "match_key": "citroen e mehari|05/2016|electrico"
+      },
+      "match_score": 0.95,
+      "changes": {
+        "price": {
+          "f2_base": 14990,
+          "supplier_now": 14750
+        },
+        "km": {
+          "f2_base": 35000,
+          "supplier_now": 30500
+        },
+        "year": {
+          "f2_base": "05/2016",
+          "supplier_now": "07/2016"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Ford Capri 77 kWh Select",
+        "year": "06/2025",
+        "km": 20100,
+        "fuel": "Eléctrico",
+        "price": 33990,
+        "url": "https://cemporcentocar.pt/viaturas/ford-capri--590fd002-ff1a-45e8-9157-e8fb55edd4ad",
+        "vin": null,
+        "registration": null,
+        "id": "641a24d57260b68c8600",
+        "match_key": "ford capri 77 kwh select|06/2025|electrico"
+      },
+      "f2_vehicle": {
+        "title": "Ford Capri 77 kWh Select",
+        "year": "05/2025",
+        "km": 20122,
+        "fuel": "Eléctrico",
+        "price": 34000,
+        "url": "https://f2car.com/viaturas/ford-capri--b7d266ca-9957-4152-a4a8-7f5d8a1446c5",
+        "vin": null,
+        "registration": null,
+        "id": "99398df46ed35dab6b42",
+        "match_key": "ford capri 77 kwh select|05/2025|electrico"
+      },
+      "match_score": 0.95,
+      "changes": {
+        "price": {
+          "f2_base": 34000,
+          "supplier_now": 33990
+        },
+        "km": {
+          "f2_base": 20122,
+          "supplier_now": 20100
+        },
+        "year": {
+          "f2_base": "05/2025",
+          "supplier_now": "06/2025"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 64 kWh Luxury",
+        "year": "02/2024",
+        "km": 21989,
+        "fuel": "Eléctrico",
+        "price": 23990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--bdcb40b9-e2c6-4654-87f1-dc2b240d2214",
+        "vin": null,
+        "registration": null,
+        "id": "9243e37143c05db184d3",
+        "match_key": "mg mg4 64 kwh luxury|02/2024|electrico"
+      },
+      "f2_vehicle": {
+        "title": "MG MG4 64 kWh Luxury",
+        "year": "06/2024",
+        "km": 35000,
+        "fuel": "Eléctrico",
+        "price": 23990,
+        "url": "https://f2car.com/viaturas/mg-mg4--4b9e6700-3429-4c21-af93-fa38de7a348d",
+        "vin": null,
+        "registration": null,
+        "id": "6afec965f30841db1b29",
+        "match_key": "mg mg4 64 kwh luxury|06/2024|electrico"
+      },
+      "match_score": 0.9,
+      "changes": {
+        "km": {
+          "f2_base": 35000,
+          "supplier_now": 21989
+        },
+        "year": {
+          "f2_base": "06/2024",
+          "supplier_now": "02/2024"
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2024",
+        "km": 48600,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--db4696b2-bc07-45d5-baab-11e2d952a251",
+        "vin": null,
+        "registration": null,
+        "id": "4b8cd6255f50bbce1e2e",
+        "match_key": "mg mg4 51 kwh standard|02/2024|electrico"
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "08/2023",
+        "km": 42300,
+        "fuel": "Eléctrico",
+        "price": 18990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--4d17067e-68fc-4a3a-ae41-f13488043c64",
+        "vin": null,
+        "registration": null,
+        "id": "54e625eb2ef15f50c1d6",
+        "match_key": "mg mg4 51 kwh standard|08/2023|electrico"
+      },
+      "f2_vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 42000,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+        "vin": null,
+        "registration": null,
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+      },
+      "match_score": 0.95,
+      "changes": {
+        "price": {
+          "f2_base": 19990,
+          "supplier_now": 18990
+        },
+        "km": {
+          "f2_base": 42000,
+          "supplier_now": 42300
+        },
+        "year": {
+          "f2_base": "02/2023",
+          "supplier_now": "08/2023"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MINI Countryman Cooper SE ALL4 Auto",
+        "year": "12/2019",
+        "km": 120600,
+        "fuel": "Gasolina",
+        "price": 18990,
+        "url": "https://cemporcentocar.pt/viaturas/mini-countryman--1d1e9c5f-4ec3-4a03-86fc-6aa3c02eaf10",
+        "vin": null,
+        "registration": null,
+        "id": "58903e0b0e167863a280",
+        "match_key": "mini countryman cooper se all4 auto|12/2019|gasolina"
+      },
+      "f2_vehicle": {
+        "title": "MINI Countryman Cooper SE All4 Aut.",
+        "year": "12/2019",
+        "km": 120600,
+        "fuel": "Híbrido Plug-In",
+        "price": 18990,
+        "url": "https://f2car.com/viaturas/mini-countryman--8e329324-1b22-4e8e-9a87-c506613beda2",
+        "vin": null,
+        "registration": null,
+        "id": "88deadda2fb7edfd02a4",
+        "match_key": "mini countryman cooper se all4 aut|12/2019|hibrido plug in"
+      },
+      "match_score": 0.9,
+      "changes": {
+        "fuel": {
+          "f2_base": "Híbrido Plug-In",
+          "supplier_now": "Gasolina"
+        }
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Smart ForFour EQ Prime",
+        "year": "08/2020",
+        "km": 53000,
+        "fuel": "Eléctrico",
+        "price": 12750,
+        "url": "https://cemporcentocar.pt/viaturas/smart-forfour--88ce6cab-d076-43c8-9653-90eacb7ced51",
+        "vin": null,
+        "registration": null,
+        "id": "12c42b556941d3152d36",
+        "match_key": "smart forfour eq prime|08/2020|electrico"
+      },
+      "f2_vehicle": {
+        "title": "Smart ForFour EQ Prime",
+        "year": "08/2020",
+        "km": 41000,
+        "fuel": "Eléctrico",
+        "price": 12740,
+        "url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c",
+        "vin": null,
+        "registration": null,
+        "id": "12c42b556941d3152d36",
+        "match_key": "smart forfour eq prime|08/2020|electrico"
+      },
+      "match_score": 1.0,
+      "changes": {
+        "price": {
+          "f2_base": 12740,
+          "supplier_now": 12750
+        },
+        "km": {
+          "f2_base": 41000,
+          "supplier_now": 53000
+        }
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Volvo EX30 51 kWh Single Motor Core",
+        "year": "07/2024",
+        "km": 23850,
+        "fuel": "Eléctrico",
+        "price": 31900,
+        "url": "https://cemporcentocar.pt/viaturas/volvo-ex30--a10ad6ee-6642-486e-9be0-9a7e5fddc8fe",
+        "vin": null,
+        "registration": null,
+        "id": "13dfd7101ff6eb39c839",
+        "match_key": "volvo ex30 51 kwh single motor core|07/2024|electrico"
+      },
+      "f2_vehicle": {
+        "title": "Volvo EX30 51 kWh Single Motor Core",
+        "year": "07/2024",
+        "km": 23850,
+        "fuel": "Eléctrico",
+        "price": 31990,
+        "url": "https://f2car.com/viaturas/volvo-ex30--817b46b2-c806-4a77-ae36-7bd0e72d7e75",
+        "vin": null,
+        "registration": null,
+        "id": "13dfd7101ff6eb39c839",
+        "match_key": "volvo ex30 51 kwh single motor core|07/2024|electrico"
+      },
+      "match_score": 1.0,
+      "changes": {
+        "price": {
+          "f2_base": 31990,
+          "supplier_now": 31900
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "BMW X3 xDrive20d Aut. M Sport",
+        "year": "2015",
+        "km": 109000,
+        "fuel": null,
+        "price": 19900,
+        "url": "https://www.mh33car.pt/viatura/bmw-x3-xdrive20d-aut-m-sport-ID177898.html",
+        "vin": null,
+        "registration": null,
+        "id": "d445dee7df56c3021afc",
+        "match_key": "bmw x3 xdrive20d aut m sport|2015|"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "BMW X1 18 d sDrive Auto xLine",
+        "year": "09/2017",
+        "km": 149000,
+        "fuel": "Diesel",
+        "price": 119900,
+        "url": "https://ftcautomoveis.pt/viaturas/bmw-x1--6e74d45b-c610-4983-9491-6091822ec719",
+        "vin": null,
+        "registration": null,
+        "id": "67eb38915a221fc6fb65",
+        "match_key": "bmw x1 18 d sdrive auto xline|09/2017|diesel"
+      }
+    },
     {
       "type": "change",
       "supplier": "FTC Automóveis",
@@ -40,28 +365,45 @@
           "supplier_now": 109839
         }
       }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Ford Transit FORD TRANSIT 2.4 100CV",
+        "year": "10/2007",
+        "km": 162000,
+        "fuel": "Diesel",
+        "price": 114990,
+        "url": "https://ftcautomoveis.pt/viaturas/ford-transit--a73bd79e-c388-4aac-bad4-c604fabe160b",
+        "vin": null,
+        "registration": null,
+        "id": "f71a150e79665161f11a",
+        "match_key": "ford transit ford transit 2 4 100cv|10/2007|diesel"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Iveco Daily Daily 35C16 Basculante 160 CV",
+        "year": "03/2017",
+        "km": 144000,
+        "fuel": "Diesel",
+        "price": 124990,
+        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--14033fd3-cc5a-4d55-9d63-7424cc11b6d3",
+        "vin": null,
+        "registration": null,
+        "id": "30e6e399cb528a76f3fd",
+        "match_key": "iveco daily daily 35c16 basculante 160 cv|03/2017|diesel"
+      }
     }
   ],
   "failures": [
     {
-      "site": "100%Car",
-      "diagnostics": [
-        "chromium_final=https://cemporcentocar.pt/viaturas title='Vercel Security Checkpoint' html_bytes=31339 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
-      ]
-    },
-    {
-      "site": "MH33CAR",
-      "diagnostics": [
-        "mh33_http_error=ConnectionError:HTTPSConnectionPool(host='www.mh33car.pt', port=443): Max retries exceeded with url: /viaturas (Caused by NewConnectionError(\"HTTPSConnection(host='www.mh33car.pt', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))",
-        "chromium_error=TimeoutError:Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://www.mh33car.pt/viaturas\", waiting until \"domcontentloaded\"\n"
-      ]
-    },
-    {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33948 final=https://www.gaiaconceptcar.pt/",
+        "http=429 bytes=33938 final=https://www.gaiaconceptcar.pt/",
         "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
       ]
     }
