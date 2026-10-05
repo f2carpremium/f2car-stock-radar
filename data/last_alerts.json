@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-04T15:51:00.133528+00:00",
-  "base_date": "2026-10-04",
+  "generated_at": "2026-10-05T09:07:14.795812+00:00",
+  "base_date": "2026-10-05",
   "alerts": [
     {
       "type": "change",
@@ -125,22 +125,6 @@
           "f2_base": "06/2024",
           "supplier_now": "02/2024"
         }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2024",
-        "km": 48600,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--db4696b2-bc07-45d5-baab-11e2d952a251",
-        "vin": null,
-        "registration": null,
-        "id": "4b8cd6255f50bbce1e2e",
-        "match_key": "mg mg4 51 kwh standard|02/2024|electrico"
       }
     },
     {
@@ -296,38 +280,6 @@
       }
     },
     {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "BMW X3 xDrive20d Aut. M Sport",
-        "year": "2015",
-        "km": 109000,
-        "fuel": null,
-        "price": 19900,
-        "url": "https://www.mh33car.pt/viatura/bmw-x3-xdrive20d-aut-m-sport-ID177898.html",
-        "vin": null,
-        "registration": null,
-        "id": "d445dee7df56c3021afc",
-        "match_key": "bmw x3 xdrive20d aut m sport|2015|"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "BMW X1 18 d sDrive Auto xLine",
-        "year": "09/2017",
-        "km": 149000,
-        "fuel": "Diesel",
-        "price": 119900,
-        "url": "https://ftcautomoveis.pt/viaturas/bmw-x1--6e74d45b-c610-4983-9491-6091822ec719",
-        "vin": null,
-        "registration": null,
-        "id": "67eb38915a221fc6fb65",
-        "match_key": "bmw x1 18 d sdrive auto xline|09/2017|diesel"
-      }
-    },
-    {
       "type": "change",
       "supplier": "FTC Automóveis",
       "vehicle": {
@@ -365,46 +317,16 @@
           "supplier_now": 109839
         }
       }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Ford Transit FORD TRANSIT 2.4 100CV",
-        "year": "10/2007",
-        "km": 162000,
-        "fuel": "Diesel",
-        "price": 114990,
-        "url": "https://ftcautomoveis.pt/viaturas/ford-transit--a73bd79e-c388-4aac-bad4-c604fabe160b",
-        "vin": null,
-        "registration": null,
-        "id": "f71a150e79665161f11a",
-        "match_key": "ford transit ford transit 2 4 100cv|10/2007|diesel"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Iveco Daily Daily 35C16 Basculante 160 CV",
-        "year": "03/2017",
-        "km": 144000,
-        "fuel": "Diesel",
-        "price": 124990,
-        "url": "https://ftcautomoveis.pt/viaturas/iveco-daily--14033fd3-cc5a-4d55-9d63-7424cc11b6d3",
-        "vin": null,
-        "registration": null,
-        "id": "30e6e399cb528a76f3fd",
-        "match_key": "iveco daily daily 35c16 basculante 160 cv|03/2017|diesel"
-      }
     }
   ],
   "failures": [
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33938 final=https://www.gaiaconceptcar.pt/",
-        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
+        "http=429 bytes=33945 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31328 body_chars=129",
+        "chromium_stock=0",
+        "chromium_links=[]"
       ]
     }
   ]
