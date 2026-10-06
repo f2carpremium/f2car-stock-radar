@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-05T09:07:14.795812+00:00",
-  "base_date": "2026-10-05",
+  "generated_at": "2026-10-06T09:05:53.888761+00:00",
+  "base_date": "2026-10-06",
   "alerts": [
     {
       "type": "change",
@@ -145,10 +145,10 @@
       "f2_vehicle": {
         "title": "MG MG4 51 kWh Standard",
         "year": "02/2023",
-        "km": 42000,
+        "km": 46715,
         "fuel": "Eléctrico",
         "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+        "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
         "vin": null,
         "registration": null,
         "id": "8b7733b4dc8040045ab4",
@@ -161,7 +161,7 @@
           "supplier_now": 18990
         },
         "km": {
-          "f2_base": 42000,
+          "f2_base": 46715,
           "supplier_now": 42300
         },
         "year": {
@@ -323,8 +323,8 @@
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33945 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31328 body_chars=129",
+        "http=429 bytes=33939 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31329 body_chars=129",
         "chromium_stock=0",
         "chromium_links=[]"
       ]
