@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-08T09:06:45.322700+00:00",
-  "base_date": "2026-10-08",
+  "generated_at": "2026-10-10T09:04:47.460203+00:00",
+  "base_date": "2026-10-10",
   "alerts": [
     {
       "type": "change",
@@ -89,7 +89,39 @@
       }
     },
     {
-      "type": "change",
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Kia e-Niro 64kWh",
+        "year": "06/2022",
+        "km": 40618,
+        "fuel": "Eléctrico",
+        "price": 24900,
+        "url": "https://cemporcentocar.pt/viaturas/kia-e-niro--aeebd79d-25d1-4b9b-8f66-86a2e6905ceb",
+        "vin": null,
+        "registration": null,
+        "id": "b45befae29cc765fc960",
+        "match_key": "kia e niro 64kwh|06/2022|electrico"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Mercedes-Benz EQA 250+ Electric Art",
+        "year": "08/2022",
+        "km": 89733,
+        "fuel": "Eléctrico",
+        "price": 29900,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqa--2e649a53-4b5c-442f-9a18-a8cf1327dcc4",
+        "vin": null,
+        "registration": null,
+        "id": "0b3ad5397b78c2644347",
+        "match_key": "mercedes benz eqa 250 electric art|08/2022|electrico"
+      }
+    },
+    {
+      "type": "new",
       "supplier": "100%Car",
       "vehicle": {
         "title": "MG MG4 64 kWh Luxury",
@@ -102,29 +134,22 @@
         "registration": null,
         "id": "9243e37143c05db184d3",
         "match_key": "mg mg4 64 kwh luxury|02/2024|electrico"
-      },
-      "f2_vehicle": {
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
         "title": "MG MG4 64 kWh Luxury",
         "year": "06/2024",
-        "km": 35000,
+        "km": 24533,
         "fuel": "Eléctrico",
         "price": 23990,
-        "url": "https://f2car.com/viaturas/mg-mg4--4b9e6700-3429-4c21-af93-fa38de7a348d",
+        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--6166368f-c8c0-4c6a-b488-b8dc202f40af",
         "vin": null,
         "registration": null,
         "id": "6afec965f30841db1b29",
         "match_key": "mg mg4 64 kwh luxury|06/2024|electrico"
-      },
-      "match_score": 0.9,
-      "changes": {
-        "km": {
-          "f2_base": 35000,
-          "supplier_now": 21989
-        },
-        "year": {
-          "f2_base": "06/2024",
-          "supplier_now": "02/2024"
-        }
       }
     },
     {
@@ -281,68 +306,50 @@
     },
     {
       "type": "new",
-      "supplier": "FTC Automóveis",
+      "supplier": "MH33CAR",
       "vehicle": {
-        "title": "Destaque BMW X1 18 d sDrive Auto xLine",
-        "year": "09/2017",
-        "km": 149000,
-        "fuel": "Diesel",
-        "price": 119900,
-        "url": "https://ftcautomoveis.pt/viaturas/bmw-x1--6e74d45b-c610-4983-9491-6091822ec719",
+        "title": "BMW 116 d Pack Desportivo M Auto",
+        "year": "2021",
+        "km": 280000,
+        "fuel": null,
+        "price": 17900,
+        "url": "https://www.mh33car.pt/viatura/bmw-116-d-pack-desportivo-m-auto-ID180444.html",
         "vin": null,
         "registration": null,
-        "id": "c6ad3083d13e0dcd058e",
-        "match_key": "destaque bmw x1 18 d sdrive auto xline|09/2017|diesel"
+        "id": "d72f58a58f92eefa2b1b",
+        "match_key": "bmw 116 d pack desportivo m auto|2021|"
       }
     },
     {
-      "type": "change",
-      "supplier": "FTC Automóveis",
+      "type": "new",
+      "supplier": "MH33CAR",
       "vehicle": {
-        "title": "DS DS3 3 1.2 PureTech Be Chic",
-        "year": "09/2016",
-        "km": 109839,
-        "fuel": "Gasolina",
-        "price": 17500,
-        "url": "https://ftcautomoveis.pt/viaturas/ds-ds3--8f5faf6c-6949-4b8b-9fe9-3056c4c2150c",
+        "title": "Renault Kangoo Kangoo Compact 1.5 DCI IVA Dedutivel",
+        "year": "2019",
+        "km": 263000,
+        "fuel": null,
+        "price": 8900,
+        "url": "https://www.mh33car.pt/viatura/renault-kangoo-compact-1-5-dci-iva-dedutivel-ID180389.html",
         "vin": null,
         "registration": null,
-        "id": "bb37d57872cbb24ee93a",
-        "match_key": "ds ds3 3 1 2 puretech be chic|09/2016|gasolina"
-      },
-      "f2_vehicle": {
-        "title": "DS DS3 1.2 PureTech Be Chic",
-        "year": "09/2016",
-        "km": 110000,
-        "fuel": "Gasolina",
-        "price": 9499,
-        "url": "https://f2car.com/viaturas/ds-ds3--9b892997-5917-4866-80e5-891202eb51c4",
-        "vin": null,
-        "registration": null,
-        "id": "76bf469fa9a22cdf5119",
-        "match_key": "ds ds3 1 2 puretech be chic|09/2016|gasolina"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 9499,
-          "supplier_now": 17500
-        },
-        "km": {
-          "f2_base": 110000,
-          "supplier_now": 109839
-        }
+        "id": "4207b04608ecf67dd5ea",
+        "match_key": "renault kangoo kangoo compact 1 5 dci iva dedutivel|2019|"
       }
     }
   ],
   "failures": [
     {
+      "site": "FTC Automóveis",
+      "diagnostics": [
+        "http=429 bytes=34146 final=https://ftcautomoveis.pt/viaturas",
+        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
+      ]
+    },
+    {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=33949 final=https://www.gaiaconceptcar.pt/",
-        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31333 body_chars=129",
-        "chromium_stock=0",
-        "chromium_links=[]"
+        "http=429 bytes=34160 final=https://www.gaiaconceptcar.pt/",
+        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
       ]
     }
   ]
