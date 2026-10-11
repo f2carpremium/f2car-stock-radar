@@ -1,355 +1,111 @@
 {
-  "generated_at": "2026-10-10T09:04:47.460203+00:00",
-  "base_date": "2026-10-10",
+  "generated_at": "2026-10-11T09:05:09.614545+00:00",
+  "base_date": "2026-10-11",
   "alerts": [
     {
-      "type": "change",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Citroen e-Mehari CABRIO",
-        "year": "07/2016",
-        "km": 30500,
-        "fuel": "Eléctrico",
-        "price": 14750,
-        "url": "https://cemporcentocar.pt/viaturas/citroen-e-mehari--e7ba9a92-a5f3-4ee8-aa4f-0372b0079a7c",
-        "vin": null,
-        "registration": null,
-        "id": "edb7afd836df6c694fc3",
-        "match_key": "citroen e mehari cabrio|07/2016|electrico"
-      },
-      "f2_vehicle": {
-        "title": "Citroen e-Mehari",
-        "year": "05/2016",
-        "km": 35000,
-        "fuel": "Eléctrico",
-        "price": 14990,
-        "url": "https://f2car.com/viaturas/citroen-e-mehari--4a06b7af-2870-403d-849d-700d7e8bcd9d",
-        "vin": null,
-        "registration": null,
-        "id": "b54022d8ccbe07b6ecea",
-        "match_key": "citroen e mehari|05/2016|electrico"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 14990,
-          "supplier_now": 14750
-        },
-        "km": {
-          "f2_base": 35000,
-          "supplier_now": 30500
-        },
-        "year": {
-          "f2_base": "05/2016",
-          "supplier_now": "07/2016"
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Ford Capri 77 kWh Select",
-        "year": "06/2025",
-        "km": 20100,
-        "fuel": "Eléctrico",
-        "price": 33990,
-        "url": "https://cemporcentocar.pt/viaturas/ford-capri--590fd002-ff1a-45e8-9157-e8fb55edd4ad",
-        "vin": null,
-        "registration": null,
-        "id": "641a24d57260b68c8600",
-        "match_key": "ford capri 77 kwh select|06/2025|electrico"
-      },
-      "f2_vehicle": {
-        "title": "Ford Capri 77 kWh Select",
-        "year": "05/2025",
-        "km": 20122,
-        "fuel": "Eléctrico",
-        "price": 34000,
-        "url": "https://f2car.com/viaturas/ford-capri--b7d266ca-9957-4152-a4a8-7f5d8a1446c5",
-        "vin": null,
-        "registration": null,
-        "id": "99398df46ed35dab6b42",
-        "match_key": "ford capri 77 kwh select|05/2025|electrico"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 34000,
-          "supplier_now": 33990
-        },
-        "km": {
-          "f2_base": 20122,
-          "supplier_now": 20100
-        },
-        "year": {
-          "f2_base": "05/2025",
-          "supplier_now": "06/2025"
-        }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Kia e-Niro 64kWh",
-        "year": "06/2022",
-        "km": 40618,
-        "fuel": "Eléctrico",
-        "price": 24900,
-        "url": "https://cemporcentocar.pt/viaturas/kia-e-niro--aeebd79d-25d1-4b9b-8f66-86a2e6905ceb",
-        "vin": null,
-        "registration": null,
-        "id": "b45befae29cc765fc960",
-        "match_key": "kia e niro 64kwh|06/2022|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Mercedes-Benz EQA 250+ Electric Art",
-        "year": "08/2022",
-        "km": 89733,
-        "fuel": "Eléctrico",
-        "price": 29900,
-        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqa--2e649a53-4b5c-442f-9a18-a8cf1327dcc4",
-        "vin": null,
-        "registration": null,
-        "id": "0b3ad5397b78c2644347",
-        "match_key": "mercedes benz eqa 250 electric art|08/2022|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 64 kWh Luxury",
-        "year": "02/2024",
-        "km": 21989,
-        "fuel": "Eléctrico",
-        "price": 23990,
-        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--bdcb40b9-e2c6-4654-87f1-dc2b240d2214",
-        "vin": null,
-        "registration": null,
-        "id": "9243e37143c05db184d3",
-        "match_key": "mg mg4 64 kwh luxury|02/2024|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 64 kWh Luxury",
-        "year": "06/2024",
-        "km": 24533,
-        "fuel": "Eléctrico",
-        "price": 23990,
-        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--6166368f-c8c0-4c6a-b488-b8dc202f40af",
-        "vin": null,
-        "registration": null,
-        "id": "6afec965f30841db1b29",
-        "match_key": "mg mg4 64 kwh luxury|06/2024|electrico"
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "08/2023",
-        "km": 42300,
-        "fuel": "Eléctrico",
-        "price": 18990,
-        "url": "https://cemporcentocar.pt/viaturas/mg-mg4--4d17067e-68fc-4a3a-ae41-f13488043c64",
-        "vin": null,
-        "registration": null,
-        "id": "54e625eb2ef15f50c1d6",
-        "match_key": "mg mg4 51 kwh standard|08/2023|electrico"
-      },
-      "f2_vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 42000,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
-        "vin": null,
-        "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 19990,
-          "supplier_now": 18990
-        },
-        "km": {
-          "f2_base": 42000,
-          "supplier_now": 42300
-        },
-        "year": {
-          "f2_base": "02/2023",
-          "supplier_now": "08/2023"
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MINI Countryman Cooper SE ALL4 Auto",
-        "year": "12/2019",
-        "km": 120600,
-        "fuel": "Gasolina",
-        "price": 18990,
-        "url": "https://cemporcentocar.pt/viaturas/mini-countryman--1d1e9c5f-4ec3-4a03-86fc-6aa3c02eaf10",
-        "vin": null,
-        "registration": null,
-        "id": "58903e0b0e167863a280",
-        "match_key": "mini countryman cooper se all4 auto|12/2019|gasolina"
-      },
-      "f2_vehicle": {
-        "title": "MINI Countryman Cooper SE All4 Aut.",
-        "year": "12/2019",
-        "km": 120600,
-        "fuel": "Híbrido Plug-In",
-        "price": 18990,
-        "url": "https://f2car.com/viaturas/mini-countryman--8e329324-1b22-4e8e-9a87-c506613beda2",
-        "vin": null,
-        "registration": null,
-        "id": "88deadda2fb7edfd02a4",
-        "match_key": "mini countryman cooper se all4 aut|12/2019|hibrido plug in"
-      },
-      "match_score": 0.9,
-      "changes": {
-        "fuel": {
-          "f2_base": "Híbrido Plug-In",
-          "supplier_now": "Gasolina"
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Smart ForFour EQ Prime",
-        "year": "08/2020",
-        "km": 53000,
-        "fuel": "Eléctrico",
-        "price": 12750,
-        "url": "https://cemporcentocar.pt/viaturas/smart-forfour--88ce6cab-d076-43c8-9653-90eacb7ced51",
-        "vin": null,
-        "registration": null,
-        "id": "12c42b556941d3152d36",
-        "match_key": "smart forfour eq prime|08/2020|electrico"
-      },
-      "f2_vehicle": {
-        "title": "Smart ForFour EQ Prime",
-        "year": "08/2020",
-        "km": 41000,
-        "fuel": "Eléctrico",
-        "price": 12740,
-        "url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c",
-        "vin": null,
-        "registration": null,
-        "id": "12c42b556941d3152d36",
-        "match_key": "smart forfour eq prime|08/2020|electrico"
-      },
-      "match_score": 1.0,
-      "changes": {
-        "price": {
-          "f2_base": 12740,
-          "supplier_now": 12750
-        },
-        "km": {
-          "f2_base": 41000,
-          "supplier_now": 53000
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Volvo EX30 51 kWh Single Motor Core",
-        "year": "07/2024",
-        "km": 23850,
-        "fuel": "Eléctrico",
-        "price": 31900,
-        "url": "https://cemporcentocar.pt/viaturas/volvo-ex30--a10ad6ee-6642-486e-9be0-9a7e5fddc8fe",
-        "vin": null,
-        "registration": null,
-        "id": "13dfd7101ff6eb39c839",
-        "match_key": "volvo ex30 51 kwh single motor core|07/2024|electrico"
-      },
-      "f2_vehicle": {
-        "title": "Volvo EX30 51 kWh Single Motor Core",
-        "year": "07/2024",
-        "km": 23850,
-        "fuel": "Eléctrico",
-        "price": 31990,
-        "url": "https://f2car.com/viaturas/volvo-ex30--817b46b2-c806-4a77-ae36-7bd0e72d7e75",
-        "vin": null,
-        "registration": null,
-        "id": "13dfd7101ff6eb39c839",
-        "match_key": "volvo ex30 51 kwh single motor core|07/2024|electrico"
-      },
-      "match_score": 1.0,
-      "changes": {
-        "price": {
-          "f2_base": 31990,
-          "supplier_now": 31900
-        }
-      }
-    },
-    {
       "type": "new",
       "supplier": "MH33CAR",
       "vehicle": {
-        "title": "BMW 116 d Pack Desportivo M Auto",
-        "year": "2021",
-        "km": 280000,
-        "fuel": null,
-        "price": 17900,
-        "url": "https://www.mh33car.pt/viatura/bmw-116-d-pack-desportivo-m-auto-ID180444.html",
-        "vin": null,
-        "registration": null,
-        "id": "d72f58a58f92eefa2b1b",
-        "match_key": "bmw 116 d pack desportivo m auto|2021|"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Renault Kangoo Kangoo Compact 1.5 DCI IVA Dedutivel",
+        "title": "Renault Kangoo Compact 1.5 DCI IVA Dedutivel",
         "year": "2019",
-        "km": 263000,
+        "km": 264000,
         "fuel": null,
         "price": 8900,
-        "url": "https://www.mh33car.pt/viatura/renault-kangoo-compact-1-5-dci-iva-dedutivel-ID180389.html",
+        "url": "https://www.mh33car.pt/viatura/renault-kangoo-compact-1-5-dci-iva-dedutivel-ID180486.html",
         "vin": null,
         "registration": null,
-        "id": "4207b04608ecf67dd5ea",
-        "match_key": "renault kangoo kangoo compact 1 5 dci iva dedutivel|2019|"
+        "id": "f52a3c6e8df079bd6b6f",
+        "match_key": "renault kangoo compact 1 5 dci iva dedutivel|2019|"
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "DS DS3 3 1.2 PureTech Be Chic",
+        "year": "09/2016",
+        "km": 109839,
+        "fuel": "Gasolina",
+        "price": 7500,
+        "url": "https://ftcautomoveis.pt/viaturas/ds-ds3--8f5faf6c-6949-4b8b-9fe9-3056c4c2150c",
+        "vin": null,
+        "registration": null,
+        "id": "bb37d57872cbb24ee93a",
+        "match_key": "ds ds3 3 1 2 puretech be chic|09/2016|gasolina"
+      },
+      "f2_vehicle": {
+        "title": "DS DS3 1.2 PureTech Be Chic",
+        "year": "09/2016",
+        "km": 110000,
+        "fuel": "Gasolina",
+        "price": 9499,
+        "url": "https://f2car.com/viaturas/ds-ds3--9b892997-5917-4866-80e5-891202eb51c4",
+        "vin": null,
+        "registration": null,
+        "id": "76bf469fa9a22cdf5119",
+        "match_key": "ds ds3 1 2 puretech be chic|09/2016|gasolina"
+      },
+      "match_score": 0.95,
+      "changes": {
+        "price": {
+          "f2_base": 9499,
+          "supplier_now": 7500
+        },
+        "km": {
+          "f2_base": 110000,
+          "supplier_now": 109839
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Land Rover Range Rover Sport P400e HSE Dynamic Stealth",
+        "year": "12/2018",
+        "km": 135000,
+        "fuel": "Híbrido Plug-In",
+        "price": 40999,
+        "url": "https://ftcautomoveis.pt/viaturas/land-rover-range-rover-sport--1c37d27a-f326-48c9-9eed-ece353379bb5",
+        "vin": null,
+        "registration": null,
+        "id": "c994d37af8cf176acc2f",
+        "match_key": "land rover range rover sport p400e hse dynamic stealth|12/2018|hibrido plug in"
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Nissan Cabstar CABSTAR 35.11",
+        "year": "04/2008",
+        "km": 145000,
+        "fuel": "Diesel",
+        "price": 15375,
+        "url": "https://ftcautomoveis.pt/viaturas/nissan-cabstar--684304dc-535b-4d43-ae1f-6a74196d5a6f",
+        "vin": null,
+        "registration": null,
+        "id": "ef805b4d5c79b4240b03",
+        "match_key": "nissan cabstar cabstar 35 11|04/2008|diesel"
       }
     }
   ],
   "failures": [
     {
-      "site": "FTC Automóveis",
+      "site": "100%Car",
       "diagnostics": [
-        "http=429 bytes=34146 final=https://ftcautomoveis.pt/viaturas",
-        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
+        "chromium_final=https://cemporcentocar.pt/viaturas title='Viaturas | 100%Car' html_bytes=655183 body_chars=2359",
+        "chromium_stock=0",
+        "chromium_links=[{\"text\": \"Stock\", \"href\": \"https://cemporcentocar.pt/viaturas\"}, {\"text\": \"BMW i4 eDrive40 Pack Desportivo M 04/2024 45 000 km Eléctrico Automática 340 cv Utilitário 5 lug. IV\", \"href\": \"https://cemporcentocar.pt/viaturas/bmw-i4--8c1cbb2f-f9a0-40d8-bc80-8839808dbf91\"}, {\"text\": \"BMW iX xDrive 40 Pack Desportivo 12/2022 60 400 km Eléctrico Automática 326 cv SUV 5 lug. IVA Dedutí\", \"href\": \"https://cemporcentocar.pt/viaturas/bmw-ix--794d56c5-e0b4-4a21-90a4-49d7267f9e5d\"}, {\"text\": \"BYD Dolphin Surf 43.2 kWh Comfort 04/2026 2594 km Eléctrico Automática 156 cv Citadino 4 lug. IVA De\", \"href\": \"https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d\"}, {\"text\": \"Citroen e-Mehari CABRIO 07/2016 30 500 km Eléctrico Automática 75 cv Cabrio 4 lug. Garantia : 18 mes\", \"href\": \"https://cemporcentocar.pt/viaturas/citroen-e-mehari--e7ba9a92-a5f3-4ee8-aa4f-0372b0079a7c\"}, {\"text\": \"Fiat 500e La Prima 05/2023 34 240 km Eléctrico Automática 118 cv Citadino 4 lug. IVA Dedutível : Sim\", \"href\": \"https://cemporcentocar.pt/viaturas/fiat-500e--fbd8c446-95c8-47d4-9502-4b48e0a313b7\"}, {\"text\": \"Ford Capri 77 kWh Select 06/2025 20 100 km Eléctrico Automática 286 cv SUV 5 lug. Garantia : 18 mese\", \"href\": \"https://cemporcentocar.pt/viaturas/ford-capri--590fd002-ff1a-45e8-9157-e8fb55edd4ad\"}, {\"text\": \"Jaguar I-Pace SE AWD Aut. 12/2018 78 000 km Eléctrico Automática 400 cv SUV 5 lug. IVA Dedutível : S\", \"href\": \"https://cemporcentocar.pt/viaturas/jaguar-i-pace--98eae604-0081-4042-bcde-a6bcc0e5af78\"}, {\"text\": \"Kia e-Niro 64kWh 06/2022 40 618 km Eléctrico Automática 204 cv Utilitário 5 lug. IVA Dedutível : Sim\", \"href\": \"https://cemporcentocar.pt/viaturas/kia-e-niro--aeebd79d-25d1-4b9b-8f66-86a2e6905ceb\"}, {\"text\": \"Mercedes-Benz CLA 250 e Shooting Brake AMG Line 10/2021 114 000 km Híbrido Plug-In Gasolina Automáti\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-cla-250--5cfb56f6-31aa-4377-a2c8-35eef969f6ea\"}, {\"text\": \"Mercedes-Benz EQA 250+ Electric Art 08/2022 89 733 km Eléctrico Automática 190 cv SUV 5 lug. IVA Ded\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-eqa--2e649a53-4b5c-442f-9a18-a8cf1327dcc4\"}, {\"text\": \"Mercedes-Benz EQE SUV 43 AMG 4Matic 07/2024 59 000 km Eléctrico Automática 476 cv SUV 5 lug. IVA Ded\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--c28a7fc7-f949-4f42-bfc9-8367e0d0e24f\"}, {\"text\": \"Mercedes-Benz EQE 300 Electric Art 08/2023 49 212 km Eléctrico Automática 245 cv Sedan 5 lug. IVA De\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--e7d30af0-acc1-4b45-96c3-d8be86cb5884\"}, {\"text\": \"BMW i4 eDrive40 Pack Desportivo M 45 750 € IVA Dedutível : Sim Garantia : 18 meses 04/2024 Mês/Ano 4\", \"href\": \"https://cemporcentocar.pt/viaturas/bmw-i4--8c1cbb2f-f9a0-40d8-bc80-8839808dbf91\"}, {\"text\": \"BMW iX xDrive 40 Pack Desportivo 47 990 € IVA Dedutível : Sim Garantia : 18 meses 12/2022 Mês/Ano 60\", \"href\": \"https://cemporcentocar.pt/viaturas/bmw-ix--794d56c5-e0b4-4a21-90a4-49d7267f9e5d\"}, {\"text\": \"BYD Dolphin Surf 43.2 kWh Comfort 26 999 € IVA Dedutível : Sim Garantia : 18 meses 04/2026 Mês/Ano 2\", \"href\": \"https://cemporcentocar.pt/viaturas/byd-dolphin-surf--10eaba64-328e-42bc-a1ee-e23162e2a94d\"}, {\"text\": \"Citroen e-Mehari CABRIO 14 750 € Garantia : 18 meses 07/2016 Mês/Ano 30 500 km Quilómetros Eléctrico\", \"href\": \"https://cemporcentocar.pt/viaturas/citroen-e-mehari--e7ba9a92-a5f3-4ee8-aa4f-0372b0079a7c\"}, {\"text\": \"Fiat 500e La Prima 19 400 € IVA Dedutível : Sim Garantia : 18 meses 05/2023 Mês/Ano 34 240 km Quilóm\", \"href\": \"https://cemporcentocar.pt/viaturas/fiat-500e--fbd8c446-95c8-47d4-9502-4b48e0a313b7\"}, {\"text\": \"Ford Capri 77 kWh Select 33 990 € Garantia : 18 meses 06/2025 Mês/Ano 20 100 km Quilómetros Eléctric\", \"href\": \"https://cemporcentocar.pt/viaturas/ford-capri--590fd002-ff1a-45e8-9157-e8fb55edd4ad\"}, {\"text\": \"Jaguar I-Pace SE AWD Aut. 25 990 € IVA Dedutível : Sim Garantia : 18 meses 12/2018 Mês/Ano 78 000 km\", \"href\": \"https://cemporcentocar.pt/viaturas/jaguar-i-pace--98eae604-0081-4042-bcde-a6bcc0e5af78\"}, {\"text\": \"Kia e-Niro 64kWh 24 900 € IVA Dedutível : Sim Garantia : 18 meses 06/2022 Mês/Ano 40 618 km Quilómet\", \"href\": \"https://cemporcentocar.pt/viaturas/kia-e-niro--aeebd79d-25d1-4b9b-8f66-86a2e6905ceb\"}, {\"text\": \"Mercedes-Benz CLA 250 e Shooting Brake AMG Line 28 990 € IVA Dedutível : Sim Garantia : 18 meses 10/\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-cla-250--5cfb56f6-31aa-4377-a2c8-35eef969f6ea\"}, {\"text\": \"Mercedes-Benz EQA 250+ Electric Art 29 900 € IVA Dedutível : Sim Garantia : 18 meses 08/2022 Mês/Ano\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-eqa--2e649a53-4b5c-442f-9a18-a8cf1327dcc4\"}, {\"text\": \"Mercedes-Benz EQE SUV 43 AMG 4Matic 89 990 € IVA Dedutível : Sim 07/2024 Mês/Ano 59 000 km Quilómetr\", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--c28a7fc7-f949-4f42-bfc9-8367e0d0e24f\"}, {\"text\": \"Mercedes-Benz EQE 300 Electric Art 45 750 € IVA Dedutível : Sim Garantia : 18 meses 08/2023 Mês/Ano \", \"href\": \"https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--e7d30af0-acc1-4b45-96c3-d8be86cb5884\"}, {\"text\": \"Stock\", \"href\": \"https://cemporcentocar.pt/viaturas\"}, {\"text\": \"Veículos\", \"href\": \"https://cemporcentocar.pt/viaturas\"}]"
       ]
     },
     {
       "site": "Gaia Concept Car",
       "diagnostics": [
-        "http=429 bytes=34160 final=https://www.gaiaconceptcar.pt/",
-        "chromium_error=Error:Page.content: Unable to retrieve content because the page is navigating and changing the content."
+        "http=429 bytes=33949 final=https://www.gaiaconceptcar.pt/",
+        "chromium_final=https://gaiaconceptcar.pt/ title='Vercel Security Checkpoint' html_bytes=31334 body_chars=129",
+        "chromium_stock=0",
+        "chromium_links=[]"
       ]
     }
   ]
