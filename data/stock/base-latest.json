@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-12T03:10:21.704223+00:00",
+  "created_at": "2026-10-14T03:20:45.218629+00:00",
   "source": "https://f2car.com/carros",
-  "count": 56,
+  "count": 55,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -425,18 +425,6 @@
     },
     {
       "title": "MG MG4 51 kWh Standard",
-      "year": "01/2023",
-      "km": 62000,
-      "fuel": "Eléctrico",
-      "price": 19990,
-      "url": "https://f2car.com/viaturas/mg-mg4--5a203b75-c2ae-42a3-af86-9d338575117e",
-      "vin": null,
-      "registration": null,
-      "id": "1fd31cf428864b58dac5",
-      "match_key": "mg mg4 51 kwh standard|01/2023|electrico"
-    },
-    {
-      "title": "MG MG4 51 kWh Standard",
       "year": "05/2023",
       "km": 20000,
       "fuel": "Eléctrico",
@@ -449,11 +437,23 @@
     },
     {
       "title": "MG MG4 51 kWh Standard",
-      "year": "02/2023",
-      "km": 42000,
+      "year": "01/2023",
+      "km": 62000,
       "fuel": "Eléctrico",
       "price": 19990,
-      "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+      "url": "https://f2car.com/viaturas/mg-mg4--5a203b75-c2ae-42a3-af86-9d338575117e",
+      "vin": null,
+      "registration": null,
+      "id": "1fd31cf428864b58dac5",
+      "match_key": "mg mg4 51 kwh standard|01/2023|electrico"
+    },
+    {
+      "title": "MG MG4 51 kWh Standard",
+      "year": "02/2023",
+      "km": 46715,
+      "fuel": "Eléctrico",
+      "price": 19990,
+      "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
       "vin": null,
       "registration": null,
       "id": "8b7733b4dc8040045ab4",
@@ -580,18 +580,6 @@
       "match_key": "renault grand scenic energy dci 160 edc bose edition|05/2018|diesel"
     },
     {
-      "title": "Renault Mégane Sport Tourer 1.5 dCi Limited",
-      "year": "06/2016",
-      "km": 193350,
-      "fuel": "Diesel",
-      "price": 7990,
-      "url": "https://f2car.com/viaturas/renault-megane-sport-tourer--6156671d-68ae-4c92-affb-07aaa422b6da",
-      "vin": null,
-      "registration": null,
-      "id": "89c7d8e93d25ac270cea",
-      "match_key": "renault megane sport tourer 1 5 dci limited|06/2016|diesel"
-    },
-    {
       "title": "Renault Trafic 2.0 Blue dCi L1H1 Advance EDC Increased Payload",
       "year": "02/2026",
       "km": 3661,
@@ -606,7 +594,7 @@
     {
       "title": "Smart ForFour EQ Prime",
       "year": "08/2020",
-      "km": 41000,
+      "km": 61000,
       "fuel": "Eléctrico",
       "price": 12740,
       "url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c",
