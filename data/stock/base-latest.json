@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-14T03:20:45.218629+00:00",
+  "created_at": "2026-10-15T03:19:59.450506+00:00",
   "source": "https://f2car.com/carros",
-  "count": 55,
+  "count": 54,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -266,18 +266,6 @@
       "registration": null,
       "id": "99398df46ed35dab6b42",
       "match_key": "ford capri 77 kwh select|05/2025|electrico"
-    },
-    {
-      "title": "Destaque Jaguar I-Pace EV320 AWD SE",
-      "year": "12/2020",
-      "km": 112503,
-      "fuel": "Eléctrico",
-      "price": 24990,
-      "url": "https://f2car.com/viaturas/jaguar-i-pace--001c71b8-f383-46e9-8628-7a523fed558c",
-      "vin": null,
-      "registration": null,
-      "id": "95fd254a6b6b13eb4aec",
-      "match_key": "destaque jaguar i pace ev320 awd se|12/2020|electrico"
     },
     {
       "title": "Jaguar I-Pace SE AWD Aut.",
