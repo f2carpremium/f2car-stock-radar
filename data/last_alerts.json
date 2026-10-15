@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-14T09:20:56.490874+00:00",
-  "base_date": "2026-10-14",
+  "generated_at": "2026-10-15T09:20:36.882740+00:00",
+  "base_date": "2026-10-15",
   "alerts": [
     {
       "type": "change",
@@ -160,50 +160,18 @@
     },
     {
       "type": "new",
-      "supplier": "MH33CAR",
+      "supplier": "FTC Automóveis",
       "vehicle": {
-        "title": "Peugeot Partner Partner 1.6HDi 3 Lugares IVA Dedutivel",
-        "year": "2019",
-        "km": 280000,
-        "fuel": null,
-        "price": 10900,
-        "url": "https://www.mh33car.pt/viatura/peugeot-partner-partner-1-6hdi-3-lugares-iva-dedutivel-ID180776.html",
+        "title": "Destaque BMW X1 xDrive25e M Sport",
+        "year": "07/2020",
+        "km": 88500,
+        "fuel": "Híbrido Plug-In",
+        "price": 25990,
+        "url": "https://ftcautomoveis.pt/viaturas/bmw-x1--5f353cfa-5ed2-439c-bdc4-7d5486eaf92f",
         "vin": null,
         "registration": null,
-        "id": "39eec690dc53a06452ac",
-        "match_key": "peugeot partner partner 1 6hdi 3 lugares iva dedutivel|2019|"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Fiat 500 1.3 16V Multijet Lounge",
-        "year": "2009",
-        "km": 240000,
-        "fuel": null,
-        "price": 6900,
-        "url": "https://www.mh33car.pt/viatura/fiat-500-1-3-16v-multijet-lounge-ID180737.html",
-        "vin": null,
-        "registration": null,
-        "id": "38c29d1c7df473596227",
-        "match_key": "fiat 500 1 3 16v multijet lounge|2009|"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Peugeot Partner 1.6 Hdi 3 Lugares IVA Dedutivel",
-        "year": "2019",
-        "km": 299661,
-        "fuel": null,
-        "price": 10900,
-        "url": "https://www.mh33car.pt/viatura/peugeot-partner-1-6-hdi-3-lugares-iva-dedutivel-ID180572.html",
-        "vin": null,
-        "registration": null,
-        "id": "b8926942efbc227d32f8",
-        "match_key": "peugeot partner 1 6 hdi 3 lugares iva dedutivel|2019|"
+        "id": "a06c9b86ad2e8bc4c0f1",
+        "match_key": "destaque bmw x1 xdrive25e m sport|07/2020|hibrido plug in"
       }
     },
     {
@@ -243,22 +211,6 @@
           "f2_base": 110000,
           "supplier_now": 109839
         }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Destaque Mercedes-Benz C 63 AMG S Station Speedshift 7G-MCT",
-        "year": "12/2015",
-        "km": 160000,
-        "fuel": "Gasolina",
-        "price": 43990,
-        "url": "https://ftcautomoveis.pt/viaturas/mercedes-benz-c-63-amg--3256b2fc-9efb-4297-9694-261307fcbaf6",
-        "vin": null,
-        "registration": null,
-        "id": "3f9f0319d4e833bbb97f",
-        "match_key": "destaque mercedes benz c 63 amg s station speedshift 7g mct|12/2015|gasolina"
       }
     },
     {
@@ -347,37 +299,19 @@
       "type": "removed",
       "supplier": "100%Car",
       "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 42000,
+        "title": "Smart ForFour EQ Prime",
+        "year": "08/2020",
+        "km": 61000,
         "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+        "price": 12740,
+        "url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c",
         "vin": null,
         "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+        "id": "12c42b556941d3152d36",
+        "match_key": "smart forfour eq prime|08/2020|electrico"
       },
-      "last_confirmed_at": "2026-10-12T09:08:41.851055+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
-    },
-    {
-      "type": "removed",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Opel Corsa-e 50 kWh",
-        "year": "05/2024",
-        "km": 17400,
-        "fuel": "Eléctrico",
-        "price": 18990,
-        "url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707",
-        "vin": null,
-        "registration": null,
-        "id": "e37232581c157b09ad37",
-        "match_key": "opel corsa e 50 kwh|05/2024|electrico"
-      },
-      "last_confirmed_at": "2026-10-12T09:08:41.851055+00:00",
-      "f2_url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707"
+      "last_confirmed_at": "2026-10-14T09:20:56.490874+00:00",
+      "f2_url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c"
     }
   ],
   "failures": []
