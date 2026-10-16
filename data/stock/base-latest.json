@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-15T03:19:59.450506+00:00",
+  "created_at": "2026-10-16T03:19:47.323819+00:00",
   "source": "https://f2car.com/carros",
-  "count": 54,
+  "count": 52,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -230,18 +230,6 @@
       "registration": null,
       "id": "76bf469fa9a22cdf5119",
       "match_key": "ds ds3 1 2 puretech be chic|09/2016|gasolina"
-    },
-    {
-      "title": "Fiat 500e La Prima",
-      "year": "05/2023",
-      "km": 34240,
-      "fuel": "Eléctrico",
-      "price": 19400,
-      "url": "https://f2car.com/viaturas/fiat-500e--c2562351-7479-4b22-95e8-c1b8464a245a",
-      "vin": null,
-      "registration": null,
-      "id": "ae9acb79524a00d93b71",
-      "match_key": "fiat 500e la prima|05/2023|electrico"
     },
     {
       "title": "Fiat 500e 23,8kWh ICON",
@@ -512,7 +500,7 @@
       "year": "09/2021",
       "km": 47531,
       "fuel": "Gasolina",
-      "price": 15900,
+      "price": 19990,
       "url": "https://f2car.com/viaturas/opel-mokka--7eb624f4-308c-4bd8-9287-269963fa1e02",
       "vin": null,
       "registration": null,
@@ -578,18 +566,6 @@
       "registration": null,
       "id": "2e8673978d5d154fff35",
       "match_key": "renault trafic 2 0 blue dci l1h1 advance edc increased payload|02/2026|diesel"
-    },
-    {
-      "title": "Smart ForFour EQ Prime",
-      "year": "08/2020",
-      "km": 61000,
-      "fuel": "Eléctrico",
-      "price": 12740,
-      "url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c",
-      "vin": null,
-      "registration": null,
-      "id": "12c42b556941d3152d36",
-      "match_key": "smart forfour eq prime|08/2020|electrico"
     },
     {
       "title": "IVA DEDUTIVEL Tesla Model Y Performance Tração Integral",
