@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-15T09:20:36.882740+00:00",
-  "base_date": "2026-10-15",
+  "generated_at": "2026-10-16T09:20:49.127855+00:00",
+  "base_date": "2026-10-16",
   "alerts": [
     {
       "type": "change",
@@ -43,6 +43,22 @@
           "f2_base": "05/2016",
           "supplier_now": "07/2016"
         }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Fiat 500e La Prima",
+        "year": "05/2023",
+        "km": 34240,
+        "fuel": "Eléctrico",
+        "price": 19400,
+        "url": "https://cemporcentocar.pt/viaturas/fiat-500e--fbd8c446-95c8-47d4-9502-4b48e0a313b7",
+        "vin": null,
+        "registration": null,
+        "id": "ae9acb79524a00d93b71",
+        "match_key": "fiat 500e la prima|05/2023|electrico"
       }
     },
     {
@@ -124,6 +140,22 @@
       }
     },
     {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Smart #1 66 kWh Pro+",
+        "year": "01/2024",
+        "km": 29442,
+        "fuel": "Eléctrico",
+        "price": 27990,
+        "url": "https://cemporcentocar.pt/viaturas/smart-1--051df0bd-e459-4a1b-98f7-26b1d747ea61",
+        "vin": null,
+        "registration": null,
+        "id": "823272252f74edecd039",
+        "match_key": "smart 1 66 kwh pro|01/2024|electrico"
+      }
+    },
+    {
       "type": "change",
       "supplier": "100%Car",
       "vehicle": {
@@ -156,22 +188,6 @@
           "f2_base": 31990,
           "supplier_now": 31900
         }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Destaque BMW X1 xDrive25e M Sport",
-        "year": "07/2020",
-        "km": 88500,
-        "fuel": "Híbrido Plug-In",
-        "price": 25990,
-        "url": "https://ftcautomoveis.pt/viaturas/bmw-x1--5f353cfa-5ed2-439c-bdc4-7d5486eaf92f",
-        "vin": null,
-        "registration": null,
-        "id": "a06c9b86ad2e8bc4c0f1",
-        "match_key": "destaque bmw x1 xdrive25e m sport|07/2020|hibrido plug in"
       }
     },
     {
@@ -268,29 +284,29 @@
         "match_key": "fiat 500e|02/2023|electrico"
       },
       "f2_vehicle": {
-        "title": "Fiat 500e La Prima",
-        "year": "05/2023",
-        "km": 34240,
+        "title": "Fiat 500e 23,8kWh ICON",
+        "year": "03/2023",
+        "km": 29626,
         "fuel": "Eléctrico",
-        "price": 19400,
-        "url": "https://f2car.com/viaturas/fiat-500e--c2562351-7479-4b22-95e8-c1b8464a245a",
+        "price": 13990,
+        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
         "vin": null,
         "registration": null,
-        "id": "ae9acb79524a00d93b71",
-        "match_key": "fiat 500e la prima|05/2023|electrico"
+        "id": "09b1b99606d97e7d1d00",
+        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
       },
-      "match_score": 0.95,
+      "match_score": 0.9,
       "changes": {
         "price": {
-          "f2_base": 19400,
+          "f2_base": 13990,
           "supplier_now": 17950
         },
         "km": {
-          "f2_base": 34240,
+          "f2_base": 29626,
           "supplier_now": 37200
         },
         "year": {
-          "f2_base": "05/2023",
+          "f2_base": "03/2023",
           "supplier_now": "02/2023"
         }
       }
@@ -299,19 +315,37 @@
       "type": "removed",
       "supplier": "100%Car",
       "vehicle": {
-        "title": "Smart ForFour EQ Prime",
-        "year": "08/2020",
-        "km": 61000,
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 46715,
         "fuel": "Eléctrico",
-        "price": 12740,
-        "url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
         "vin": null,
         "registration": null,
-        "id": "12c42b556941d3152d36",
-        "match_key": "smart forfour eq prime|08/2020|electrico"
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
       },
-      "last_confirmed_at": "2026-10-14T09:20:56.490874+00:00",
-      "f2_url": "https://f2car.com/viaturas/smart-forfour--8315fe02-37d6-40a1-96c2-de10aa4c805c"
+      "last_confirmed_at": "2026-10-15T09:20:36.882740+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2"
+    },
+    {
+      "type": "removed",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Opel Corsa-e 50 kWh",
+        "year": "05/2024",
+        "km": 17400,
+        "fuel": "Eléctrico",
+        "price": 18990,
+        "url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707",
+        "vin": null,
+        "registration": null,
+        "id": "e37232581c157b09ad37",
+        "match_key": "opel corsa e 50 kwh|05/2024|electrico"
+      },
+      "last_confirmed_at": "2026-10-15T09:20:36.882740+00:00",
+      "f2_url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707"
     }
   ],
   "failures": []
