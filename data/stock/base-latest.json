@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-16T03:19:47.323819+00:00",
+  "created_at": "2026-10-17T03:19:04.660038+00:00",
   "source": "https://f2car.com/carros",
-  "count": 52,
+  "count": 54,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -140,7 +140,7 @@
       "year": "12/2024",
       "km": 59000,
       "fuel": "Eléctrico",
-      "price": 54900,
+      "price": 53900,
       "url": "https://f2car.com/viaturas/bmw-i5--5954221e-d7f6-4e43-8e37-6fded299a12e",
       "vin": null,
       "registration": null,
@@ -182,6 +182,18 @@
       "registration": null,
       "id": "2392e5e6ca32179ee5ee",
       "match_key": "bmw m2 auto|02/2025|gasolina"
+    },
+    {
+      "title": "BMW X3 xDrive20d Aut. M Sport",
+      "year": "12/2015",
+      "km": 109000,
+      "fuel": "Diesel",
+      "price": 19990,
+      "url": "https://f2car.com/viaturas/bmw-x3--ff90978c-8d1f-45b8-ae8e-1a08d6941f0c",
+      "vin": null,
+      "registration": null,
+      "id": "24d8639db019d32801ac",
+      "match_key": "bmw x3 xdrive20d aut m sport|12/2015|diesel"
     },
     {
       "title": "BYD Dolphin Surf 43.2 kWh Comfort",
@@ -386,6 +398,18 @@
       "registration": null,
       "id": "1e2e379f407fd38418db",
       "match_key": "mercedes benz eqe 43 amg 4matic edition|07/2024|electrico"
+    },
+    {
+      "title": "Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line",
+      "year": "05/2014",
+      "km": 160000,
+      "fuel": "Diesel",
+      "price": 18250,
+      "url": "https://f2car.com/viaturas/mercedes-benz-gla-220--4219bccd-7b39-4a40-9830-b0ce5a1a01a6",
+      "vin": null,
+      "registration": null,
+      "id": "71f7f86f0785f8cede25",
+      "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|05/2014|diesel"
     },
     {
       "title": "Mercedes-Benz Viano 3.0 CDI DPF Compacta Auto Avantgarde Grand Edition",
