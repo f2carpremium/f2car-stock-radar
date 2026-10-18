@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-17T09:13:44.874380+00:00",
-  "base_date": "2026-10-17",
+  "generated_at": "2026-10-18T09:13:59.684321+00:00",
+  "base_date": "2026-10-18",
   "alerts": [
     {
       "type": "change",
@@ -162,16 +162,16 @@
       "type": "new",
       "supplier": "MH33CAR",
       "vehicle": {
-        "title": "Ford Focus 1.6 TDCi Titanium",
-        "year": "2014",
-        "km": 378570,
+        "title": "Mercedes-Benz Sprinter 316 CDI/37 CD",
+        "year": "2010",
+        "km": 650000,
         "fuel": null,
-        "price": 7900,
-        "url": "https://www.mh33car.pt/viatura/ford-focus-1-6-tdci-titanium-ID181122.html",
+        "price": 9900,
+        "url": "https://www.mh33car.pt/viatura/mercedes-benz-sprinter-316-cdi-37-cd-ID181239.html",
         "vin": null,
         "registration": null,
-        "id": "aa6fd016cdf3a78dd282",
-        "match_key": "ford focus 1 6 tdci titanium|2014|"
+        "id": "ddb02d6088d6ccca80df",
+        "match_key": "mercedes benz sprinter 316 cdi 37 cd|2010|"
       }
     },
     {
@@ -257,6 +257,22 @@
       }
     },
     {
+      "type": "new",
+      "supplier": "FTC Automóveis",
+      "vehicle": {
+        "title": "Land Rover Discovery Sport 2.0 D AWD R-Dynamic SE",
+        "year": "07/2020",
+        "km": 99000,
+        "fuel": "Diesel",
+        "price": 28990,
+        "url": "https://ftcautomoveis.pt/viaturas/land-rover-discovery-sport--6009d2c4-75eb-427d-8deb-41689daaa5da",
+        "vin": null,
+        "registration": null,
+        "id": "b6d644bbb5b036d78d6f",
+        "match_key": "land rover discovery sport 2 0 d awd r dynamic se|07/2020|diesel"
+      }
+    },
+    {
       "type": "change",
       "supplier": "Gaia Concept Car",
       "vehicle": {
@@ -337,6 +353,42 @@
           "supplier_now": "02/2023"
         }
       }
+    },
+    {
+      "type": "removed",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 46715,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
+        "vin": null,
+        "registration": null,
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-17T09:13:44.874380+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2"
+    },
+    {
+      "type": "removed",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Opel Corsa-e 50 kWh",
+        "year": "05/2024",
+        "km": 17400,
+        "fuel": "Eléctrico",
+        "price": 18990,
+        "url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707",
+        "vin": null,
+        "registration": null,
+        "id": "e37232581c157b09ad37",
+        "match_key": "opel corsa e 50 kwh|05/2024|electrico"
+      },
+      "last_confirmed_at": "2026-10-17T09:13:44.874380+00:00",
+      "f2_url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707"
     }
   ],
   "failures": []
