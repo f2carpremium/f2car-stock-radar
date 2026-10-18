@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-17T03:19:04.660038+00:00",
+  "created_at": "2026-10-18T03:18:39.916580+00:00",
   "source": "https://f2car.com/carros",
-  "count": 54,
+  "count": 53,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -530,18 +530,6 @@
       "registration": null,
       "id": "2441d50b2d2c03bcbc70",
       "match_key": "destaque opel mokka 1 2 t gs line|09/2021|gasolina"
-    },
-    {
-      "title": "Destaque Peugeot 2008 1.2 PureTech Allure Pack",
-      "year": "01/2022",
-      "km": 78260,
-      "fuel": "Gasolina",
-      "price": 16990,
-      "url": "https://f2car.com/viaturas/peugeot-2008--bff38774-3894-4eb9-8cc6-24fe0ddc8839",
-      "vin": null,
-      "registration": null,
-      "id": "260fc06658f67c42be9c",
-      "match_key": "destaque peugeot 2008 1 2 puretech allure pack|01/2022|gasolina"
     },
     {
       "title": "Peugeot 308 1.5 BlueHDi Allure EAT8",
