@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-18T09:13:59.684321+00:00",
-  "base_date": "2026-10-18",
+  "generated_at": "2026-10-19T09:23:50.777922+00:00",
+  "base_date": "2026-10-19",
   "alerts": [
     {
       "type": "change",
@@ -159,65 +159,6 @@
       }
     },
     {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Mercedes-Benz Sprinter 316 CDI/37 CD",
-        "year": "2010",
-        "km": 650000,
-        "fuel": null,
-        "price": 9900,
-        "url": "https://www.mh33car.pt/viatura/mercedes-benz-sprinter-316-cdi-37-cd-ID181239.html",
-        "vin": null,
-        "registration": null,
-        "id": "ddb02d6088d6ccca80df",
-        "match_key": "mercedes benz sprinter 316 cdi 37 cd|2010|"
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line",
-        "year": "2014",
-        "km": 160000,
-        "fuel": null,
-        "price": 17900,
-        "url": "https://www.mh33car.pt/viatura/mercedes-benz-gla-220-d-4matic-7g-dct-amg-line-ID179014.html",
-        "vin": null,
-        "registration": null,
-        "id": "074b3ffce7c90565cd0b",
-        "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|2014|"
-      },
-      "f2_vehicle": {
-        "title": "Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line",
-        "year": "05/2014",
-        "km": 160000,
-        "fuel": "Diesel",
-        "price": 18250,
-        "url": "https://f2car.com/viaturas/mercedes-benz-gla-220--4219bccd-7b39-4a40-9830-b0ce5a1a01a6",
-        "vin": null,
-        "registration": null,
-        "id": "71f7f86f0785f8cede25",
-        "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|05/2014|diesel"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 18250,
-          "supplier_now": 17900
-        },
-        "year": {
-          "f2_base": "05/2014",
-          "supplier_now": "2014"
-        },
-        "fuel": {
-          "f2_base": "Diesel",
-          "supplier_now": null
-        }
-      }
-    },
-    {
       "type": "change",
       "supplier": "FTC Automóveis",
       "vehicle": {
@@ -254,22 +195,6 @@
           "f2_base": 110000,
           "supplier_now": 109839
         }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Land Rover Discovery Sport 2.0 D AWD R-Dynamic SE",
-        "year": "07/2020",
-        "km": 99000,
-        "fuel": "Diesel",
-        "price": 28990,
-        "url": "https://ftcautomoveis.pt/viaturas/land-rover-discovery-sport--6009d2c4-75eb-427d-8deb-41689daaa5da",
-        "vin": null,
-        "registration": null,
-        "id": "b6d644bbb5b036d78d6f",
-        "match_key": "land rover discovery sport 2 0 d awd r dynamic se|07/2020|diesel"
       }
     },
     {
@@ -353,43 +278,18 @@
           "supplier_now": "02/2023"
         }
       }
-    },
-    {
-      "type": "removed",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 46715,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
-        "vin": null,
-        "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
-      },
-      "last_confirmed_at": "2026-10-17T09:13:44.874380+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2"
-    },
-    {
-      "type": "removed",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Opel Corsa-e 50 kWh",
-        "year": "05/2024",
-        "km": 17400,
-        "fuel": "Eléctrico",
-        "price": 18990,
-        "url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707",
-        "vin": null,
-        "registration": null,
-        "id": "e37232581c157b09ad37",
-        "match_key": "opel corsa e 50 kwh|05/2024|electrico"
-      },
-      "last_confirmed_at": "2026-10-17T09:13:44.874380+00:00",
-      "f2_url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707"
     }
   ],
-  "failures": []
+  "failures": [
+    {
+      "site": "MH33CAR",
+      "diagnostics": [
+        "mh33_http=200 bytes=5618 final=https://www.mh33car.pt/viaturas",
+        "mh33_detail_urls=0",
+        "chromium_final=https://www.mh33car.pt/viaturas title='MH33car - Viaturas Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Fiat, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Porsche, Renault, VW, Xpeng, )' html_bytes=5554 body_chars=0",
+        "chromium_stock=0",
+        "chromium_links=[]"
+      ]
+    }
+  ]
 }
