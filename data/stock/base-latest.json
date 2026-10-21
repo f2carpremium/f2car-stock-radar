@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-20T03:21:13.967255+00:00",
+  "created_at": "2026-10-21T03:22:21.447712+00:00",
   "source": "https://f2car.com/carros",
-  "count": 53,
+  "count": 57,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -208,6 +208,30 @@
       "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|electrico"
     },
     {
+      "title": "Citroen e-C4 50 kWh Feel",
+      "year": "06/2023",
+      "km": 22400,
+      "fuel": "Eléctrico",
+      "price": 20990,
+      "url": "https://f2car.com/viaturas/citroen-e-c4--832273dd-d290-459e-a5c0-00b3be927e11",
+      "vin": null,
+      "registration": null,
+      "id": "4471e9be9e262bbb25f0",
+      "match_key": "citroen e c4 50 kwh feel|06/2023|electrico"
+    },
+    {
+      "title": "Citroen e-C4 X 50 kWh Shine Pack",
+      "year": "06/2023",
+      "km": 150,
+      "fuel": "Eléctrico",
+      "price": 25900,
+      "url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f",
+      "vin": null,
+      "registration": null,
+      "id": "a7b045271125b51c04a9",
+      "match_key": "citroen e c4 x 50 kwh shine pack|06/2023|electrico"
+    },
+    {
       "title": "Citroen e-Mehari",
       "year": "05/2016",
       "km": 35000,
@@ -242,6 +266,18 @@
       "registration": null,
       "id": "76bf469fa9a22cdf5119",
       "match_key": "ds ds3 1 2 puretech be chic|09/2016|gasolina"
+    },
+    {
+      "title": "Fiat 500e",
+      "year": "02/2023",
+      "km": 37200,
+      "fuel": "Eléctrico",
+      "price": 17990,
+      "url": "https://f2car.com/viaturas/fiat-500e--96344066-c36d-4339-95d3-0934dd02acbd",
+      "vin": null,
+      "registration": null,
+      "id": "8b1614456cbe3cef64e2",
+      "match_key": "fiat 500e|02/2023|electrico"
     },
     {
       "title": "Fiat 500e 23,8kWh ICON",
@@ -508,18 +544,6 @@
       "match_key": "mini countryman cooper se all4 aut|12/2019|hibrido plug in"
     },
     {
-      "title": "Opel Corsa-e 50 kWh",
-      "year": "05/2024",
-      "km": 17400,
-      "fuel": "Eléctrico",
-      "price": 18990,
-      "url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707",
-      "vin": null,
-      "registration": null,
-      "id": "e37232581c157b09ad37",
-      "match_key": "opel corsa e 50 kwh|05/2024|electrico"
-    },
-    {
       "title": "Destaque Opel Mokka 1.2 T GS Line",
       "year": "09/2021",
       "km": 47531,
@@ -542,6 +566,18 @@
       "registration": null,
       "id": "5389a9e918580e5f2dbf",
       "match_key": "peugeot 308 1 5 bluehdi allure eat8|03/2026|diesel"
+    },
+    {
+      "title": "Polestar 4 coupé Long Range 100 kWh Single Motor Plus",
+      "year": "08/2025",
+      "km": 28569,
+      "fuel": "Eléctrico",
+      "price": 46750,
+      "url": "https://f2car.com/viaturas/polestar-4-coupe--d9deb8e3-161f-466a-b0be-8f95208e017d",
+      "vin": null,
+      "registration": null,
+      "id": "ed6c71f71e00e9b7bab8",
+      "match_key": "polestar 4 coupe long range 100 kwh single motor plus|08/2025|electrico"
     },
     {
       "title": "Porsche Panamera Sport Turismo Turbo S E-Hybrid",
@@ -578,6 +614,18 @@
       "registration": null,
       "id": "2e8673978d5d154fff35",
       "match_key": "renault trafic 2 0 blue dci l1h1 advance edc increased payload|02/2026|diesel"
+    },
+    {
+      "title": "Smart #1 66 kWh Pro+",
+      "year": "01/2024",
+      "km": 29442,
+      "fuel": "Eléctrico",
+      "price": 27990,
+      "url": "https://f2car.com/viaturas/smart-1--1fc84e40-96d8-46c9-b2fb-b456fb42c744",
+      "vin": null,
+      "registration": null,
+      "id": "823272252f74edecd039",
+      "match_key": "smart 1 66 kwh pro|01/2024|electrico"
     },
     {
       "title": "IVA DEDUTIVEL Tesla Model Y Performance Tração Integral",
