@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-20T09:21:26.148384+00:00",
-  "base_date": "2026-10-20",
+  "generated_at": "2026-10-21T09:23:13.250963+00:00",
+  "base_date": "2026-10-21",
   "alerts": [
     {
       "type": "change",
@@ -287,7 +287,7 @@
         "year": "02/2023",
         "km": 37200,
         "fuel": "Eléctrico",
-        "price": 17950,
+        "price": 18500,
         "url": "https://gaiaconceptcar.pt/viaturas/fiat-500e--24b98a22-cbd1-46ac-978d-dec536be58df",
         "vin": null,
         "registration": null,
@@ -295,68 +295,59 @@
         "match_key": "fiat 500e|02/2023|electrico"
       },
       "f2_vehicle": {
-        "title": "Fiat 500e 23,8kWh ICON",
-        "year": "03/2023",
-        "km": 29626,
+        "title": "Fiat 500e",
+        "year": "02/2023",
+        "km": 37200,
         "fuel": "Eléctrico",
-        "price": 13990,
-        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
+        "price": 17990,
+        "url": "https://f2car.com/viaturas/fiat-500e--96344066-c36d-4339-95d3-0934dd02acbd",
         "vin": null,
         "registration": null,
-        "id": "09b1b99606d97e7d1d00",
-        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
+        "id": "8b1614456cbe3cef64e2",
+        "match_key": "fiat 500e|02/2023|electrico"
       },
-      "match_score": 0.9,
+      "match_score": 1.0,
       "changes": {
         "price": {
-          "f2_base": 13990,
-          "supplier_now": 17950
-        },
-        "km": {
-          "f2_base": 29626,
-          "supplier_now": 37200
-        },
-        "year": {
-          "f2_base": "03/2023",
-          "supplier_now": "02/2023"
+          "f2_base": 17990,
+          "supplier_now": 18500
         }
       }
     },
     {
-      "type": "removed",
-      "supplier": "100%Car",
+      "type": "change",
+      "supplier": "Gaia Concept Car",
       "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 46715,
+        "title": "Citroen e-C4 50 kWh Feel",
+        "year": "06/2023",
+        "km": 22400,
         "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
+        "price": 20950,
+        "url": "https://gaiaconceptcar.pt/viaturas/citroen-e-c4--e8009dba-f878-4243-b78f-594ebe401359",
         "vin": null,
         "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+        "id": "4471e9be9e262bbb25f0",
+        "match_key": "citroen e c4 50 kwh feel|06/2023|electrico"
       },
-      "last_confirmed_at": "2026-10-19T09:23:50.777922+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2"
-    },
-    {
-      "type": "removed",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Opel Corsa-e 50 kWh",
-        "year": "05/2024",
-        "km": 17400,
+      "f2_vehicle": {
+        "title": "Citroen e-C4 50 kWh Feel",
+        "year": "06/2023",
+        "km": 22400,
         "fuel": "Eléctrico",
-        "price": 18990,
-        "url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707",
+        "price": 20990,
+        "url": "https://f2car.com/viaturas/citroen-e-c4--832273dd-d290-459e-a5c0-00b3be927e11",
         "vin": null,
         "registration": null,
-        "id": "e37232581c157b09ad37",
-        "match_key": "opel corsa e 50 kwh|05/2024|electrico"
+        "id": "4471e9be9e262bbb25f0",
+        "match_key": "citroen e c4 50 kwh feel|06/2023|electrico"
       },
-      "last_confirmed_at": "2026-10-19T09:23:50.777922+00:00",
-      "f2_url": "https://f2car.com/viaturas/opel-corsa-e--37526ccb-29b5-41f0-8d5a-823ac2a20707"
+      "match_score": 1.0,
+      "changes": {
+        "price": {
+          "f2_base": 20990,
+          "supplier_now": 20950
+        }
+      }
     }
   ],
   "failures": []
