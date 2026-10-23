@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-22T03:21:44.454174+00:00",
+  "created_at": "2026-10-23T03:22:20.353430+00:00",
   "source": "https://f2car.com/carros",
-  "count": 57,
+  "count": 61,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -98,6 +98,18 @@
       "registration": null,
       "id": "ef26aa3a2c0b3711e57d",
       "match_key": "bmw 330 d xdrive pack m|01/2014|diesel"
+    },
+    {
+      "title": "BMW 420 Gran Coupé d Line Sport Auto",
+      "year": "08/2019",
+      "km": 180000,
+      "fuel": "Diesel",
+      "price": 27990,
+      "url": "https://f2car.com/viaturas/bmw-420-gran-coupe--695c6b9e-6eea-40d5-a7e8-602e0dcc330e",
+      "vin": null,
+      "registration": null,
+      "id": "f8c0391a6984514a71b1",
+      "match_key": "bmw 420 gran coupe d line sport auto|08/2019|diesel"
     },
     {
       "title": "BMW 420 Gran Coupé d Pack M Auto",
@@ -556,6 +568,18 @@
       "match_key": "destaque opel mokka 1 2 t gs line|09/2021|gasolina"
     },
     {
+      "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
+      "year": "10/2023",
+      "km": 160000,
+      "fuel": "Gasolina",
+      "price": 14990,
+      "url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7",
+      "vin": null,
+      "registration": null,
+      "id": "163d92369063f2a64c7f",
+      "match_key": "peugeot 208 1 2 puretech allure pack eat8|10/2023|gasolina"
+    },
+    {
       "title": "Peugeot 308 1.5 BlueHDi Allure EAT8",
       "year": "03/2026",
       "km": 7900,
@@ -580,6 +604,18 @@
       "match_key": "polestar 4 coupe long range 100 kwh single motor plus|08/2025|electrico"
     },
     {
+      "title": "Porsche Macan Electric Turbo",
+      "year": "06/2025",
+      "km": 12000,
+      "fuel": "Eléctrico",
+      "price": 127000,
+      "url": "https://f2car.com/viaturas/porsche-macan--8e3ba598-d73f-4071-96cb-0797d0e5e5a1",
+      "vin": null,
+      "registration": null,
+      "id": "3b304b0924070ffd37fe",
+      "match_key": "porsche macan electric turbo|06/2025|electrico"
+    },
+    {
       "title": "Porsche Panamera Sport Turismo Turbo S E-Hybrid",
       "year": "10/2019",
       "km": 130000,
@@ -590,6 +626,18 @@
       "registration": null,
       "id": "067745e82bbfb227f358",
       "match_key": "porsche panamera sport turismo turbo s e hybrid|10/2019|hibrido plug in"
+    },
+    {
+      "title": "Renault Clio 1.5 dCi Limited",
+      "year": "03/2018",
+      "km": 138930,
+      "fuel": "Diesel",
+      "price": 11990,
+      "url": "https://f2car.com/viaturas/renault-clio--23abe953-b358-4b0c-a7ab-43a5b998d818",
+      "vin": null,
+      "registration": null,
+      "id": "3c20e9796fea7a24b13e",
+      "match_key": "renault clio 1 5 dci limited|03/2018|diesel"
     },
     {
       "title": "Renault Grand Scénic ENERGY dCi 160 EDC BOSE EDITION",
