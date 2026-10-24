@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-23T03:22:20.353430+00:00",
+  "created_at": "2026-10-24T03:20:15.232868+00:00",
   "source": "https://f2car.com/carros",
   "count": 61,
   "stock": [
@@ -20,7 +20,7 @@
       "year": "01/2013",
       "km": 195166,
       "fuel": "Diesel",
-      "price": 11490,
+      "price": 10990,
       "url": "https://f2car.com/viaturas/audi-a3-cabrio--eca7b4c0-6621-4734-83b2-3bfb2e8ccd1e",
       "vin": null,
       "registration": null,
@@ -62,6 +62,18 @@
       "registration": null,
       "id": "380463c0f19bddb3f874",
       "match_key": "bmw 123 d cabrio auto|06/2009|diesel"
+    },
+    {
+      "title": "BMW 218 Active Tourer d Line Sport",
+      "year": "11/2014",
+      "km": 150000,
+      "fuel": "Diesel",
+      "price": 14900,
+      "url": "https://f2car.com/viaturas/bmw-218-active-tourer--52096bc4-d53b-425c-a25d-7db3c0217d88",
+      "vin": null,
+      "registration": null,
+      "id": "3e4c530716c1776353d0",
+      "match_key": "bmw 218 active tourer d line sport|11/2014|diesel"
     },
     {
       "title": "BMW 320 320D auto PACK M PERFORMANCE",
@@ -284,7 +296,7 @@
       "year": "02/2023",
       "km": 37200,
       "fuel": "Eléctrico",
-      "price": 17990,
+      "price": 18500,
       "url": "https://f2car.com/viaturas/fiat-500e--96344066-c36d-4339-95d3-0934dd02acbd",
       "vin": null,
       "registration": null,
@@ -296,7 +308,7 @@
       "year": "03/2023",
       "km": 29626,
       "fuel": "Eléctrico",
-      "price": 13990,
+      "price": 14990,
       "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
       "vin": null,
       "registration": null,
@@ -326,18 +338,6 @@
       "registration": null,
       "id": "95d0f1ccd974ea1fcb0b",
       "match_key": "jaguar i pace se awd aut|12/2018|electrico"
-    },
-    {
-      "title": "Jeep Renegade 1.6 MJD Limited",
-      "year": "05/2017",
-      "km": 185000,
-      "fuel": "Diesel",
-      "price": 13990,
-      "url": "https://f2car.com/viaturas/jeep-renegade--e64cfdea-d2d7-4f31-905f-a1d208b050fe",
-      "vin": null,
-      "registration": null,
-      "id": "c32302b694f8da72d828",
-      "match_key": "jeep renegade 1 6 mjd limited|05/2017|diesel"
     },
     {
       "title": "Land Rover Discovery Sport 2.0 D AWD R-Dynamic HSE",
@@ -498,10 +498,10 @@
     {
       "title": "MG MG4 51 kWh Standard",
       "year": "02/2023",
-      "km": 46715,
+      "km": 42000,
       "fuel": "Eléctrico",
       "price": 19990,
-      "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
+      "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
       "vin": null,
       "registration": null,
       "id": "8b7733b4dc8040045ab4",
@@ -554,18 +554,6 @@
       "registration": null,
       "id": "88deadda2fb7edfd02a4",
       "match_key": "mini countryman cooper se all4 aut|12/2019|hibrido plug in"
-    },
-    {
-      "title": "Destaque Opel Mokka 1.2 T GS Line",
-      "year": "09/2021",
-      "km": 47531,
-      "fuel": "Gasolina",
-      "price": 19990,
-      "url": "https://f2car.com/viaturas/opel-mokka--7eb624f4-308c-4bd8-9287-269963fa1e02",
-      "vin": null,
-      "registration": null,
-      "id": "2441d50b2d2c03bcbc70",
-      "match_key": "destaque opel mokka 1 2 t gs line|09/2021|gasolina"
     },
     {
       "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
@@ -710,6 +698,18 @@
       "registration": null,
       "id": "9e73531cfbf7780c0811",
       "match_key": "volkswagen polo 1 0 tsi r line dsg|07/2025|gasolina"
+    },
+    {
+      "title": "Volkswagen Tiguan 2.0 TDI SCR 4MOTION DSG R-Line",
+      "year": "03/2018",
+      "km": 145000,
+      "fuel": "Diesel",
+      "price": 24490,
+      "url": "https://f2car.com/viaturas/volkswagen-tiguan--a43d4f78-0d53-45d9-bcdd-26c3571fcb7e",
+      "vin": null,
+      "registration": null,
+      "id": "d76fd5d524ebc48d3fd1",
+      "match_key": "volkswagen tiguan 2 0 tdi scr 4motion dsg r line|03/2018|diesel"
     },
     {
       "title": "Volvo C30 D2 Summum",
