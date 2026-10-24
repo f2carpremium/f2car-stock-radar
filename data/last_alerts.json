@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-23T09:22:41.428162+00:00",
-  "base_date": "2026-10-23",
+  "generated_at": "2026-10-24T09:15:41.982665+00:00",
+  "base_date": "2026-10-24",
   "alerts": [
     {
       "type": "change",
@@ -322,41 +322,6 @@
       "type": "change",
       "supplier": "Gaia Concept Car",
       "vehicle": {
-        "title": "Fiat 500e",
-        "year": "02/2023",
-        "km": 37200,
-        "fuel": "Eléctrico",
-        "price": 18500,
-        "url": "https://gaiaconceptcar.pt/viaturas/fiat-500e--24b98a22-cbd1-46ac-978d-dec536be58df",
-        "vin": null,
-        "registration": null,
-        "id": "8b1614456cbe3cef64e2",
-        "match_key": "fiat 500e|02/2023|electrico"
-      },
-      "f2_vehicle": {
-        "title": "Fiat 500e",
-        "year": "02/2023",
-        "km": 37200,
-        "fuel": "Eléctrico",
-        "price": 17990,
-        "url": "https://f2car.com/viaturas/fiat-500e--96344066-c36d-4339-95d3-0934dd02acbd",
-        "vin": null,
-        "registration": null,
-        "id": "8b1614456cbe3cef64e2",
-        "match_key": "fiat 500e|02/2023|electrico"
-      },
-      "match_score": 1.0,
-      "changes": {
-        "price": {
-          "f2_base": 17990,
-          "supplier_now": 18500
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
         "title": "Citroen e-C4 50 kWh Feel",
         "year": "06/2023",
         "km": 22400,
@@ -387,6 +352,42 @@
           "supplier_now": 20950
         }
       }
+    },
+    {
+      "type": "removed",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 46715,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
+        "vin": null,
+        "registration": null,
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-23T09:22:41.428162+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2"
+    },
+    {
+      "type": "removed",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Fiat 500e 23,8kWh ICON",
+        "year": "03/2023",
+        "km": 29626,
+        "fuel": "Eléctrico",
+        "price": 13990,
+        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
+        "vin": null,
+        "registration": null,
+        "id": "09b1b99606d97e7d1d00",
+        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-23T09:22:41.428162+00:00",
+      "f2_url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34"
     }
   ],
   "failures": []
