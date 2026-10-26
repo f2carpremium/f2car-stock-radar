@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-25T03:20:25.274921+00:00",
+  "created_at": "2026-10-26T08:24:31.607373+00:00",
   "source": "https://f2car.com/carros",
-  "count": 61,
+  "count": 66,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -98,6 +98,18 @@
       "registration": null,
       "id": "b603f6ef22bb7699747f",
       "match_key": "bmw 320 i edition exclusive|05/2007|gasolina"
+    },
+    {
+      "title": "BMW 330 e xDrive Aut. Sport Line",
+      "year": "06/2022",
+      "km": 166000,
+      "fuel": "Híbrido Plug-In",
+      "price": 29999,
+      "url": "https://f2car.com/viaturas/bmw-330--b68fd704-36d4-4266-a2fa-a20d9031f8dc",
+      "vin": null,
+      "registration": null,
+      "id": "9268e0ca71ae50ed6ff5",
+      "match_key": "bmw 330 e xdrive aut sport line|06/2022|hibrido plug in"
     },
     {
       "title": "BMW 330 d xDrive Pack M",
@@ -328,6 +340,30 @@
       "match_key": "ford capri 77 kwh select|05/2025|electrico"
     },
     {
+      "title": "Ford Fiesta 1.0 EcoBoost S&S ACTIVE VIGNALE",
+      "year": "03/2019",
+      "km": 92000,
+      "fuel": "Gasolina",
+      "price": 14990,
+      "url": "https://f2car.com/viaturas/ford-fiesta--ba26ffa1-5e55-41ba-8ce4-62bbe4f6375a",
+      "vin": null,
+      "registration": null,
+      "id": "a78959f9c887d9d279ba",
+      "match_key": "ford fiesta 1 0 ecoboost s s active vignale|03/2019|gasolina"
+    },
+    {
+      "title": "Hyundai Ioniq 1.6 GDI Advantage",
+      "year": "07/2019",
+      "km": 188000,
+      "fuel": "Híbrido Plug-In",
+      "price": 15990,
+      "url": "https://f2car.com/viaturas/hyundai-ioniq--adf8265a-255d-4864-9c65-0663f24d56ae",
+      "vin": null,
+      "registration": null,
+      "id": "35414bf4c9305fe7a7f1",
+      "match_key": "hyundai ioniq 1 6 gdi advantage|07/2019|hibrido plug in"
+    },
+    {
       "title": "Jaguar I-Pace SE AWD Aut.",
       "year": "12/2018",
       "km": 78000,
@@ -338,6 +374,18 @@
       "registration": null,
       "id": "95d0f1ccd974ea1fcb0b",
       "match_key": "jaguar i pace se awd aut|12/2018|electrico"
+    },
+    {
+      "title": "Kia Sportage 1.6 T-GDI AWD & Ride",
+      "year": "05/2023",
+      "km": 114000,
+      "fuel": "Híbrido Plug-In",
+      "price": 30990,
+      "url": "https://f2car.com/viaturas/kia-sportage--0a19ffd0-dc8e-469c-984e-19b010caf7ba",
+      "vin": null,
+      "registration": null,
+      "id": "ecbaea2b9af65c96b712",
+      "match_key": "kia sportage 1 6 t gdi awd ride|05/2023|hibrido plug in"
     },
     {
       "title": "Land Rover Discovery Sport 2.0 D AWD R-Dynamic HSE",
@@ -734,6 +782,18 @@
       "registration": null,
       "id": "13dfd7101ff6eb39c839",
       "match_key": "volvo ex30 51 kwh single motor core|07/2024|electrico"
+    },
+    {
+      "title": "Volvo XC 40 1.5 T5 PHEV R-Design Expression",
+      "year": "12/2021",
+      "km": 104000,
+      "fuel": "Híbrido Plug-In",
+      "price": 31990,
+      "url": "https://f2car.com/viaturas/volvo-xc-40--554dc55b-d0f8-4f31-b096-3106bced745a",
+      "vin": null,
+      "registration": null,
+      "id": "34130480fc7601f6fcfc",
+      "match_key": "volvo xc 40 1 5 t5 phev r design expression|12/2021|hibrido plug in"
     }
   ]
 }
