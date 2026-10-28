@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-27T08:34:53.816136+00:00",
+  "created_at": "2026-10-28T09:13:44.516386+00:00",
   "source": "https://f2car.com/carros",
   "count": 66,
   "stock": [
@@ -122,6 +122,18 @@
       "registration": null,
       "id": "ef26aa3a2c0b3711e57d",
       "match_key": "bmw 330 d xdrive pack m|01/2014|diesel"
+    },
+    {
+      "title": "BMW 420 d Advantage Auto",
+      "year": "05/2021",
+      "km": 138000,
+      "fuel": "Diesel",
+      "price": 38990,
+      "url": "https://f2car.com/viaturas/bmw-420--ba6fd9b6-d2c8-4ded-bf28-837da52f33b7",
+      "vin": null,
+      "registration": null,
+      "id": "e044c173ad81dd1a4a3b",
+      "match_key": "bmw 420 d advantage auto|05/2021|diesel"
     },
     {
       "title": "BMW 420 Gran Coupé d Line Sport Auto",
@@ -294,9 +306,9 @@
     {
       "title": "DS DS3 1.2 PureTech Be Chic",
       "year": "09/2016",
-      "km": 110000,
+      "km": 109839,
       "fuel": "Gasolina",
-      "price": 9499,
+      "price": 8500,
       "url": "https://f2car.com/viaturas/ds-ds3--9b892997-5917-4866-80e5-891202eb51c4",
       "vin": null,
       "registration": null,
@@ -350,18 +362,6 @@
       "registration": null,
       "id": "a78959f9c887d9d279ba",
       "match_key": "ford fiesta 1 0 ecoboost s s active vignale|03/2019|gasolina"
-    },
-    {
-      "title": "Hyundai Ioniq 1.6 GDI Advantage",
-      "year": "07/2019",
-      "km": 188000,
-      "fuel": "Híbrido Plug-In",
-      "price": 15990,
-      "url": "https://f2car.com/viaturas/hyundai-ioniq--adf8265a-255d-4864-9c65-0663f24d56ae",
-      "vin": null,
-      "registration": null,
-      "id": "35414bf4c9305fe7a7f1",
-      "match_key": "hyundai ioniq 1 6 gdi advantage|07/2019|hibrido plug in"
     },
     {
       "title": "Jaguar I-Pace SE AWD Aut.",
