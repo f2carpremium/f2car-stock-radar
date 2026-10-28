@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-27T15:00:52.123290+00:00",
-  "base_date": "2026-10-27",
+  "generated_at": "2026-10-28T15:36:30.668258+00:00",
+  "base_date": "2026-10-28",
   "alerts": [
     {
       "type": "change",
@@ -159,22 +159,6 @@
       }
     },
     {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Citroën Berlingo 1.5 BlueHDi M Feel",
-        "year": "2021",
-        "km": 146008,
-        "fuel": null,
-        "price": 12900,
-        "url": "https://www.mh33car.pt/viatura/citroen-berlingo-1-5-bluehdi-m-feel-ID181125.html",
-        "vin": null,
-        "registration": null,
-        "id": "a4882a527651e60ca5e1",
-        "match_key": "citroen berlingo 1 5 bluehdi m feel|2021|"
-      }
-    },
-    {
       "type": "change",
       "supplier": "MH33CAR",
       "vehicle": {
@@ -274,9 +258,9 @@
       "f2_vehicle": {
         "title": "DS DS3 1.2 PureTech Be Chic",
         "year": "09/2016",
-        "km": 110000,
+        "km": 109839,
         "fuel": "Gasolina",
-        "price": 9499,
+        "price": 8500,
         "url": "https://f2car.com/viaturas/ds-ds3--9b892997-5917-4866-80e5-891202eb51c4",
         "vin": null,
         "registration": null,
@@ -286,12 +270,8 @@
       "match_score": 0.95,
       "changes": {
         "price": {
-          "f2_base": 9499,
+          "f2_base": 8500,
           "supplier_now": 17500
-        },
-        "km": {
-          "f2_base": 110000,
-          "supplier_now": 109839
         }
       }
     },
@@ -299,7 +279,7 @@
       "type": "new",
       "supplier": "FTC Automóveis",
       "vehicle": {
-        "title": "Fiat Ducato 35 2.0 M-Jet L CD",
+        "title": "Fiat Ducato 2.3 Multijet 150CV Basculante",
         "year": "08/2013",
         "km": 258000,
         "fuel": "Diesel",
@@ -307,8 +287,8 @@
         "url": "https://ftcautomoveis.pt/viaturas/fiat-ducato--1272e079-91db-416e-8ff1-e6ba3f480faf",
         "vin": null,
         "registration": null,
-        "id": "377e64c417f804da282f",
-        "match_key": "fiat ducato 35 2 0 m jet l cd|08/2013|diesel"
+        "id": "857e5bb5946ff74d737b",
+        "match_key": "fiat ducato 2 3 multijet 150cv basculante|08/2013|diesel"
       }
     },
     {
@@ -384,6 +364,42 @@
           "supplier_now": 20950
         }
       }
+    },
+    {
+      "type": "removed",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 42000,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+        "vin": null,
+        "registration": null,
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-27T15:00:52.123290+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
+    },
+    {
+      "type": "removed",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Fiat 500e 23,8kWh ICON",
+        "year": "03/2023",
+        "km": 29626,
+        "fuel": "Eléctrico",
+        "price": 14990,
+        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
+        "vin": null,
+        "registration": null,
+        "id": "09b1b99606d97e7d1d00",
+        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-27T15:00:52.123290+00:00",
+      "f2_url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34"
     }
   ],
   "failures": []
