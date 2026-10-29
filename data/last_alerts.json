@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-28T15:36:30.668258+00:00",
-  "base_date": "2026-10-28",
+  "generated_at": "2026-10-29T15:43:48.869459+00:00",
+  "base_date": "2026-10-29",
   "alerts": [
     {
       "type": "change",
@@ -92,6 +92,41 @@
       "type": "change",
       "supplier": "100%Car",
       "vehicle": {
+        "title": "Mercedes-Benz EQE SUV 43 AMG 4Matic",
+        "year": "07/2024",
+        "km": 62000,
+        "fuel": "Eléctrico",
+        "price": 89990,
+        "url": "https://cemporcentocar.pt/viaturas/mercedes-benz-eqe--c28a7fc7-f949-4f42-bfc9-8367e0d0e24f",
+        "vin": null,
+        "registration": null,
+        "id": "1826acd16922a2848fc7",
+        "match_key": "mercedes benz eqe suv 43 amg 4matic|07/2024|electrico"
+      },
+      "f2_vehicle": {
+        "title": "Mercedes-Benz EQE 43 AMG 4Matic Edition",
+        "year": "07/2024",
+        "km": 59000,
+        "fuel": "Eléctrico",
+        "price": 89990,
+        "url": "https://f2car.com/viaturas/mercedes-benz-eqe--69f3a8d8-bd71-4de6-99a5-659e76659050",
+        "vin": null,
+        "registration": null,
+        "id": "1e2e379f407fd38418db",
+        "match_key": "mercedes benz eqe 43 amg 4matic edition|07/2024|electrico"
+      },
+      "match_score": 0.95,
+      "changes": {
+        "km": {
+          "f2_base": 59000,
+          "supplier_now": 62000
+        }
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "100%Car",
+      "vehicle": {
         "title": "MINI Countryman Cooper SE ALL4 Auto",
         "year": "12/2019",
         "km": 120600,
@@ -156,6 +191,22 @@
           "f2_base": 31990,
           "supplier_now": 31900
         }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "BMW 320 d Aut. Efficient Dynamics Edition Sport Line",
+        "year": "2013",
+        "km": 220000,
+        "fuel": null,
+        "price": 12900,
+        "url": "https://www.mh33car.pt/viatura/bmw-320-d-aut-efficient-dynamics-edition-sport-line-ID182171.html",
+        "vin": null,
+        "registration": null,
+        "id": "5d4e955d1f5f170e3a65",
+        "match_key": "bmw 320 d aut efficient dynamics edition sport line|2013|"
       }
     },
     {
@@ -276,22 +327,6 @@
       }
     },
     {
-      "type": "new",
-      "supplier": "FTC Automóveis",
-      "vehicle": {
-        "title": "Fiat Ducato 2.3 Multijet 150CV Basculante",
-        "year": "08/2013",
-        "km": 258000,
-        "fuel": "Diesel",
-        "price": 118490,
-        "url": "https://ftcautomoveis.pt/viaturas/fiat-ducato--1272e079-91db-416e-8ff1-e6ba3f480faf",
-        "vin": null,
-        "registration": null,
-        "id": "857e5bb5946ff74d737b",
-        "match_key": "fiat ducato 2 3 multijet 150cv basculante|08/2013|diesel"
-      }
-    },
-    {
       "type": "change",
       "supplier": "Gaia Concept Car",
       "vehicle": {
@@ -364,42 +399,6 @@
           "supplier_now": 20950
         }
       }
-    },
-    {
-      "type": "removed",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 42000,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
-        "vin": null,
-        "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
-      },
-      "last_confirmed_at": "2026-10-27T15:00:52.123290+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
-    },
-    {
-      "type": "removed",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Fiat 500e 23,8kWh ICON",
-        "year": "03/2023",
-        "km": 29626,
-        "fuel": "Eléctrico",
-        "price": 14990,
-        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
-        "vin": null,
-        "registration": null,
-        "id": "09b1b99606d97e7d1d00",
-        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
-      },
-      "last_confirmed_at": "2026-10-27T15:00:52.123290+00:00",
-      "f2_url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34"
     }
   ],
   "failures": []
