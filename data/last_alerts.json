@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T15:43:48.869459+00:00",
-  "base_date": "2026-10-29",
+  "generated_at": "2026-10-30T15:25:56.206359+00:00",
+  "base_date": "2026-10-30",
   "alerts": [
     {
       "type": "change",
@@ -197,16 +197,16 @@
       "type": "new",
       "supplier": "MH33CAR",
       "vehicle": {
-        "title": "BMW 320 d Aut. Efficient Dynamics Edition Sport Line",
-        "year": "2013",
-        "km": 220000,
+        "title": "BMW 420 Gran Coupé d Aut. Sport Line",
+        "year": "2016",
+        "km": 225000,
         "fuel": null,
-        "price": 12900,
-        "url": "https://www.mh33car.pt/viatura/bmw-320-d-aut-efficient-dynamics-edition-sport-line-ID182171.html",
+        "price": 16900,
+        "url": "https://www.mh33car.pt/viatura/bmw-420-gran-coupe-d-aut-sport-line-ID182201.html",
         "vin": null,
         "registration": null,
-        "id": "5d4e955d1f5f170e3a65",
-        "match_key": "bmw 320 d aut efficient dynamics edition sport line|2013|"
+        "id": "1085d7a700ae940b2c18",
+        "match_key": "bmw 420 gran coupe d aut sport line|2016|"
       }
     },
     {
@@ -399,6 +399,42 @@
           "supplier_now": 20950
         }
       }
+    },
+    {
+      "type": "removed",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 42000,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+        "vin": null,
+        "registration": null,
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-29T15:43:48.869459+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
+    },
+    {
+      "type": "removed",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Fiat 500e 23,8kWh ICON",
+        "year": "03/2023",
+        "km": 29626,
+        "fuel": "Eléctrico",
+        "price": 14990,
+        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
+        "vin": null,
+        "registration": null,
+        "id": "09b1b99606d97e7d1d00",
+        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
+      },
+      "last_confirmed_at": "2026-10-29T15:43:48.869459+00:00",
+      "f2_url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34"
     }
   ],
   "failures": []
