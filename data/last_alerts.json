@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T15:25:56.206359+00:00",
-  "base_date": "2026-10-30",
+  "generated_at": "2026-10-31T14:54:44.288828+00:00",
+  "base_date": "2026-10-31",
   "alerts": [
     {
       "type": "change",
@@ -197,16 +197,16 @@
       "type": "new",
       "supplier": "MH33CAR",
       "vehicle": {
-        "title": "BMW 420 Gran Coupé d Aut. Sport Line",
-        "year": "2016",
-        "km": 225000,
+        "title": "Citroën Berlingo 1.5 BlueHDi XL Live",
+        "year": "2021",
+        "km": 119000,
         "fuel": null,
-        "price": 16900,
-        "url": "https://www.mh33car.pt/viatura/bmw-420-gran-coupe-d-aut-sport-line-ID182201.html",
+        "price": 12900,
+        "url": "https://www.mh33car.pt/viatura/citroen-berlingo-1-5-bluehdi-xl-live-ID182388.html",
         "vin": null,
         "registration": null,
-        "id": "1085d7a700ae940b2c18",
-        "match_key": "bmw 420 gran coupe d aut sport line|2016|"
+        "id": "7c772367d236c3a0b22a",
+        "match_key": "citroen berlingo 1 5 bluehdi xl live|2021|"
       }
     },
     {
@@ -249,45 +249,6 @@
         "fuel": {
           "f2_base": "Diesel",
           "supplier_now": null
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
-        "year": "2023",
-        "km": 160000,
-        "fuel": "Gasolina",
-        "price": 13900,
-        "url": "https://www.mh33car.pt/viatura/peugeot-208-1-2-puretech-allure-pack-eat8-ID178858.html",
-        "vin": null,
-        "registration": null,
-        "id": "0255718fa2f1ae7ea384",
-        "match_key": "peugeot 208 1 2 puretech allure pack eat8|2023|gasolina"
-      },
-      "f2_vehicle": {
-        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
-        "year": "10/2023",
-        "km": 160000,
-        "fuel": "Gasolina",
-        "price": 14990,
-        "url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7",
-        "vin": null,
-        "registration": null,
-        "id": "163d92369063f2a64c7f",
-        "match_key": "peugeot 208 1 2 puretech allure pack eat8|10/2023|gasolina"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 14990,
-          "supplier_now": 13900
-        },
-        "year": {
-          "f2_base": "10/2023",
-          "supplier_now": "2023"
         }
       }
     },
@@ -399,42 +360,6 @@
           "supplier_now": 20950
         }
       }
-    },
-    {
-      "type": "removed",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 42000,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
-        "vin": null,
-        "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
-      },
-      "last_confirmed_at": "2026-10-29T15:43:48.869459+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
-    },
-    {
-      "type": "removed",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Fiat 500e 23,8kWh ICON",
-        "year": "03/2023",
-        "km": 29626,
-        "fuel": "Eléctrico",
-        "price": 14990,
-        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
-        "vin": null,
-        "registration": null,
-        "id": "09b1b99606d97e7d1d00",
-        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
-      },
-      "last_confirmed_at": "2026-10-29T15:43:48.869459+00:00",
-      "f2_url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34"
     }
   ],
   "failures": []
