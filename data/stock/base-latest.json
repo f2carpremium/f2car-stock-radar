@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-31T09:12:15.490354+00:00",
+  "created_at": "2026-11-01T09:58:25.848573+00:00",
   "source": "https://f2car.com/carros",
-  "count": 67,
+  "count": 64,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -148,18 +148,6 @@
       "match_key": "bmw 420 gran coupe d line sport auto|08/2019|diesel"
     },
     {
-      "title": "BMW 420 Gran Coupé d Pack M Auto",
-      "year": "05/2015",
-      "km": 200857,
-      "fuel": "Diesel",
-      "price": 21999,
-      "url": "https://f2car.com/viaturas/bmw-420-gran-coupe--548b15df-0582-4253-aaee-b65e8287820f",
-      "vin": null,
-      "registration": null,
-      "id": "4ff2f9100e6e95c17c55",
-      "match_key": "bmw 420 gran coupe d pack m auto|05/2015|diesel"
-    },
-    {
       "title": "BMW i4 eDrive40 Pack Desportivo M",
       "year": "04/2024",
       "km": 45000,
@@ -188,7 +176,7 @@
       "year": "12/2024",
       "km": 59000,
       "fuel": "Eléctrico",
-      "price": 53900,
+      "price": 52900,
       "url": "https://f2car.com/viaturas/bmw-i5--5954221e-d7f6-4e43-8e37-6fded299a12e",
       "vin": null,
       "registration": null,
@@ -440,7 +428,7 @@
       "year": "05/2018",
       "km": 191000,
       "fuel": "Diesel",
-      "price": 23990,
+      "price": 21990,
       "url": "https://f2car.com/viaturas/mercedes-benz-c-200--afe858fc-8f12-40f2-94b6-6b5a9afba6c0",
       "vin": null,
       "registration": null,
@@ -520,16 +508,16 @@
       "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|05/2014|diesel"
     },
     {
-      "title": "Mercedes-Benz Viano 3.0 CDI DPF Compacta Auto Avantgarde Grand Edition",
-      "year": "05/2012",
-      "km": 185909,
-      "fuel": "Diesel",
-      "price": 31990,
-      "url": "https://f2car.com/viaturas/mercedes-benz-viano--190626f5-a5cd-4632-81ba-1945f52893a6",
+      "title": "MG MG4 51 kWh Standard",
+      "year": "05/2023",
+      "km": 20000,
+      "fuel": "Eléctrico",
+      "price": 20990,
+      "url": "https://f2car.com/viaturas/mg-mg4--226bed21-2d6e-48fd-9b0e-f13f0c79b54c",
       "vin": null,
       "registration": null,
-      "id": "da87e37f9e4abbb06b42",
-      "match_key": "mercedes benz viano 3 0 cdi dpf compacta auto avantgarde grand edition|05/2012|diesel"
+      "id": "a74224586f477fecc23d",
+      "match_key": "mg mg4 51 kwh standard|05/2023|electrico"
     },
     {
       "title": "MG MG4 51 kWh Standard",
@@ -542,18 +530,6 @@
       "registration": null,
       "id": "1fd31cf428864b58dac5",
       "match_key": "mg mg4 51 kwh standard|01/2023|electrico"
-    },
-    {
-      "title": "MG MG4 51 kWh Standard",
-      "year": "05/2023",
-      "km": 20000,
-      "fuel": "Eléctrico",
-      "price": 20990,
-      "url": "https://f2car.com/viaturas/mg-mg4--226bed21-2d6e-48fd-9b0e-f13f0c79b54c",
-      "vin": null,
-      "registration": null,
-      "id": "a74224586f477fecc23d",
-      "match_key": "mg mg4 51 kwh standard|05/2023|electrico"
     },
     {
       "title": "MG MG4 51 kWh Standard",
@@ -712,18 +688,6 @@
       "match_key": "renault trafic 2 0 blue dci l1h1 advance edc increased payload|02/2026|diesel"
     },
     {
-      "title": "Smart #1 66 kWh Pro+",
-      "year": "01/2024",
-      "km": 29442,
-      "fuel": "Eléctrico",
-      "price": 27990,
-      "url": "https://f2car.com/viaturas/smart-1--1fc84e40-96d8-46c9-b2fb-b456fb42c744",
-      "vin": null,
-      "registration": null,
-      "id": "823272252f74edecd039",
-      "match_key": "smart 1 66 kwh pro|01/2024|electrico"
-    },
-    {
       "title": "IVA DEDUTIVEL Tesla Model Y Performance Tração Integral",
       "year": "10/2022",
       "km": 104000,
@@ -776,7 +740,7 @@
       "year": "05/2012",
       "km": 257920,
       "fuel": "Diesel",
-      "price": 6990,
+      "price": 5990,
       "url": "https://f2car.com/viaturas/volvo-c30--d502c748-d900-4e3b-8d58-7dc6bbe358cf",
       "vin": null,
       "registration": null,
