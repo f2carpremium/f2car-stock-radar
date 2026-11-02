@@ -1,23 +1,7 @@
 {
-  "generated_at": "2026-11-01T15:32:48.721411+00:00",
-  "base_date": "2026-11-01",
+  "generated_at": "2026-11-02T18:57:56.340494+00:00",
+  "base_date": "2026-11-02",
   "alerts": [
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Citroen e-C3 44 kWh Autonomia Conforto Plus",
-        "year": "05/2025",
-        "km": 21300,
-        "fuel": "Eléctrico",
-        "price": 19900,
-        "url": "https://cemporcentocar.pt/viaturas/citroen-e-c3--d3eb85e9-5fdd-41e2-8e7e-4ddf28e21ccb",
-        "vin": null,
-        "registration": null,
-        "id": "95d74df8f0e76430dfbb",
-        "match_key": "citroen e c3 44 kwh autonomia conforto plus|05/2025|electrico"
-      }
-    },
     {
       "type": "change",
       "supplier": "100%Car",
@@ -102,22 +86,6 @@
           "f2_base": "05/2025",
           "supplier_now": "06/2025"
         }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Kia EV2 42.2 kWh Dynamic",
-        "year": "05/2026",
-        "km": 4273,
-        "fuel": "Eléctrico",
-        "price": 28990,
-        "url": "https://cemporcentocar.pt/viaturas/kia-ev2--56e9bec3-2251-4d41-b729-dfad27e7a850",
-        "vin": null,
-        "registration": null,
-        "id": "9ef46354121dfd012fb9",
-        "match_key": "kia ev2 42 2 kwh dynamic|05/2026|electrico"
       }
     },
     {
@@ -226,6 +194,22 @@
       }
     },
     {
+      "type": "new",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "BMW 116 d EDynamics Line Sport",
+        "year": "2016",
+        "km": 200000,
+        "fuel": null,
+        "price": 12900,
+        "url": "https://www.mh33car.pt/viatura/bmw-116-d-edynamics-line-sport-ID182404.html",
+        "vin": null,
+        "registration": null,
+        "id": "cc0cf5a4f1fe96bf0a6e",
+        "match_key": "bmw 116 d edynamics line sport|2016|"
+      }
+    },
+    {
       "type": "change",
       "supplier": "FTC Automóveis",
       "vehicle": {
@@ -258,6 +242,81 @@
           "f2_base": 8500,
           "supplier_now": 17500
         }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Dacia Spring Electric 65 Extreme",
+        "year": "03/2023",
+        "km": 19600,
+        "fuel": "Eléctrico",
+        "price": 14500,
+        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--66de08c9-2f6d-4690-9f58-ec4005300df1",
+        "vin": null,
+        "registration": null,
+        "id": "d1b603ca1a7c20e03a0c",
+        "match_key": "dacia spring electric 65 extreme|03/2023|electrico"
+      }
+    },
+    {
+      "type": "change",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Fiat 500e PACK CONFORT",
+        "year": "06/2023",
+        "km": 12300,
+        "fuel": "Eléctrico",
+        "price": 18750,
+        "url": "https://gaiaconceptcar.pt/viaturas/fiat-500e--b1ae3f5e-33d6-4618-8ec6-530aaf8905ee",
+        "vin": null,
+        "registration": null,
+        "id": "6a2e817d716597c632f8",
+        "match_key": "fiat 500e pack confort|06/2023|electrico"
+      },
+      "f2_vehicle": {
+        "title": "Fiat 500e",
+        "year": "02/2023",
+        "km": 37200,
+        "fuel": "Eléctrico",
+        "price": 18500,
+        "url": "https://f2car.com/viaturas/fiat-500e--96344066-c36d-4339-95d3-0934dd02acbd",
+        "vin": null,
+        "registration": null,
+        "id": "8b1614456cbe3cef64e2",
+        "match_key": "fiat 500e|02/2023|electrico"
+      },
+      "match_score": 0.9,
+      "changes": {
+        "price": {
+          "f2_base": 18500,
+          "supplier_now": 18750
+        },
+        "km": {
+          "f2_base": 37200,
+          "supplier_now": 12300
+        },
+        "year": {
+          "f2_base": "02/2023",
+          "supplier_now": "06/2023"
+        }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Fiat 500e PACK CONFORT STYLE",
+        "year": "01/2024",
+        "km": 23610,
+        "fuel": "Eléctrico",
+        "price": 19250,
+        "url": "https://gaiaconceptcar.pt/viaturas/fiat-500e--08401916-74bf-4a9c-a276-5398d6ca1454",
+        "vin": null,
+        "registration": null,
+        "id": "fee6514c717a2e91a3ef",
+        "match_key": "fiat 500e pack confort style|01/2024|electrico"
       }
     },
     {
@@ -336,51 +395,22 @@
     },
     {
       "type": "removed",
-      "supplier": "100%Car",
+      "supplier": "MH33CAR",
       "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 42000,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
-        "vin": null,
-        "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
-      },
-      "last_confirmed_at": "2026-10-31T14:54:44.288828+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
-    },
-    {
-      "type": "removed",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Fiat 500e 23,8kWh ICON",
-        "year": "03/2023",
-        "km": 29626,
-        "fuel": "Eléctrico",
+        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
+        "year": "10/2023",
+        "km": 160000,
+        "fuel": "Gasolina",
         "price": 14990,
-        "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
+        "url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7",
         "vin": null,
         "registration": null,
-        "id": "09b1b99606d97e7d1d00",
-        "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
+        "id": "163d92369063f2a64c7f",
+        "match_key": "peugeot 208 1 2 puretech allure pack eat8|10/2023|gasolina"
       },
       "last_confirmed_at": "2026-10-31T14:54:44.288828+00:00",
-      "f2_url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34"
+      "f2_url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7"
     }
   ],
-  "failures": [
-    {
-      "site": "MH33CAR",
-      "diagnostics": [
-        "mh33_http=200 bytes=5665 final=https://www.mh33car.pt/viaturas",
-        "mh33_detail_urls=0",
-        "chromium_final=https://www.mh33car.pt/viaturas title='MH33car - Viaturas Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Citroën, Fiat, Ford, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Renault, VW, Xpeng, )' html_bytes=5598 body_chars=0",
-        "chromium_stock=0",
-        "chromium_links=[]"
-      ]
-    }
-  ]
+  "failures": []
 }
