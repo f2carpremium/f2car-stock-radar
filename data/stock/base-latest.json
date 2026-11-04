@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-03T10:24:43.650621+00:00",
+  "created_at": "2026-11-04T10:19:48.828447+00:00",
   "source": "https://f2car.com/carros",
-  "count": 64,
+  "count": 61,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -316,18 +316,6 @@
       "match_key": "fiat 500e|02/2023|electrico"
     },
     {
-      "title": "Fiat 500e 23,8kWh ICON",
-      "year": "03/2023",
-      "km": 29626,
-      "fuel": "Eléctrico",
-      "price": 14990,
-      "url": "https://f2car.com/viaturas/fiat-500e--f019f4c5-ab73-462d-a0ed-1f6139672c34",
-      "vin": null,
-      "registration": null,
-      "id": "09b1b99606d97e7d1d00",
-      "match_key": "fiat 500e 23 8kwh icon|03/2023|electrico"
-    },
-    {
       "title": "Fiat 500e 3 + 1 42 kWh Icon",
       "year": "04/2022",
       "km": 64801,
@@ -400,18 +388,6 @@
       "match_key": "land rover discovery sport 2 0 d awd r dynamic hse|05/2017|diesel"
     },
     {
-      "title": "Mercedes-Benz A 200 d 8G-DCT Edition AMG Line",
-      "year": "05/2019",
-      "km": 101900,
-      "fuel": "Diesel",
-      "price": 27990,
-      "url": "https://f2car.com/viaturas/mercedes-benz-a-200--baa20f9e-7b5c-4b41-bb2e-e56e64d8c685",
-      "vin": null,
-      "registration": null,
-      "id": "e30d0e50c73b39db36e0",
-      "match_key": "mercedes benz a 200 d 8g dct edition amg line|05/2019|diesel"
-    },
-    {
       "title": "Mercedes-Benz A 250 e Progressive",
       "year": "01/2024",
       "km": 6077,
@@ -446,18 +422,6 @@
       "registration": null,
       "id": "885ba8ddfa9765c50dcd",
       "match_key": "mercedes benz c 300 e amg line|02/2024|hibrido plug in"
-    },
-    {
-      "title": "Mercedes-Benz CLA 180 d Shooting Brake AMG Line Aut.",
-      "year": "05/2020",
-      "km": 179120,
-      "fuel": "Diesel",
-      "price": 24990,
-      "url": "https://f2car.com/viaturas/mercedes-benz-cla-180--772dba07-b8d5-47d9-967c-2bfd4f5f7518",
-      "vin": null,
-      "registration": null,
-      "id": "8a26b81a2e6a7ef287e4",
-      "match_key": "mercedes benz cla 180 d shooting brake amg line aut|05/2020|diesel"
     },
     {
       "title": "Mercedes-Benz CLA 250 e Shooting Brake AMG Line",
@@ -509,18 +473,6 @@
     },
     {
       "title": "MG MG4 51 kWh Standard",
-      "year": "05/2023",
-      "km": 20000,
-      "fuel": "Eléctrico",
-      "price": 20990,
-      "url": "https://f2car.com/viaturas/mg-mg4--226bed21-2d6e-48fd-9b0e-f13f0c79b54c",
-      "vin": null,
-      "registration": null,
-      "id": "a74224586f477fecc23d",
-      "match_key": "mg mg4 51 kwh standard|05/2023|electrico"
-    },
-    {
-      "title": "MG MG4 51 kWh Standard",
       "year": "01/2023",
       "km": 62000,
       "fuel": "Eléctrico",
@@ -530,6 +482,18 @@
       "registration": null,
       "id": "1fd31cf428864b58dac5",
       "match_key": "mg mg4 51 kwh standard|01/2023|electrico"
+    },
+    {
+      "title": "MG MG4 51 kWh Standard",
+      "year": "05/2023",
+      "km": 20000,
+      "fuel": "Eléctrico",
+      "price": 20990,
+      "url": "https://f2car.com/viaturas/mg-mg4--226bed21-2d6e-48fd-9b0e-f13f0c79b54c",
+      "vin": null,
+      "registration": null,
+      "id": "a74224586f477fecc23d",
+      "match_key": "mg mg4 51 kwh standard|05/2023|electrico"
     },
     {
       "title": "MG MG4 51 kWh Standard",
@@ -690,9 +654,9 @@
     {
       "title": "IVA DEDUTIVEL Tesla Model Y Performance Tração Integral",
       "year": "10/2022",
-      "km": 104000,
+      "km": 105000,
       "fuel": "Eléctrico",
-      "price": 37990,
+      "price": 34990,
       "url": "https://f2car.com/viaturas/tesla-model-y--c3a5ca42-d6b6-455b-a585-3bdf4e3fbfc7",
       "vin": null,
       "registration": null,
