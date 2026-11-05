@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-04T10:19:48.828447+00:00",
+  "created_at": "2026-11-05T10:13:59.850115+00:00",
   "source": "https://f2car.com/carros",
-  "count": 61,
+  "count": 62,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -76,16 +76,16 @@
       "match_key": "bmw 218 active tourer d line sport|11/2014|diesel"
     },
     {
-      "title": "BMW 320 320D auto PACK M PERFORMANCE",
+      "title": "BMW 318 d Pack M Auto",
       "year": "11/2017",
       "km": 147000,
       "fuel": "Diesel",
-      "price": 21499,
-      "url": "https://f2car.com/viaturas/bmw-320--965e95a1-7bd8-43af-a759-42afa9b72d02",
+      "price": 20499,
+      "url": "https://f2car.com/viaturas/bmw-318--965e95a1-7bd8-43af-a759-42afa9b72d02",
       "vin": null,
       "registration": null,
-      "id": "de1bf821c3cb43789cdd",
-      "match_key": "bmw 320 320d auto pack m performance|11/2017|diesel"
+      "id": "2bf0941a20aa5eb20f4b",
+      "match_key": "bmw 318 d pack m auto|11/2017|diesel"
     },
     {
       "title": "BMW 320 i Edition Exclusive",
@@ -352,6 +352,18 @@
       "match_key": "ford fiesta 1 0 ecoboost s s active vignale|03/2019|gasolina"
     },
     {
+      "title": "Hyundai Ioniq 1.6 GDI Advantage",
+      "year": "07/2019",
+      "km": 188000,
+      "fuel": "Híbrido Plug-In",
+      "price": 15990,
+      "url": "https://f2car.com/viaturas/hyundai-ioniq--adf8265a-255d-4864-9c65-0663f24d56ae",
+      "vin": null,
+      "registration": null,
+      "id": "35414bf4c9305fe7a7f1",
+      "match_key": "hyundai ioniq 1 6 gdi advantage|07/2019|hibrido plug in"
+    },
+    {
       "title": "Jaguar I-Pace SE AWD Aut.",
       "year": "12/2018",
       "km": 78000,
@@ -498,10 +510,10 @@
     {
       "title": "MG MG4 51 kWh Standard",
       "year": "02/2023",
-      "km": 42000,
+      "km": 46715,
       "fuel": "Eléctrico",
       "price": 19990,
-      "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+      "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
       "vin": null,
       "registration": null,
       "id": "8b7733b4dc8040045ab4",
