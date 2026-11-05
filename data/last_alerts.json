@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04T16:41:25.075251+00:00",
-  "base_date": "2026-11-04",
+  "generated_at": "2026-11-05T16:56:42.723575+00:00",
+  "base_date": "2026-11-05",
   "alerts": [
     {
       "type": "change",
@@ -230,98 +230,18 @@
     },
     {
       "type": "new",
-      "supplier": "Gaia Concept Car",
+      "supplier": "FTC Automóveis",
       "vehicle": {
-        "title": "Dacia Spring CONFORT PLUS",
-        "year": "05/2022",
-        "km": 61700,
-        "fuel": "Eléctrico",
-        "price": 12950,
-        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--d2c2793a-0da0-48db-8a7f-37a51e7ca1a3",
+        "title": "Fiat Ducato L2H2",
+        "year": "12/2010",
+        "km": 110800,
+        "fuel": "Diesel",
+        "price": 113990,
+        "url": "https://ftcautomoveis.pt/viaturas/fiat-ducato--a08732dc-2c47-492f-806c-629e84cd0a2d",
         "vin": null,
         "registration": null,
-        "id": "5e8cb5ba8729601020f0",
-        "match_key": "dacia spring confort plus|05/2022|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Dacia Spring Electric 65 Extreme",
-        "year": "11/2023",
-        "km": 14000,
-        "fuel": "Eléctrico",
-        "price": 14500,
-        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--d1f73462-0c79-4556-84d1-d87e9d392e0c",
-        "vin": null,
-        "registration": null,
-        "id": "58e4f300bdf75f782231",
-        "match_key": "dacia spring electric 65 extreme|11/2023|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Renault Zoe",
-        "year": "12/2019",
-        "km": 54860,
-        "fuel": "Eléctrico",
-        "price": 14990,
-        "url": "https://gaiaconceptcar.pt/viaturas/renault-zoe--d858274b-bc8c-42e0-9563-e2f8c23a8a8b",
-        "vin": null,
-        "registration": null,
-        "id": "9a6cbb441b9c0e11422b",
-        "match_key": "renault zoe|12/2019|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Leapmotor T03 DESIGN",
-        "year": "06/2025",
-        "km": 5077,
-        "fuel": "Eléctrico",
-        "price": 17850,
-        "url": "https://gaiaconceptcar.pt/viaturas/leapmotor-t03--6f952ec4-ca93-45dc-bf80-68905cc98c99",
-        "vin": null,
-        "registration": null,
-        "id": "63b8c7bde379daf7bdb0",
-        "match_key": "leapmotor t03 design|06/2025|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Dacia Spring Electric 65 Extreme",
-        "year": "12/2023",
-        "km": 27900,
-        "fuel": "Eléctrico",
-        "price": 14500,
-        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--0f574d5f-f910-433e-b9f5-0ed2cfa656c2",
-        "vin": null,
-        "registration": null,
-        "id": "9a5fe555b72bc3f4ddf9",
-        "match_key": "dacia spring electric 65 extreme|12/2023|electrico"
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Dacia Spring Electric 65 Extreme",
-        "year": "09/2023",
-        "km": 41642,
-        "fuel": "Eléctrico",
-        "price": 13990,
-        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--58d8c1e5-57f1-4f29-a480-ce38e41c8f8b",
-        "vin": null,
-        "registration": null,
-        "id": "ebb9305a88cd2abf1be5",
-        "match_key": "dacia spring electric 65 extreme|09/2023|electrico"
+        "id": "63c0b300acde870f61db",
+        "match_key": "fiat ducato l2h2|12/2010|diesel"
       }
     },
     {
@@ -365,22 +285,6 @@
           "f2_base": "02/2023",
           "supplier_now": "06/2023"
         }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Dacia Spring Electric 45 Expression",
-        "year": "03/2023",
-        "km": 19600,
-        "fuel": "Eléctrico",
-        "price": 14500,
-        "url": "https://gaiaconceptcar.pt/viaturas/dacia-spring--66de08c9-2f6d-4690-9f58-ec4005300df1",
-        "vin": null,
-        "registration": null,
-        "id": "cdd9123937b6afefa81a",
-        "match_key": "dacia spring electric 45 expression|03/2023|electrico"
       }
     },
     {
@@ -459,21 +363,57 @@
     },
     {
       "type": "removed",
-      "supplier": "MH33CAR",
+      "supplier": "100%Car",
       "vehicle": {
-        "title": "Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line",
-        "year": "05/2014",
-        "km": 160000,
-        "fuel": "Diesel",
-        "price": 18250,
-        "url": "https://f2car.com/viaturas/mercedes-benz-gla-220--4219bccd-7b39-4a40-9830-b0ce5a1a01a6",
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 42000,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
         "vin": null,
         "registration": null,
-        "id": "71f7f86f0785f8cede25",
-        "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|05/2014|diesel"
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
       },
-      "last_confirmed_at": "2026-11-02T18:57:56.340494+00:00",
-      "f2_url": "https://f2car.com/viaturas/mercedes-benz-gla-220--4219bccd-7b39-4a40-9830-b0ce5a1a01a6"
+      "last_confirmed_at": "2026-11-04T16:41:25.075251+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
+    },
+    {
+      "type": "removed",
+      "supplier": "MH33CAR",
+      "vehicle": {
+        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
+        "year": "10/2023",
+        "km": 160000,
+        "fuel": "Gasolina",
+        "price": 14990,
+        "url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7",
+        "vin": null,
+        "registration": null,
+        "id": "163d92369063f2a64c7f",
+        "match_key": "peugeot 208 1 2 puretech allure pack eat8|10/2023|gasolina"
+      },
+      "last_confirmed_at": "2026-11-04T16:41:25.075251+00:00",
+      "f2_url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7"
+    },
+    {
+      "type": "removed",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Citroen e-C4 X 50 kWh Shine Pack",
+        "year": "06/2023",
+        "km": 150,
+        "fuel": "Eléctrico",
+        "price": 25900,
+        "url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f",
+        "vin": null,
+        "registration": null,
+        "id": "a7b045271125b51c04a9",
+        "match_key": "citroen e c4 x 50 kwh shine pack|06/2023|electrico"
+      },
+      "last_confirmed_at": "2026-11-04T16:41:25.075251+00:00",
+      "f2_url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f"
     }
   ],
   "failures": []
