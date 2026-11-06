@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-05T10:13:59.850115+00:00",
+  "created_at": "2026-11-06T10:16:42.357073+00:00",
   "source": "https://f2car.com/carros",
-  "count": 62,
+  "count": 63,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -242,6 +242,18 @@
       "registration": null,
       "id": "9647754fca7f98269ea4",
       "match_key": "byd dolphin surf 43 2 kwh comfort|04/2026|electrico"
+    },
+    {
+      "title": "Citroen Berlingo 1.5 BlueHDi XL Live",
+      "year": "04/2021",
+      "km": 119000,
+      "fuel": "Diesel",
+      "price": 12990,
+      "url": "https://f2car.com/viaturas/citroen-berlingo--bd3d5490-27de-4b18-9a3e-d8c47810b3e4",
+      "vin": null,
+      "registration": null,
+      "id": "4416977dc4c8f4a9ce97",
+      "match_key": "citroen berlingo 1 5 bluehdi xl live|04/2021|diesel"
     },
     {
       "title": "Citroen e-C4 50 kWh Feel",
@@ -510,10 +522,10 @@
     {
       "title": "MG MG4 51 kWh Standard",
       "year": "02/2023",
-      "km": 46715,
+      "km": 42000,
       "fuel": "Eléctrico",
       "price": 19990,
-      "url": "https://f2car.com/viaturas/mg-mg4--dcde30ba-69ac-41a1-98b7-f2cbde25a7d2",
+      "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
       "vin": null,
       "registration": null,
       "id": "8b7733b4dc8040045ab4",
