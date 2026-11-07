@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-11-06T10:16:42.357073+00:00",
+  "created_at": "2026-11-07T09:32:02.101528+00:00",
   "source": "https://f2car.com/carros",
-  "count": 63,
+  "count": 65,
   "stock": [
     {
       "title": "Abarth 500e C Turismo",
@@ -230,6 +230,18 @@
       "registration": null,
       "id": "24d8639db019d32801ac",
       "match_key": "bmw x3 xdrive20d aut m sport|12/2015|diesel"
+    },
+    {
+      "title": "BYD Dolphin Surf 43.2 kWh Boost",
+      "year": "08/2026",
+      "km": 5125,
+      "fuel": "Eléctrico",
+      "price": 24990,
+      "url": "https://f2car.com/viaturas/byd-dolphin-surf--732cfe14-1708-476e-98e0-963190e19bc5",
+      "vin": null,
+      "registration": null,
+      "id": "82f032c548d2988a8c6b",
+      "match_key": "byd dolphin surf 43 2 kwh boost|08/2026|electrico"
     },
     {
       "title": "BYD Dolphin Surf 43.2 kWh Comfort",
@@ -497,18 +509,6 @@
     },
     {
       "title": "MG MG4 51 kWh Standard",
-      "year": "01/2023",
-      "km": 62000,
-      "fuel": "Eléctrico",
-      "price": 19990,
-      "url": "https://f2car.com/viaturas/mg-mg4--5a203b75-c2ae-42a3-af86-9d338575117e",
-      "vin": null,
-      "registration": null,
-      "id": "1fd31cf428864b58dac5",
-      "match_key": "mg mg4 51 kwh standard|01/2023|electrico"
-    },
-    {
-      "title": "MG MG4 51 kWh Standard",
       "year": "05/2023",
       "km": 20000,
       "fuel": "Eléctrico",
@@ -518,6 +518,18 @@
       "registration": null,
       "id": "a74224586f477fecc23d",
       "match_key": "mg mg4 51 kwh standard|05/2023|electrico"
+    },
+    {
+      "title": "MG MG4 51 kWh Standard",
+      "year": "01/2023",
+      "km": 62000,
+      "fuel": "Eléctrico",
+      "price": 19990,
+      "url": "https://f2car.com/viaturas/mg-mg4--5a203b75-c2ae-42a3-af86-9d338575117e",
+      "vin": null,
+      "registration": null,
+      "id": "1fd31cf428864b58dac5",
+      "match_key": "mg mg4 51 kwh standard|01/2023|electrico"
     },
     {
       "title": "MG MG4 51 kWh Standard",
@@ -674,6 +686,18 @@
       "registration": null,
       "id": "2e8673978d5d154fff35",
       "match_key": "renault trafic 2 0 blue dci l1h1 advance edc increased payload|02/2026|diesel"
+    },
+    {
+      "title": "Tesla Model 3 Standard Range Plus RWD",
+      "year": "09/2021",
+      "km": 121500,
+      "fuel": "Eléctrico",
+      "price": 24990,
+      "url": "https://f2car.com/viaturas/tesla-model-3--0a21dfb3-0923-4d7a-b17e-954fef1fed14",
+      "vin": null,
+      "registration": null,
+      "id": "6f74fd5f2f0cf402e6cd",
+      "match_key": "tesla model 3 standard range plus rwd|09/2021|electrico"
     },
     {
       "title": "IVA DEDUTIVEL Tesla Model Y Performance Tração Integral",
