@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T16:28:16.644258+00:00",
-  "base_date": "2026-11-06",
+  "generated_at": "2026-11-07T15:16:16.289327+00:00",
+  "base_date": "2026-11-07",
   "alerts": [
     {
       "type": "change",
@@ -124,6 +124,22 @@
       }
     },
     {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "MG ZS EV 50.3 kWh Comfort",
+        "year": "01/2022",
+        "km": 37000,
+        "fuel": "Eléctrico",
+        "price": 19990,
+        "url": "https://cemporcentocar.pt/viaturas/mg-zs--2c0e8d80-bfd6-4309-b8db-8d499f5298bf",
+        "vin": null,
+        "registration": null,
+        "id": "160c3e1629ba4cd5a018",
+        "match_key": "mg zs ev 50 3 kwh comfort|01/2022|electrico"
+      }
+    },
+    {
       "type": "change",
       "supplier": "100%Car",
       "vehicle": {
@@ -156,6 +172,22 @@
           "f2_base": "Híbrido Plug-In",
           "supplier_now": "Gasolina"
         }
+      }
+    },
+    {
+      "type": "new",
+      "supplier": "100%Car",
+      "vehicle": {
+        "title": "Tesla Model S 75 D",
+        "year": "03/2018",
+        "km": 132880,
+        "fuel": "Eléctrico",
+        "price": 24900,
+        "url": "https://cemporcentocar.pt/viaturas/tesla-model-s--b7896dba-072d-463f-8e42-4c658c9955bb",
+        "vin": null,
+        "registration": null,
+        "id": "5caaba0f8f2a81c6905a",
+        "match_key": "tesla model s 75 d|03/2018|electrico"
       }
     },
     {
@@ -197,16 +229,16 @@
       "type": "new",
       "supplier": "MH33CAR",
       "vehicle": {
-        "title": "MINI John Cooper Works JOHN COOPER WORKS",
-        "year": "2017",
-        "km": 70544,
+        "title": "Mercedes-Benz E 300 de 9G-TRONIC AMG Line",
+        "year": "2021",
+        "km": 177000,
         "fuel": null,
-        "price": 27500,
-        "url": "https://www.mh33car.pt/viatura/mini-john-cooper-works-john-cooper-works-ID182829.html",
+        "price": 31900,
+        "url": "https://www.mh33car.pt/viatura/mercedes-benz-e-300-de-9g-tronic-amg-line-ID182834.html",
         "vin": null,
         "registration": null,
-        "id": "a2285a2cd18fb298fc79",
-        "match_key": "mini john cooper works john cooper works|2017|"
+        "id": "2148fd870f2d21fd188c",
+        "match_key": "mercedes benz e 300 de 9g tronic amg line|2021|"
       }
     },
     {
@@ -486,37 +518,55 @@
       "type": "removed",
       "supplier": "100%Car",
       "vehicle": {
-        "title": "Mercedes-Benz EQE SUV 300 Electric Art Advanced",
-        "year": "08/2023",
-        "km": 49212,
+        "title": "MG MG4 51 kWh Standard",
+        "year": "02/2023",
+        "km": 42000,
         "fuel": "Eléctrico",
-        "price": 45750,
-        "url": "https://f2car.com/viaturas/mercedes-benz-eqe--da2074e9-b485-4b69-bdde-8e880e53e99d",
+        "price": 19990,
+        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
         "vin": null,
         "registration": null,
-        "id": "f613c89cd4cf1d2bec52",
-        "match_key": "mercedes benz eqe suv 300 electric art advanced|08/2023|electrico"
+        "id": "8b7733b4dc8040045ab4",
+        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
       },
-      "last_confirmed_at": "2026-11-05T16:56:42.723575+00:00",
-      "f2_url": "https://f2car.com/viaturas/mercedes-benz-eqe--da2074e9-b485-4b69-bdde-8e880e53e99d"
+      "last_confirmed_at": "2026-11-06T16:28:16.644258+00:00",
+      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
     },
     {
       "type": "removed",
       "supplier": "MH33CAR",
       "vehicle": {
-        "title": "Mercedes-Benz GLA 220 d 4Matic 7G-DCT AMG Line",
-        "year": "05/2014",
+        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
+        "year": "10/2023",
         "km": 160000,
-        "fuel": "Diesel",
-        "price": 18250,
-        "url": "https://f2car.com/viaturas/mercedes-benz-gla-220--4219bccd-7b39-4a40-9830-b0ce5a1a01a6",
+        "fuel": "Gasolina",
+        "price": 14990,
+        "url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7",
         "vin": null,
         "registration": null,
-        "id": "71f7f86f0785f8cede25",
-        "match_key": "mercedes benz gla 220 d 4matic 7g dct amg line|05/2014|diesel"
+        "id": "163d92369063f2a64c7f",
+        "match_key": "peugeot 208 1 2 puretech allure pack eat8|10/2023|gasolina"
       },
-      "last_confirmed_at": "2026-11-05T16:56:42.723575+00:00",
-      "f2_url": "https://f2car.com/viaturas/mercedes-benz-gla-220--4219bccd-7b39-4a40-9830-b0ce5a1a01a6"
+      "last_confirmed_at": "2026-11-06T16:28:16.644258+00:00",
+      "f2_url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7"
+    },
+    {
+      "type": "removed",
+      "supplier": "Gaia Concept Car",
+      "vehicle": {
+        "title": "Citroen e-C4 X 50 kWh Shine Pack",
+        "year": "06/2023",
+        "km": 150,
+        "fuel": "Eléctrico",
+        "price": 25900,
+        "url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f",
+        "vin": null,
+        "registration": null,
+        "id": "a7b045271125b51c04a9",
+        "match_key": "citroen e c4 x 50 kwh shine pack|06/2023|electrico"
+      },
+      "last_confirmed_at": "2026-11-06T16:28:16.644258+00:00",
+      "f2_url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f"
     }
   ],
   "failures": []
