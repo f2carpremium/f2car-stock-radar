@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-07T15:16:16.289327+00:00",
-  "base_date": "2026-11-07",
+  "generated_at": "2026-11-08T15:39:37.165578+00:00",
+  "base_date": "2026-11-08",
   "alerts": [
     {
       "type": "change",
@@ -124,22 +124,6 @@
       }
     },
     {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "MG ZS EV 50.3 kWh Comfort",
-        "year": "01/2022",
-        "km": 37000,
-        "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://cemporcentocar.pt/viaturas/mg-zs--2c0e8d80-bfd6-4309-b8db-8d499f5298bf",
-        "vin": null,
-        "registration": null,
-        "id": "160c3e1629ba4cd5a018",
-        "match_key": "mg zs ev 50 3 kwh comfort|01/2022|electrico"
-      }
-    },
-    {
       "type": "change",
       "supplier": "100%Car",
       "vehicle": {
@@ -175,22 +159,6 @@
       }
     },
     {
-      "type": "new",
-      "supplier": "100%Car",
-      "vehicle": {
-        "title": "Tesla Model S 75 D",
-        "year": "03/2018",
-        "km": 132880,
-        "fuel": "Eléctrico",
-        "price": 24900,
-        "url": "https://cemporcentocar.pt/viaturas/tesla-model-s--b7896dba-072d-463f-8e42-4c658c9955bb",
-        "vin": null,
-        "registration": null,
-        "id": "5caaba0f8f2a81c6905a",
-        "match_key": "tesla model s 75 d|03/2018|electrico"
-      }
-    },
-    {
       "type": "change",
       "supplier": "100%Car",
       "vehicle": {
@@ -222,104 +190,6 @@
         "price": {
           "f2_base": 31990,
           "supplier_now": 31900
-        }
-      }
-    },
-    {
-      "type": "new",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Mercedes-Benz E 300 de 9G-TRONIC AMG Line",
-        "year": "2021",
-        "km": 177000,
-        "fuel": null,
-        "price": 31900,
-        "url": "https://www.mh33car.pt/viatura/mercedes-benz-e-300-de-9g-tronic-amg-line-ID182834.html",
-        "vin": null,
-        "registration": null,
-        "id": "2148fd870f2d21fd188c",
-        "match_key": "mercedes benz e 300 de 9g tronic amg line|2021|"
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Porsche Macan Electric Turbo em",
-        "year": "2025",
-        "km": 12000,
-        "fuel": "Elétrico",
-        "price": 127000,
-        "url": "https://www.mh33car.pt/viatura/porsche-macan-electric-turbo-ID182773.html",
-        "vin": null,
-        "registration": null,
-        "id": "d40a6e67ce4127a25298",
-        "match_key": "porsche macan electric turbo em|2025|eletrico"
-      },
-      "f2_vehicle": {
-        "title": "Porsche Macan Electric Turbo",
-        "year": "06/2025",
-        "km": 12000,
-        "fuel": "Eléctrico",
-        "price": 127000,
-        "url": "https://f2car.com/viaturas/porsche-macan--8e3ba598-d73f-4071-96cb-0797d0e5e5a1",
-        "vin": null,
-        "registration": null,
-        "id": "3b304b0924070ffd37fe",
-        "match_key": "porsche macan electric turbo|06/2025|electrico"
-      },
-      "match_score": 0.9,
-      "changes": {
-        "year": {
-          "f2_base": "06/2025",
-          "supplier_now": "2025"
-        },
-        "fuel": {
-          "f2_base": "Eléctrico",
-          "supplier_now": "Elétrico"
-        }
-      }
-    },
-    {
-      "type": "change",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Citroën Berlingo 1.5 BlueHDi XL Live",
-        "year": "2021",
-        "km": 119000,
-        "fuel": null,
-        "price": 12900,
-        "url": "https://www.mh33car.pt/viatura/citroen-berlingo-1-5-bluehdi-xl-live-ID182388.html",
-        "vin": null,
-        "registration": null,
-        "id": "7c772367d236c3a0b22a",
-        "match_key": "citroen berlingo 1 5 bluehdi xl live|2021|"
-      },
-      "f2_vehicle": {
-        "title": "Citroen Berlingo 1.5 BlueHDi XL Live",
-        "year": "04/2021",
-        "km": 119000,
-        "fuel": "Diesel",
-        "price": 12990,
-        "url": "https://f2car.com/viaturas/citroen-berlingo--bd3d5490-27de-4b18-9a3e-d8c47810b3e4",
-        "vin": null,
-        "registration": null,
-        "id": "4416977dc4c8f4a9ce97",
-        "match_key": "citroen berlingo 1 5 bluehdi xl live|04/2021|diesel"
-      },
-      "match_score": 0.95,
-      "changes": {
-        "price": {
-          "f2_base": 12990,
-          "supplier_now": 12900
-        },
-        "year": {
-          "f2_base": "04/2021",
-          "supplier_now": "2021"
-        },
-        "fuel": {
-          "f2_base": "Diesel",
-          "supplier_now": null
         }
       }
     },
@@ -518,56 +388,31 @@
       "type": "removed",
       "supplier": "100%Car",
       "vehicle": {
-        "title": "MG MG4 51 kWh Standard",
-        "year": "02/2023",
-        "km": 42000,
+        "title": "Mercedes-Benz EQE SUV 300 Electric Art Advanced",
+        "year": "08/2023",
+        "km": 49212,
         "fuel": "Eléctrico",
-        "price": 19990,
-        "url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf",
+        "price": 45750,
+        "url": "https://f2car.com/viaturas/mercedes-benz-eqe--da2074e9-b485-4b69-bdde-8e880e53e99d",
         "vin": null,
         "registration": null,
-        "id": "8b7733b4dc8040045ab4",
-        "match_key": "mg mg4 51 kwh standard|02/2023|electrico"
+        "id": "f613c89cd4cf1d2bec52",
+        "match_key": "mercedes benz eqe suv 300 electric art advanced|08/2023|electrico"
       },
-      "last_confirmed_at": "2026-11-06T16:28:16.644258+00:00",
-      "f2_url": "https://f2car.com/viaturas/mg-mg4--daea26cf-0276-4a20-8c91-1a29b3d830bf"
-    },
-    {
-      "type": "removed",
-      "supplier": "MH33CAR",
-      "vehicle": {
-        "title": "Peugeot 208 1.2 PureTech Allure Pack EAT8",
-        "year": "10/2023",
-        "km": 160000,
-        "fuel": "Gasolina",
-        "price": 14990,
-        "url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7",
-        "vin": null,
-        "registration": null,
-        "id": "163d92369063f2a64c7f",
-        "match_key": "peugeot 208 1 2 puretech allure pack eat8|10/2023|gasolina"
-      },
-      "last_confirmed_at": "2026-11-06T16:28:16.644258+00:00",
-      "f2_url": "https://f2car.com/viaturas/peugeot-208--47ae610d-42ff-4152-a447-30ce8c79c8e7"
-    },
-    {
-      "type": "removed",
-      "supplier": "Gaia Concept Car",
-      "vehicle": {
-        "title": "Citroen e-C4 X 50 kWh Shine Pack",
-        "year": "06/2023",
-        "km": 150,
-        "fuel": "Eléctrico",
-        "price": 25900,
-        "url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f",
-        "vin": null,
-        "registration": null,
-        "id": "a7b045271125b51c04a9",
-        "match_key": "citroen e c4 x 50 kwh shine pack|06/2023|electrico"
-      },
-      "last_confirmed_at": "2026-11-06T16:28:16.644258+00:00",
-      "f2_url": "https://f2car.com/viaturas/citroen-e-c4-x--4a1b518b-f47e-4f44-8271-b2dab075b98f"
+      "last_confirmed_at": "2026-11-07T15:16:16.289327+00:00",
+      "f2_url": "https://f2car.com/viaturas/mercedes-benz-eqe--da2074e9-b485-4b69-bdde-8e880e53e99d"
     }
   ],
-  "failures": []
+  "failures": [
+    {
+      "site": "MH33CAR",
+      "diagnostics": [
+        "mh33_http=200 bytes=5665 final=https://www.mh33car.pt/viaturas",
+        "mh33_detail_urls=0",
+        "chromium_final=https://www.mh33car.pt/viaturas title='MH33car - Viaturas Mh33car Vila Nova de Gaia Porto, Stand Automóvel, Viaturas Comercializadas (BMW, Citroën, Fiat, Ford, Jaguar, Mercedes-Benz, MINI, Nissan, Opel, Peugeot, Renault, VW, Xpeng, )' html_bytes=5598 body_chars=0",
+        "chromium_stock=0",
+        "chromium_links=[]"
+      ]
+    }
+  ]
 }
